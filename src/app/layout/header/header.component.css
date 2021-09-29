@@ -1,24 +1,36 @@
 * {
   box-sizing: border-box;
 }
-
-.left {
-  background-color: #2196f3;
+.logo {
   padding: 20px;
+  position: absolute;
+  content: url("../../../assets/logo/logo_home.png");
+}
+/* .logo::before {
+  padding-top: 10px;
+  content: url("../../../assets/logo/logo_home.png");
+} */
+.left {
+  align: center;
+  background-color: #313030;
+  height: 100px;
+  max-height: 100px;
   float: left;
   width: 20%; /* The width is 20%, by default */
 }
 
 .main {
-  background-color: #f1f1f1;
-  padding: 20px;
+  background-color: #313030;
+  height: 100px;
+  max-height: 100px;
   float: left;
   width: 60%; /* The width is 60%, by default */
 }
 
 .right {
-  background-color: #04aa6d;
-  padding: 20px;
+  background-color: #313030;
+  height: 100px;
+  max-height: 100px;
   float: left;
   width: 20%; /* The width is 20%, by default */
 }

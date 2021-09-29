@@ -6,11 +6,11 @@ import { RouterModule, Routes } from "@angular/router";
 export const routes: Routes = [
   {
     path: "",
-    redirectTo: "menu",
+    redirectTo: "home",
     pathMatch: "full",
   },
   {
-    path: "menu",
+    path: "home",
     component: StartComponent,
   },
 ];
