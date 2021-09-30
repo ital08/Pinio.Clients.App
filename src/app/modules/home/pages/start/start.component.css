@@ -1,20 +1,72 @@
-.bg-nav {
-  width: 100%;
+.button-category {
   background-color: #4f4e4e;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
 }
-.buttons {
-  display: flex;
+.button-promotion {
   background-color: #4f4e4e;
-  padding: 40px;
-  display: flex;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
 }
-.buttons-container {
-  padding-right: 20%;
+.button-news {
+  background-color: #4f4e4e;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
 }
-
+.button-aboutus {
+  background-color: #4f4e4e;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+.button-faq {
+  background-color: #4f4e4e;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+.category-button {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  margin: 20px;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ed691e;
+}
+.secondary-button {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  background-color: #e9e9e9;
+  margin: 20px;
+  color: black;
+  height: 40px;
+  border-radius: 20px;
+}
 /* @media screen and .buttons(max-width:600px); */
 @media screen and (max-width: 800px) {
-  .buttons-container {
+  .button-category,
+  .button-promotion,
+  .button-aboutus,
+  .button-news,
+  .button-faq {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    height: 80%;
+  }
+  .category-button,
+  .secondary-button {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
   }
 }
