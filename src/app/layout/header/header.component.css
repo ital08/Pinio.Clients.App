@@ -1,24 +1,85 @@
+::ng-deep .mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #ed691e !important;
+}
+
+::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+  .mat-form-field-outline-thick {
+  color: #ed691e !important;
+}
+
+::ng-deep .mat-input-element {
+  caret-color: #ed691e !important;
+}
+::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+  caret-color: #ed691e !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ed691e !important;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #ed691e !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 40px;
+  width: 100%;
+  color: #ed691e !important;
+  opacity: 1 !important;
+}
+mat-form-field {
+  width: 95%;
+}
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 40px 0 0 40px !important;
+  min-width: 40px !important;
+}
+
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 40px 40px 0 !important;
+}
 * {
   box-sizing: border-box;
 }
-
+.logo {
+  padding-top: 20px;
+  padding-left: 30px;
+  position: absolute;
+  content: url("../../../assets/logo/logo_home.png");
+}
+/* .logo::before {
+  padding-top: 10px;
+  content: url("../../../assets/logo/logo_home.png");
+} */
 .left {
-  background-color: #2196f3;
-  padding: 20px;
+  align-content: center;
+  background-color: #313030;
+  height: 100px;
+  max-height: 100px;
   float: left;
   width: 20%; /* The width is 20%, by default */
 }
 
 .main {
-  background-color: #f1f1f1;
-  padding: 20px;
+  padding: 23.45px;
+  padding-left: 20px;
+  background-color: #313030;
+  height: 100px;
+  max-height: 100px;
   float: left;
   width: 60%; /* The width is 60%, by default */
 }
 
 .right {
-  background-color: #04aa6d;
-  padding: 20px;
+  background-color: #313030;
+  height: 100px;
+  max-height: 100px;
   float: left;
   width: 20%; /* The width is 20%, by default */
 }
