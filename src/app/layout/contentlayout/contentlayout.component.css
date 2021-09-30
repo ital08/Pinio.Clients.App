@@ -1,3 +1,6 @@
 .main {
   margin-top: -16px;
 }
+.mat-app-background {
+  height: 100%;
+}

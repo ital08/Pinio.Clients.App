@@ -16,7 +16,6 @@ import { AppRoutingModule } from "./app-routing.module";
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent,
     ContentlayoutComponent,
   ],
   imports: [
