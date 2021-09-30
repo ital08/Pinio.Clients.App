@@ -27,12 +27,14 @@ import { OverlayModule } from "@angular/cdk/overlay";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatTreeModule } from "@angular/material/tree";
 import { MatStepperModule } from "@angular/material/stepper";
+import { MatFormField } from "@angular/material";
 
 // Others
 
 @NgModule({
   declarations: [],
   imports: [
+    MatFormField,
     MatButtonModule,
     MatToolbarModule,
     MatMenuModule,
@@ -62,6 +64,7 @@ import { MatStepperModule } from "@angular/material/stepper";
     MatStepperModule,
   ],
   exports: [
+    MatFormField,
     MatButtonModule,
     MatToolbarModule,
     MatMenuModule,
