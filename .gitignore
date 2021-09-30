@@ -1,5 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+#Es posible quitar el dist con /dist
 # compiled output
 /tmp
 /out-tsc
