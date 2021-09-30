@@ -1,7 +1,10 @@
 name: Deploy Node.js to Azure Web App
 
 on:
-  [push]
+  push:
+    branches:
+      - qa
+
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
