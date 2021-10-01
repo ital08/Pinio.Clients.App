@@ -47,6 +47,10 @@ mat-form-field {
 * {
   box-sizing: border-box;
 }
+.left-container {
+  padding-top: 10px;
+  padding-left: 5%;
+}
 .logo {
   padding-top: 20px;
   padding-left: 30px;
@@ -58,7 +62,6 @@ mat-form-field {
   content: url("../../../assets/logo/logo_home.png");
 } */
 .left {
-  align-content: center;
   background-color: #313030;
   height: 100px;
   max-height: 100px;
@@ -67,27 +70,99 @@ mat-form-field {
 }
 
 .main {
-  padding: 23.45px;
-  padding-left: 20px;
+  padding: 15.45px;
   background-color: #313030;
   height: 100px;
   max-height: 100px;
   float: left;
-  width: 60%; /* The width is 60%, by default */
+  width: 50%; /* The width is 60%, by default */
 }
-
+.search-section {
+  padding-top: 8px;
+}
 .right {
   background-color: #313030;
   height: 100px;
+  display: flex;
   max-height: 100px;
   float: left;
-  width: 20%; /* The width is 20%, by default */
+  width: 30%; /* The width is 20%, by default */
 }
-
+.bg-nav {
+  background-color: #313030;
+}
+.profile-section {
+  padding-left: 10px;
+  margin-top: -12px;
+}
+.shopping-cart,
+.user-section {
+  display: flex;
+  padding-top: 25px;
+  margin-right: 10%;
+}
+.user-section {
+  padding-left: 14%;
+}
+.shopping-cart {
+  text-align: right;
+}
+.avatar-container {
+  height: 60px;
+  width: 60px;
+  background-color: #ed691e;
+  border-radius: 100px;
+}
+.login-text {
+  color: #ed691e;
+}
+.register-text {
+  color: white;
+}
+.avatar-logo {
+  content: url("../../../assets/user.svg");
+  text-align: center;
+  margin: 13%;
+  height: 45px;
+}
+.cart-logo {
+  content: url("../../../assets/shopping-cart.svg");
+  text-align: center;
+  margin: 15%;
+  height: 45px;
+}
+.cart-container {
+  height: 65px;
+  width: 65px;
+  background-color: #ed691e;
+  border-radius: 100px;
+}
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {
+  .main {
+    height: 80px;
+    width: 100%;
+    margin: -1px;
+    margin-left: 0px;
+  }
+  .left-container {
+    padding: 20px;
+    padding-left: 25%;
+  }
+  .search-section {
+    text-align: center;
+    padding-left: 25px;
+    padding-top: 0px;
+    width: 90%;
+  }
+  .user-section {
+    padding-left: 18%;
+    align: center;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+  }
   .left,
-  .main,
   .right {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
