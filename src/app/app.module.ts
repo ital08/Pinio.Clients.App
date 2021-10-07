@@ -9,6 +9,8 @@ import { ContentlayoutComponent } from "./layout/contentlayout/contentlayout.com
 import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
 import { AppRoutingModule } from "./app-routing.module";
+import { SubNavComponent } from "./layout/sub-nav/sub-nav.component";
+import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { AppRoutingModule } from "./app-routing.module";
     HeaderComponent,
     FooterComponent,
     ContentlayoutComponent,
+    SubNavComponent,
+    NotFoundComponent,
   ],
   imports: [
     // angular

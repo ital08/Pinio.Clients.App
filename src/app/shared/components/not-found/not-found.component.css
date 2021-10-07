@@ -1,0 +1,17 @@
+.not-found-page {
+  height: 100%;
+  background: white;
+  color: black;
+}
+
+.row {
+  margin: 0;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+}

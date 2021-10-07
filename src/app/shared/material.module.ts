@@ -27,7 +27,11 @@ import { OverlayModule } from "@angular/cdk/overlay";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatTreeModule } from "@angular/material/tree";
 import { MatStepperModule } from "@angular/material/stepper";
-import { MatFormField, MatFormFieldModule } from "@angular/material";
+import {
+  MatFormField,
+  MatFormFieldModule,
+  MatPaginatorModule,
+} from "@angular/material";
 
 // Others
 
@@ -62,8 +66,10 @@ import { MatFormField, MatFormFieldModule } from "@angular/material";
     MatAutocompleteModule,
     MatTreeModule,
     MatStepperModule,
+    MatPaginatorModule,
   ],
   exports: [
+    MatPaginatorModule,
     MatFormFieldModule,
     MatButtonModule,
     MatToolbarModule,
