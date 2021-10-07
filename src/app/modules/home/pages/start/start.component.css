@@ -5,6 +5,15 @@
   float: left;
   width: 20%; /* The width is 20%, by default */
 }
+.products {
+}
+.flex-container-main {
+  display: flex;
+}
+.product-container {
+  background-color: #ed691e;
+  border-radius: 20px;
+}
 .button-promotion,
 .button-news,
 .button-aboutus,
@@ -14,6 +23,9 @@
   max-height: 100px;
   float: left;
   width: 20%; /* The width is 20%, by default */
+}
+.flex-container {
+  max-width: 300xp;
 }
 .category-button {
   text-align: center;
@@ -35,7 +47,16 @@
   height: 40px;
   border-radius: 20px;
 }
+.mat-toolbar {
+  width: 100%;
+}
+.content {
+  padding: 16px;
+}
 
+.content > mat-card {
+  width: 200px;
+}
 /* @media screen and .buttons(max-width:600px); */
 @media screen and (max-width: 800px) {
   .button-category,
