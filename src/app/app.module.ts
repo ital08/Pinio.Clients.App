@@ -11,6 +11,7 @@ import { SharedModule } from "./shared/shared.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { SubNavComponent } from "./layout/sub-nav/sub-nav.component";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NotFoundComponent } from "@shared/components/not-found/not-found.compon
 
     // app
     AppRoutingModule,
-
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
   ],
   providers: [],
