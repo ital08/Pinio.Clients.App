@@ -1,0 +1,96 @@
+.button-category {
+  background-color: #4f4e4e;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.flex-container-main {
+  display: flex;
+}
+.product-container {
+  background-color: #ed691e;
+  border-radius: 20px;
+}
+.button-promotion,
+.button-news,
+.button-aboutus,
+.button-faq {
+  background-color: #4f4e4e;
+  height: 80px;
+  max-height: 100px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+.flex-container {
+  max-width: 300xp;
+}
+.category-button {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  margin: 20px;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ed691e;
+}
+.secondary-button {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  background-color: #e9e9e9;
+  margin: 20px;
+  color: black;
+  height: 40px;
+  border-radius: 20px;
+}
+.mat-toolbar {
+  width: 100%;
+}
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}
+/* @media screen and .buttons(max-width:600px); */
+@media screen and (max-width: 800px) {
+  .button-category,
+  .button-promotion,
+  .button-aboutus,
+  .button-news,
+  .button-faq {
+    cursor: pointer;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    height: 80%;
+  }
+  .category-button,
+  .secondary-button {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+}
+/* Overlays */
+.example-list {
+  width: 200px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.example-list > li {
+  list-style-type: none;
+  border-bottom: solid 1px #8b8b8b;
+  padding: 8px 0;
+}
+
+.example-list > li:last-child {
+  border-bottom: none;
+}

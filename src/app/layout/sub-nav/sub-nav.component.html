@@ -1,0 +1,67 @@
+<div style="background-color: #4f4e4e">
+  <div class="button-category">
+    <a
+      (click)="isOpen = !isOpen"
+      cdkOverlayOrigin
+      #trigger="cdkOverlayOrigin"
+      style="text-decoration: none"
+    >
+      <div class="category-button" style="cursor: pointer">
+        <p>CATEGORIAS</p>
+      </div>
+    </a>
+    <!-- This template displays the overlay content and is connected to the button -->
+    <ng-template
+      cdkConnectedOverlay
+      [cdkConnectedOverlayHasBackdrop]="true"
+      [cdkConnectedOverlayOrigin]="trigger"
+      [cdkConnectedOverlayOpen]="isOpen"
+      (backdropClick)="toggleDropdown()"
+    >
+      <div class="example-list">
+        <div *ngIf="categories">
+          <div class="flex-container-main mt-3">
+            <ng-container *ngFor="let item of categories">
+              <div>
+                <a style="text-decoration: none" href="{{ item.url }}">{{
+                  item.name
+                }}</a>
+              </div>
+              <div>
+                <p>{{ item.description }}</p>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div class="button-promotion">
+    <a style="text-decoration: none" href="/promo">
+      <div class="secondary-button">
+        <p>PROMOCIONES</p>
+      </div>
+    </a>
+  </div>
+  <div class="button-news">
+    <a style="text-decoration: none" href="/news">
+      <div class="secondary-button">
+        <p>NOVEDADES</p>
+      </div>
+    </a>
+  </div>
+  <div class="button-aboutus">
+    <a style="text-decoration: none" href="/about">
+      <div class="secondary-button">
+        <p>ABOUT US</p>
+      </div>
+    </a>
+  </div>
+  <div class="button-faq">
+    <a style="text-decoration: none" href="/faq">
+      <div class="secondary-button">
+        <p>FAQ</p>
+      </div>
+    </a>
+  </div>
+</div>

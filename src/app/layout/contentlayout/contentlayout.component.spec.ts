@@ -1,16 +1,29 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {
+  MatFormField,
+  MatFormFieldModule,
+  MatInputModule,
+  MatLabel,
+} from "@angular/material";
+import { SharedModule } from "@shared/shared.module";
+import { HeaderComponent } from "../header/header.component";
 
-import { ContentlayoutComponent } from './contentlayout.component';
+import { ContentlayoutComponent } from "./contentlayout.component";
 
-describe('ContentlayoutComponent', () => {
+describe("ContentlayoutComponent", () => {
   let component: ContentlayoutComponent;
   let fixture: ComponentFixture<ContentlayoutComponent>;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentlayoutComponent ]
-    })
-    .compileComponents();
+      declarations: [ContentlayoutComponent],
+      imports: [HeaderComponent],
+      providers: [
+        HeaderComponent,
+        SharedModule,
+        MatFormFieldModule,
+        MatInputModule,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +32,7 @@ describe('ContentlayoutComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
