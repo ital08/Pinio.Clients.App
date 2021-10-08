@@ -47,7 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"main\">\n  <div class=\"mat-app-background\">\n    <app-header></app-header>\n\n    <div class=\"container\">\n      <router-outlet></router-outlet>\n    </div>\n\n    <app-footer></app-footer>\n  </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"main\">\r\n  <div class=\"mat-app-background\">\r\n    <app-header></app-header>\r\n    <app-sub-nav></app-sub-nav>\r\n    <div>\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -59,7 +59,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"footer\">\n  <p>footer works!</p>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"footer\">\r\n  <p>footer works!</p>\r\n</div>\r\n";
     /***/
   },
 
@@ -71,7 +71,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"bg-nav\">\n  <div class=\"left\">\n    <div class=\"left-container\">\n      <a href=\"javascript:void(0)\" (click)=\"home()\"\n        ><span class=\"logo\"></span\n      ></a>\n    </div>\n  </div>\n\n  <div class=\"main\">\n    <div class=\"search-section\">\n      <mat-form-field appearance=\"outline\">\n        <mat-label>Buscar productos</mat-label>\n        <input matInput />\n      </mat-form-field>\n    </div>\n  </div>\n\n  <div class=\"right\">\n    <div class=\"user-section\">\n      <div>\n        <a style=\"text-decoration: none\" href=\"\">\n          <div class=\"avatar-container\">\n            <span class=\"avatar-logo\"></span>\n          </div>\n        </a>\n      </div>\n      <div class=\"profile-section\">\n        <div>\n          <a style=\"text-decoration: none\" href=\"\">\n            <div class=\"login-text\">\n              <p>Log In</p>\n            </div>\n          </a>\n        </div>\n        <div>\n          <a style=\"text-decoration: none\" href=\"\">\n            <div class=\"register-text\">\n              <p>Register</p>\n            </div></a\n          >\n        </div>\n      </div>\n    </div>\n    <div class=\"shopping-cart\">\n      <a style=\"text-decoration: none\" href=\"\">\n        <div class=\"cart-container\">\n          <span class=\"cart-logo\"></span>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"javascript:void(0)\" (click)=\"home()\"\r\n        ><span class=\"logo\"></span\r\n      ></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput />\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/sub-nav/sub-nav.component.html": function node_modulesRawLoaderDistCjsJsSrcAppLayoutSubNavSubNavComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div style=\"background-color: #4f4e4e\">\r\n  <div class=\"button-category\">\r\n    <a\r\n      (click)=\"isOpen = !isOpen\"\r\n      cdkOverlayOrigin\r\n      #trigger=\"cdkOverlayOrigin\"\r\n      style=\"text-decoration: none\"\r\n    >\r\n      <div class=\"category-button\" style=\"cursor: pointer\">\r\n        <p>CATEGORIAS</p>\r\n      </div>\r\n    </a>\r\n    <!-- This template displays the overlay content and is connected to the button -->\r\n    <ng-template\r\n      cdkConnectedOverlay\r\n      [cdkConnectedOverlayHasBackdrop]=\"true\"\r\n      [cdkConnectedOverlayOrigin]=\"trigger\"\r\n      [cdkConnectedOverlayOpen]=\"isOpen\"\r\n      (backdropClick)=\"toggleDropdown()\"\r\n    >\r\n      <div class=\"example-list\">\r\n        <div *ngIf=\"categories\">\r\n          <div class=\"flex-container-main mt-3\">\r\n            <ng-container *ngFor=\"let item of categories\">\r\n              <div>\r\n                <a style=\"text-decoration: none\" href=\"{{ item.url }}\">{{\r\n                  item.name\r\n                }}</a>\r\n              </div>\r\n              <div>\r\n                <p>{{ item.description }}</p>\r\n              </div>\r\n            </ng-container>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </ng-template>\r\n  </div>\r\n  <div class=\"button-promotion\">\r\n    <a style=\"text-decoration: none\" href=\"/promo\">\r\n      <div class=\"secondary-button\">\r\n        <p>PROMOCIONES</p>\r\n      </div>\r\n    </a>\r\n  </div>\r\n  <div class=\"button-news\">\r\n    <a style=\"text-decoration: none\" href=\"/news\">\r\n      <div class=\"secondary-button\">\r\n        <p>NOVEDADES</p>\r\n      </div>\r\n    </a>\r\n  </div>\r\n  <div class=\"button-aboutus\">\r\n    <a style=\"text-decoration: none\" href=\"/about\">\r\n      <div class=\"secondary-button\">\r\n        <p>ABOUT US</p>\r\n      </div>\r\n    </a>\r\n  </div>\r\n  <div class=\"button-faq\">\r\n    <a style=\"text-decoration: none\" href=\"/faq\">\r\n      <div class=\"secondary-button\">\r\n        <p>FAQ</p>\r\n      </div>\r\n    </a>\r\n  </div>\r\n</div>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/components/not-found/not-found.component.html": function node_modulesRawLoaderDistCjsJsSrcAppSharedComponentsNotFoundNotFoundComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"not-found-page\">\r\n  <div class=\"h-100 row align-items-center justify-content-center\">\r\n    <div class=\"title-not-found text-center\">\r\n      <a href=\"/home\">\r\n        <img\r\n          class=\"img-logo mb-4\"\r\n          style=\"width: 120px\"\r\n          src=\"../../../../assets/logo/logo_home.png\"\r\n        />\r\n      </a>\r\n      <h1>404</h1>\r\n      <p>Página no encontrada</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -703,7 +727,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @shared/components/not-found/not-found.component */
+    "./src/app/shared/components/not-found/not-found.component.ts");
+    /* harmony import */
+
+
+    var _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./layout/contentlayout/contentlayout.component */
     "./src/app/layout/contentlayout/contentlayout.component.ts");
 
@@ -714,7 +744,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // },
     {
       path: "",
-      component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_3__["ContentlayoutComponent"],
+      component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_4__["ContentlayoutComponent"],
       children: [{
         path: "",
         loadChildren: function loadChildren() {
@@ -727,6 +757,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }]
+    }, {
+      path: "404",
+      component: _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__["NotFoundComponent"]
+    }, {
+      path: "**",
+      redirectTo: "/404"
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -872,13 +908,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
+    /* harmony import */
+
+
+    var _layout_sub_nav_sub_nav_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./layout/sub-nav/sub-nav.component */
+    "./src/app/layout/sub-nav/sub-nav.component.ts");
+    /* harmony import */
+
+
+    var _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! @shared/components/not-found/not-found.component */
+    "./src/app/shared/components/not-found/not-found.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _layout_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_7__["ContentlayoutComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _layout_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_7__["ContentlayoutComponent"], _layout_sub_nav_sub_nav_component__WEBPACK_IMPORTED_MODULE_11__["SubNavComponent"], _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__["NotFoundComponent"]],
       imports: [// angular
       _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], // 3rd party
       // core & shared
@@ -1135,6 +1183,143 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/layout/sub-nav/sub-nav.component.css": function srcAppLayoutSubNavSubNavComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".button-category {\r\n  background-color: #4f4e4e;\r\n  height: 80px;\r\n  max-height: 100px;\r\n  float: left;\r\n  width: 20%; /* The width is 20%, by default */\r\n}\r\n\r\n.flex-container-main {\r\n  display: flex;\r\n}\r\n\r\n.product-container {\r\n  background-color: #ed691e;\r\n  border-radius: 20px;\r\n}\r\n\r\n.button-promotion,\r\n.button-news,\r\n.button-aboutus,\r\n.button-faq {\r\n  background-color: #4f4e4e;\r\n  height: 80px;\r\n  max-height: 100px;\r\n  float: left;\r\n  width: 20%; /* The width is 20%, by default */\r\n}\r\n\r\n.flex-container {\r\n  max-width: 300xp;\r\n}\r\n\r\n.category-button {\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  line-height: 40px;\r\n  margin: 20px;\r\n  color: white;\r\n  height: 40px;\r\n  border-radius: 20px;\r\n  background-color: #ed691e;\r\n}\r\n\r\n.secondary-button {\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  line-height: 40px;\r\n  background-color: #e9e9e9;\r\n  margin: 20px;\r\n  color: black;\r\n  height: 40px;\r\n  border-radius: 20px;\r\n}\r\n\r\n.mat-toolbar {\r\n  width: 100%;\r\n}\r\n\r\n.content {\r\n  padding: 16px;\r\n}\r\n\r\n.content > mat-card {\r\n  width: 200px;\r\n}\r\n\r\n/* @media screen and .buttons(max-width:600px); */\r\n\r\n@media screen and (max-width: 800px) {\r\n  .button-category,\r\n  .button-promotion,\r\n  .button-aboutus,\r\n  .button-news,\r\n  .button-faq {\r\n    cursor: pointer;\r\n    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */\r\n    height: 80%;\r\n  }\r\n  .category-button,\r\n  .secondary-button {\r\n    margin-left: 10%;\r\n    margin-right: 10%;\r\n    width: 80%;\r\n  }\r\n}\r\n\r\n/* Overlays */\r\n\r\n.example-list {\r\n  width: 200px;\r\n  border: solid 1px #ccc;\r\n  border-radius: 5px;\r\n  background: #fff;\r\n  text-align: center;\r\n  padding: 10px;\r\n  margin: 0;\r\n}\r\n\r\n.example-list > li {\r\n  list-style-type: none;\r\n  border-bottom: solid 1px #8b8b8b;\r\n  padding: 8px 0;\r\n}\r\n\r\n.example-list > li:last-child {\r\n  border-bottom: none;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L3N1Yi1uYXYvc3ViLW5hdi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsV0FBVztFQUNYLFVBQVUsRUFBRSxpQ0FBaUM7QUFDL0M7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsbUJBQW1CO0FBQ3JCOztBQUNBOzs7O0VBSUUseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsV0FBVztFQUNYLFVBQVUsRUFBRSxpQ0FBaUM7QUFDL0M7O0FBQ0E7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIseUJBQXlCO0FBQzNCOztBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0QixpQkFBaUI7RUFDakIseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixZQUFZO0VBQ1osWUFBWTtFQUNaLG1CQUFtQjtBQUNyQjs7QUFDQTtFQUNFLFdBQVc7QUFDYjs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFDQSxpREFBaUQ7O0FBQ2pEO0VBQ0U7Ozs7O0lBS0UsZUFBZTtJQUNmLFdBQVcsRUFBRSw2REFBNkQ7SUFDMUUsV0FBVztFQUNiO0VBQ0E7O0lBRUUsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixVQUFVO0VBQ1o7QUFDRjs7QUFDQSxhQUFhOztBQUNiO0VBQ0UsWUFBWTtFQUNaLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsU0FBUztBQUNYOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLGdDQUFnQztFQUNoQyxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvbGF5b3V0L3N1Yi1uYXYvc3ViLW5hdi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ1dHRvbi1jYXRlZ29yeSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzRmNGU0ZTtcclxuICBoZWlnaHQ6IDgwcHg7XHJcbiAgbWF4LWhlaWdodDogMTAwcHg7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbiAgd2lkdGg6IDIwJTsgLyogVGhlIHdpZHRoIGlzIDIwJSwgYnkgZGVmYXVsdCAqL1xyXG59XHJcblxyXG4uZmxleC1jb250YWluZXItbWFpbiB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG4ucHJvZHVjdC1jb250YWluZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlZDY5MWU7XHJcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcclxufVxyXG4uYnV0dG9uLXByb21vdGlvbixcclxuLmJ1dHRvbi1uZXdzLFxyXG4uYnV0dG9uLWFib3V0dXMsXHJcbi5idXR0b24tZmFxIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNGY0ZTRlO1xyXG4gIGhlaWdodDogODBweDtcclxuICBtYXgtaGVpZ2h0OiAxMDBweDtcclxuICBmbG9hdDogbGVmdDtcclxuICB3aWR0aDogMjAlOyAvKiBUaGUgd2lkdGggaXMgMjAlLCBieSBkZWZhdWx0ICovXHJcbn1cclxuLmZsZXgtY29udGFpbmVyIHtcclxuICBtYXgtd2lkdGg6IDMwMHhwO1xyXG59XHJcbi5jYXRlZ29yeS1idXR0b24ge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIGxpbmUtaGVpZ2h0OiA0MHB4O1xyXG4gIG1hcmdpbjogMjBweDtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgaGVpZ2h0OiA0MHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDIwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VkNjkxZTtcclxufVxyXG4uc2Vjb25kYXJ5LWJ1dHRvbiB7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbiAgbGluZS1oZWlnaHQ6IDQwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U5ZTllOTtcclxuICBtYXJnaW46IDIwcHg7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG4gIGhlaWdodDogNDBweDtcclxuICBib3JkZXItcmFkaXVzOiAyMHB4O1xyXG59XHJcbi5tYXQtdG9vbGJhciB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuLmNvbnRlbnQge1xyXG4gIHBhZGRpbmc6IDE2cHg7XHJcbn1cclxuXHJcbi5jb250ZW50ID4gbWF0LWNhcmQge1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG4vKiBAbWVkaWEgc2NyZWVuIGFuZCAuYnV0dG9ucyhtYXgtd2lkdGg6NjAwcHgpOyAqL1xyXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA4MDBweCkge1xyXG4gIC5idXR0b24tY2F0ZWdvcnksXHJcbiAgLmJ1dHRvbi1wcm9tb3Rpb24sXHJcbiAgLmJ1dHRvbi1hYm91dHVzLFxyXG4gIC5idXR0b24tbmV3cyxcclxuICAuYnV0dG9uLWZhcSB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJTsgLyogVGhlIHdpZHRoIGlzIDEwMCUsIHdoZW4gdGhlIHZpZXdwb3J0IGlzIDgwMHB4IG9yIHNtYWxsZXIgKi9cclxuICAgIGhlaWdodDogODAlO1xyXG4gIH1cclxuICAuY2F0ZWdvcnktYnV0dG9uLFxyXG4gIC5zZWNvbmRhcnktYnV0dG9uIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMCU7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDEwJTtcclxuICAgIHdpZHRoOiA4MCU7XHJcbiAgfVxyXG59XHJcbi8qIE92ZXJsYXlzICovXHJcbi5leGFtcGxlLWxpc3Qge1xyXG4gIHdpZHRoOiAyMDBweDtcclxuICBib3JkZXI6IHNvbGlkIDFweCAjY2NjO1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICBiYWNrZ3JvdW5kOiAjZmZmO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIG1hcmdpbjogMDtcclxufVxyXG5cclxuLmV4YW1wbGUtbGlzdCA+IGxpIHtcclxuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XHJcbiAgYm9yZGVyLWJvdHRvbTogc29saWQgMXB4ICM4YjhiOGI7XHJcbiAgcGFkZGluZzogOHB4IDA7XHJcbn1cclxuXHJcbi5leGFtcGxlLWxpc3QgPiBsaTpsYXN0LWNoaWxkIHtcclxuICBib3JkZXItYm90dG9tOiBub25lO1xyXG59XHJcbiJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/layout/sub-nav/sub-nav.component.ts": function srcAppLayoutSubNavSubNavComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SubNavComponent", function () {
+      return SubNavComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var SubNavComponent = /*#__PURE__*/function () {
+      function SubNavComponent() {
+        _classCallCheck(this, SubNavComponent);
+
+        this.categories = [{
+          categoryId: 1,
+          name: "Televisores",
+          items: 1,
+          description: "Tv y celulares",
+          url: "/home"
+        }]; // overlay
+
+        this.isOpen = false;
+      }
+
+      _createClass(SubNavComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "toggleDropdown",
+        value: function toggleDropdown() {
+          this.isOpen = false;
+        }
+      }]);
+
+      return SubNavComponent;
+    }();
+
+    SubNavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: "app-sub-nav",
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./sub-nav.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/sub-nav/sub-nav.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./sub-nav.component.css */
+      "./src/app/layout/sub-nav/sub-nav.component.css"))["default"]]
+    })], SubNavComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/shared/components/not-found/not-found.component.css": function srcAppSharedComponentsNotFoundNotFoundComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".not-found-page {\r\n  height: 100%;\r\n  background: white;\r\n  color: black;\r\n}\r\n\r\n.row {\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  font-weight: bold;\r\n}\r\n\r\np {\r\n  font-size: 16px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxTQUFTO0FBQ1g7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5vdC1mb3VuZC1wYWdlIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG4ucm93IHtcclxuICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbmgxIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxucCB7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcbiJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/shared/components/not-found/not-found.component.ts": function srcAppSharedComponentsNotFoundNotFoundComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NotFoundComponent", function () {
+      return NotFoundComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var NotFoundComponent = /*#__PURE__*/function () {
+      function NotFoundComponent() {
+        _classCallCheck(this, NotFoundComponent);
+      }
+
+      _createClass(NotFoundComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return NotFoundComponent;
+    }();
+
+    NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-not-found',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./not-found.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/components/not-found/not-found.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./not-found.component.css */
+      "./src/app/shared/components/not-found/not-found.component.css"))["default"]]
+    })], NotFoundComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/shared/material.module.ts": function srcAppSharedMaterialModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
@@ -1327,8 +1512,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [],
-      imports: [_angular_material__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_5__["MatSelectModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTabsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatProgressSpinnerModule"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_14__["MatChipsModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_7__["MatCheckboxModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_15__["MatCardModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_8__["MatListModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIconModule"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_17__["MatTooltipModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_18__["MatSnackBarModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_16__["MatSlideToggleModule"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_19__["MatDividerModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_20__["MatDatepickerModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatNativeDateModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_21__["MatExpansionModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_22__["MatRadioModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatRippleModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_24__["OverlayModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_25__["MatAutocompleteModule"], _angular_material_tree__WEBPACK_IMPORTED_MODULE_26__["MatTreeModule"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_27__["MatStepperModule"]],
-      exports: [_angular_material__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_5__["MatSelectModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTabsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatProgressSpinnerModule"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_14__["MatChipsModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_7__["MatCheckboxModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_15__["MatCardModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_8__["MatListModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIconModule"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_17__["MatTooltipModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_18__["MatSnackBarModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_16__["MatSlideToggleModule"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_19__["MatDividerModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_20__["MatDatepickerModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatNativeDateModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_21__["MatExpansionModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_22__["MatRadioModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatRippleModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_24__["OverlayModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_25__["MatAutocompleteModule"], _angular_material_tree__WEBPACK_IMPORTED_MODULE_26__["MatTreeModule"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_27__["MatStepperModule"]]
+      imports: [_angular_material__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_5__["MatSelectModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTabsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatProgressSpinnerModule"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_14__["MatChipsModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_7__["MatCheckboxModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_15__["MatCardModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_8__["MatListModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIconModule"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_17__["MatTooltipModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_18__["MatSnackBarModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_16__["MatSlideToggleModule"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_19__["MatDividerModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_20__["MatDatepickerModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatNativeDateModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_21__["MatExpansionModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_22__["MatRadioModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatRippleModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_24__["OverlayModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_25__["MatAutocompleteModule"], _angular_material_tree__WEBPACK_IMPORTED_MODULE_26__["MatTreeModule"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_27__["MatStepperModule"], _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatPaginatorModule"]],
+      exports: [_angular_material__WEBPACK_IMPORTED_MODULE_28__["MatPaginatorModule"], _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_4__["MatMenuModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_5__["MatSelectModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTabsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatProgressSpinnerModule"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_14__["MatChipsModule"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_7__["MatCheckboxModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_15__["MatCardModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_8__["MatListModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIconModule"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_17__["MatTooltipModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_18__["MatSnackBarModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_16__["MatSlideToggleModule"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_19__["MatDividerModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_20__["MatDatepickerModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatNativeDateModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_21__["MatExpansionModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_22__["MatRadioModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatRippleModule"], _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_24__["OverlayModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_25__["MatAutocompleteModule"], _angular_material_tree__WEBPACK_IMPORTED_MODULE_26__["MatTreeModule"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_27__["MatStepperModule"]]
     })], MaterialModule);
     /***/
   },
