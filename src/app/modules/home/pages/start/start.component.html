@@ -28,9 +28,14 @@
             MARCA
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <section class="example-section">
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
+            </section>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -45,9 +50,17 @@
             PRECIO
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <section class="example-section">
+              <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1000"
+                step="1000"
+                min="0"
+                max="10000"
+                aria-label="units"
+              ></mat-slider>
+            </section>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -62,67 +75,36 @@
             ENVIO
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
-              />
-              <label class="custom-control-label" for="customCheck1"
-                >Gratis</label
-              >
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
-              />
-              <label class="custom-control-label" for="customCheck1"
-                >Envio Plus</label
-              >
-            </div>
+            <section class="example-section">
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
+            </section>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
+            href="#"
             id="navbarDropdownMenuLink"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
           >
-            ORDENAR
+            ORDENAR POR
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
-              />
-              <label class="custom-control-label" for="customCheck1"
-                >Mayor a Menor</label
-              >
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
-              />
-              <label class="custom-control-label" for="customCheck1"
-                >Menor a Mayor</label
-              >
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
-              />
-              <label class="custom-control-label" for="customCheck1">A-Z</label>
-            </div>
+            <section class="example-section">
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
+            </section>
           </div>
         </li>
       </ul>
@@ -130,55 +112,33 @@
   </nav>
   <!--  -->
 </div>
-<hr width="100%" align="right" color="#ED691E" />
 <div>
-  <!-- header -->
-  <!-- <div style="background-color: #4f4e4e">
-    <div class="button-category">
-      <a style="text-decoration: none" href="">
-        <div class="category-button">
-          <p>CATEGORIAS</p>
-        </div>
-      </a>
-    </div>
-    <div class="button-promotion">
-      <a style="text-decoration: none" href="">
-        <div class="secondary-button">
-          <p>PROMOCIONES</p>
-        </div>
-      </a>
-    </div>
-    <div class="button-news">
-      <a style="text-decoration: none" href="">
-        <div class="secondary-button">
-          <p>NOVEDADES</p>
-        </div>
-      </a>
-    </div>
-    <div class="button-aboutus">
-      <a style="text-decoration: none" href="">
-        <div class="secondary-button">
-          <p>ABOUT US</p>
-        </div>
-      </a>
-    </div>
-    <div class="button-faq">
-      <a style="text-decoration: none" href="">
-        <div class="secondary-button">
-          <p>FAQ</p>
-        </div>
-      </a>
-    </div>
-  </div> -->
   <div class="products">
     <div *ngIf="products">
       <div class="flex-container-main mt-3">
-        <ng-container *ngFor="let item of products">
-          <div class="product-container">
-            <p>{{ item.name }}</p>
-            <p>{{ item.description }}</p>
-            <p>{{ item.price }}</p>
-          </div>
+        <ng-container style="display: flex" *ngFor="let item of products">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{ item.name }}</mat-card-title>
+              <mat-card-subtitle style="color: red"
+                >S/. {{ item.price }}</mat-card-subtitle
+              >
+            </mat-card-header>
+            <img
+              style="padding: 10px"
+              mat-card-image
+              width="10px"
+              src="{{ item.url }}"
+              alt="{{ item.name }}"
+            />
+            <mat-card-content>
+              <p>{{ item.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
         </ng-container>
       </div>
     </div>

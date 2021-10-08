@@ -4,3 +4,6 @@
 .mat-app-background {
   height: 100%;
 }
+.mat-app-footer {
+  background-color: #313030;
+}
