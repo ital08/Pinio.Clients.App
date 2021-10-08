@@ -38,6 +38,7 @@ import {
 @NgModule({
   declarations: [],
   imports: [
+    MatSidenavModule,
     MatFormFieldModule,
     MatButtonModule,
     MatToolbarModule,
@@ -69,6 +70,7 @@ import {
     MatPaginatorModule,
   ],
   exports: [
+    MatSidenavModule,
     MatPaginatorModule,
     MatFormFieldModule,
     MatButtonModule,

@@ -13,6 +13,7 @@ export const routes: Routes = [
     path: "home",
     component: StartComponent,
   },
+  { path: "home/:category", component: StartComponent },
 ];
 
 @NgModule({

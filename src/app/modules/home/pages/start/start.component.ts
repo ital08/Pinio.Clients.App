@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router, ParamMap } from "@angular/router";
+import { Subscription } from "rxjs";
 import { FindProduct } from "src/app/data/models/response/product.model";
 @Component({
   selector: "app-start",
@@ -6,6 +8,8 @@ import { FindProduct } from "src/app/data/models/response/product.model";
   styleUrls: ["./start.component.css"],
 })
 export class StartComponent implements OnInit {
+  private routeSub: Subscription;
+  category: string;
   products: FindProduct[] = [
     {
       productId: 100001,
@@ -26,7 +30,11 @@ export class StartComponent implements OnInit {
       price: 3000,
     },
   ];
-  constructor() {}
+  constructor(private route: ActivatedRoute, public router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.routeSub = this.route.params.subscribe((params) => {
+      this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
+    });
+  }
 }
