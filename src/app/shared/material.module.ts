@@ -28,16 +28,30 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatTreeModule } from "@angular/material/tree";
 import { MatStepperModule } from "@angular/material/stepper";
 import {
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
   MatFormField,
   MatFormFieldModule,
+  MatGridListModule,
   MatPaginatorModule,
+  MatProgressBarModule,
+  MatSliderModule,
+  MatSortModule,
+  MatTableModule,
 } from "@angular/material";
+import { A11yModule } from "@angular/cdk/a11y";
+import { CdkStepperModule } from "@angular/cdk/stepper";
+import { PortalModule } from "@angular/cdk/portal";
+import { ScrollingModule } from "@angular/cdk/scrolling";
 
 // Others
 
 @NgModule({
   declarations: [],
   imports: [
+    MatFormFieldModule,
+    MatSidenavModule,
     MatFormFieldModule,
     MatButtonModule,
     MatToolbarModule,
@@ -69,6 +83,7 @@ import {
     MatPaginatorModule,
   ],
   exports: [
+    MatSidenavModule,
     MatPaginatorModule,
     MatFormFieldModule,
     MatButtonModule,
@@ -98,6 +113,19 @@ import {
     MatAutocompleteModule,
     MatTreeModule,
     MatStepperModule,
+    MatFormFieldModule,
+    A11yModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonToggleModule,
+    MatGridListModule,
+    MatProgressBarModule,
+    MatSliderModule,
+    MatSortModule,
+    MatTableModule,
+    PortalModule,
+    ScrollingModule,
   ],
 })
 export class MaterialModule {}

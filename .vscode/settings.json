@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/3c11a5a8-3050-4cd1-807a-1d09b984aea2/resourceGroups/SI505V/providers/Microsoft.Web/sites/apppinioclientsdev",
+  "appService.deploySubpath": "dist\\ClientsApp"
+}

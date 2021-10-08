@@ -6,6 +6,7 @@
   width: 20%; /* The width is 20%, by default */
 }
 .products {
+  padding-bottom: 10px;
 }
 .flex-container-main {
   display: flex;
@@ -73,4 +74,17 @@
     margin-right: 10%;
     width: 80%;
   }
+}
+/***section***/
+.example-section {
+  margin-left: 20px;
+}
+mat-slider {
+  width: 300px;
+}
+/**cards**/
+.example-card {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
