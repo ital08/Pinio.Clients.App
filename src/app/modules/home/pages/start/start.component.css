@@ -104,4 +104,42 @@ mat-slider {
 .example-card {
   width: 120%;
   margin-bottom: 10px;
+  height: 350px;
+}
+/**grid**/
+@media screen and (max-width: 1920px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 1420px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 1020px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 620px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 410px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Create 2 columns and auto-place rows */
+  }
 }
