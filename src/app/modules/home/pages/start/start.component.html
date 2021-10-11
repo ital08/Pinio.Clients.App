@@ -112,18 +112,16 @@
   </nav>
   <!--  -->
 </div>
+<!-- productos -->
 <div>
   <div class="products">
     <div *ngIf="products">
-      <div class="flex-container-main mt-3">
-        <ng-container style="display: flex" *ngFor="let item of products">
+      <div class="grid flex-container-main mt-3">
+        <ng-container
+          style="grid-auto-columns: auto"
+          *ngFor="let item of products"
+        >
           <mat-card class="example-card">
-            <mat-card-header>
-              <mat-card-title>{{ item.name }}</mat-card-title>
-              <mat-card-subtitle style="color: red"
-                >S/. {{ item.price }}</mat-card-subtitle
-              >
-            </mat-card-header>
             <img
               style="padding: 10px"
               mat-card-image
@@ -131,8 +129,31 @@
               src="{{ item.url }}"
               alt="{{ item.name }}"
             />
+            <mat-card-header
+              style="padding: 0%; margin: -15px; justify-content: left"
+            >
+              <mat-card-title>
+                <div>
+                  <p
+                    style="
+                      width: 15ch;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                    "
+                  >
+                    {{ item.name }}
+                  </p>
+                </div>
+              </mat-card-title>
+              <mat-card-subtitle style="color: red"
+                >S/. {{ item.price }}</mat-card-subtitle
+              >
+            </mat-card-header>
             <mat-card-content>
-              <p>{{ item.description }}</p>
+              <div>
+                <p style="color: #868686">Unidades:{{ item.stock }}</p>
+              </div>
             </mat-card-content>
             <mat-card-actions>
               <button mat-button>LIKE</button>
@@ -143,5 +164,23 @@
       </div>
     </div>
   </div>
-  <!-- fin Contenido -->
 </div>
+<!-- fin productos -->
+<!-- paginator -->
+
+<mat-paginator
+  [length]="length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="pageEvent = $event"
+  aria-label="Select page"
+>
+</mat-paginator>
+
+<div *ngIf="pageEvent">
+  <h5>Page Change Event Properties</h5>
+  <div>List length: {{ pageEvent.length }}</div>
+  <div>Page size: {{ pageEvent.pageSize }}</div>
+  <div>Page index: {{ pageEvent.pageIndex }}</div>
+</div>
+<!-- fin paginator -->

@@ -1,0 +1,48 @@
+<div></div>
+<div *ngIf="products">
+  <div class="flex-container-main mt-3">
+    <ng-container style="grid-auto-columns: auto" *ngFor="let item of products">
+      <div style="background-color: white">
+        <div class="products-router-container">
+          <a
+            style="text-decoration: none"
+            href="category/{{ item.category }}"
+            >{{ item.category }}</a
+          >
+          <span class="material-icons"> arrow_forward_ios </span>
+          <a style="text-decoration: none" href="">{{ item.brand }}</a>
+          <span class="material-icons"> arrow_forward_ios </span>
+          <a
+            style="text-decoration: none"
+            href="product/{{ item.productId }}"
+            >{{ item.name }}</a
+          >
+        </div>
+        <div style="background-color: #ed691e; height: 1vh"></div>
+        <div class="products-details-container">
+          <!-- /***left***/ -->
+          <div class="box1">
+            <img
+              class="product-image"
+              alt="{{ item.name }}"
+              src="{{ item.url }}"
+            />
+          </div>
+          <!-- end left -->
+          <!-- right -->
+          <div>
+            <div class="products-details">
+              <h3>{{ item.name }}</h3>
+              <p>Stock:&nbsp;{{ item.stock }}</p>
+              <p>Marca:&nbsp;{{ item.brand }}</p>
+              <p>Descripcion:&nbsp;{{ item.description }}</p>
+              <p style="color: red">Precio:&nbsp;S/.{{ item.price }}</p>
+            </div>
+            <button>pal carrito</button>
+          </div>
+          <!-- end right -->
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
