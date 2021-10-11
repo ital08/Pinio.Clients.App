@@ -74,6 +74,9 @@
     margin-right: 10%;
     width: 80%;
   }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
 }
 /***section***/
 .example-section {
@@ -87,4 +90,56 @@ mat-slider {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
+}
+/**paginator**/
+.mat-form-field {
+  margin-right: 12px;
+}
+/**grid**/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+}
+/**example card**/
+.example-card {
+  width: 120%;
+  margin-bottom: 10px;
+  height: 350px;
+}
+/**grid**/
+@media screen and (max-width: 1920px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 1420px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 1020px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 620px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create 2 columns and auto-place rows */
+  }
+}
+@media screen and (max-width: 410px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Create 2 columns and auto-place rows */
+  }
 }

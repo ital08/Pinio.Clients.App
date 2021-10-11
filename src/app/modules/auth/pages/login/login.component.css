@@ -1,0 +1,50 @@
+.container-main {
+  padding: 10vh;
+  padding-top: 6vh;
+  padding-bottom: 5vh;
+}
+.img-logus {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  filter: contrast(100%);
+  filter: drop-shadow(0px 0px 5px white);
+  width: 40%;
+  color: black;
+  text-align: center;
+}
+.box1 {
+  background-color: #4f4e4e;
+  border-radius: 20px;
+  display: flex;
+}
+.box2 {
+  height: 550px;
+  background: url("https://us.123rf.com/450wm/nejron/nejron1808/nejron180800024/105668533-bella-mujer-con-tarjeta-de-cr%C3%A9dito-para-compras-online.jpg?ver=6");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 0 0 20px;
+  background-position: center center;
+  padding: 20%;
+  filter: contrast(75%);
+  background-color: #ed691e;
+}
+.footer {
+  margin-top: 20px;
+}
+.box3 {
+}
+@media screen and (max-width: 800px) {
+  .box1 {
+    display: block;
+  }
+  .box2 {
+    border-radius: 20px 20px 0 0;
+    height: 200px;
+  }
+  .img-logus {
+    left: 5px;
+    top: 5px;
+    width: 20%;
+  }
+}

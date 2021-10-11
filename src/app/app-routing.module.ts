@@ -1,14 +1,10 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
+import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 import { ContentlayoutComponent } from "./layout/contentlayout/contentlayout.component";
 
 const routes: Routes = [
-  // {
-  //   path: "",
-  //   redirectTo: "home/",
-  //   pathMatch: "full",
-  // },
   {
     path: "",
     component: ContentlayoutComponent, // Should be replaced with actual auth guard
@@ -19,6 +15,12 @@ const routes: Routes = [
           import("@modules/home/home.module").then((m) => m.HomeModule),
       },
     ],
+  },
+  {
+    path: "auth",
+    component: AuthlayoutComponent,
+    loadChildren: () =>
+      import("./modules/auth/auth.module").then((m) => m.AuthModule),
   },
   { path: "404", component: NotFoundComponent },
   { path: "**", redirectTo: "/404" },

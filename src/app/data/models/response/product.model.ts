@@ -7,4 +7,5 @@ export class FindProduct {
   description: string;
   price: number;
   url: string;
+  category: string;
 }

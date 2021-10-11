@@ -44,12 +44,14 @@ import { A11yModule } from "@angular/cdk/a11y";
 import { CdkStepperModule } from "@angular/cdk/stepper";
 import { PortalModule } from "@angular/cdk/portal";
 import { ScrollingModule } from "@angular/cdk/scrolling";
+import { FormsModule } from "@angular/forms";
 
 // Others
 
 @NgModule({
   declarations: [],
   imports: [
+    MatPaginatorModule,
     MatFormFieldModule,
     MatSidenavModule,
     MatFormFieldModule,
@@ -81,6 +83,7 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
     MatTreeModule,
     MatStepperModule,
     MatPaginatorModule,
+    FormsModule,
   ],
   exports: [
     MatSidenavModule,
@@ -126,6 +129,7 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
     MatTableModule,
     PortalModule,
     ScrollingModule,
+    FormsModule,
   ],
 })
 export class MaterialModule {}
