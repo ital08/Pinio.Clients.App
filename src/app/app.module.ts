@@ -12,7 +12,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { SubNavComponent } from "./layout/sub-nav/sub-nav.component";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { ProductsComponent } from "./modules/home/pages/products/products.component";
+import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import { ProductsComponent } from "./modules/home/pages/products/products.compon
     ContentlayoutComponent,
     SubNavComponent,
     NotFoundComponent,
+    AuthlayoutComponent,
   ],
   imports: [
     // angular

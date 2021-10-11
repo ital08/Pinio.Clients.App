@@ -40,6 +40,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/authlayout/authlayout.component.html": function node_modulesRawLoaderDistCjsJsSrcAppLayoutAuthlayoutAuthlayoutComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"main\">\n  <div>\n    <div class=\"container-router\">\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</div>\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/contentlayout/contentlayout.component.html": function node_modulesRawLoaderDistCjsJsSrcAppLayoutContentlayoutContentlayoutComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
@@ -733,13 +745,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./layout/authlayout/authlayout.component */
+    "./src/app/layout/authlayout/authlayout.component.ts");
+    /* harmony import */
+
+
+    var _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./layout/contentlayout/contentlayout.component */
     "./src/app/layout/contentlayout/contentlayout.component.ts");
 
     var routes = [{
       path: "",
-      component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_4__["ContentlayoutComponent"],
+      component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_5__["ContentlayoutComponent"],
       children: [{
         path: "",
         loadChildren: function loadChildren() {
@@ -752,6 +770,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }]
+    }, {
+      path: "auth",
+      component: _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_4__["AuthlayoutComponent"],
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | modules-auth-auth-module */
+        "modules-auth-auth-module").then(__webpack_require__.bind(null,
+        /*! ./modules/auth/auth.module */
+        "./src/app/modules/auth/auth.module.ts")).then(function (m) {
+          return m.AuthModule;
+        });
+      }
     }, {
       path: "404",
       component: _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__["NotFoundComponent"]
@@ -921,13 +951,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! ./layout/authlayout/authlayout.component */
+    "./src/app/layout/authlayout/authlayout.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _layout_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_7__["ContentlayoutComponent"], _layout_sub_nav_sub_nav_component__WEBPACK_IMPORTED_MODULE_11__["SubNavComponent"], _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__["NotFoundComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _layout_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_7__["ContentlayoutComponent"], _layout_sub_nav_sub_nav_component__WEBPACK_IMPORTED_MODULE_11__["SubNavComponent"], _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__["NotFoundComponent"], _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__["AuthlayoutComponent"]],
       imports: [// angular
       _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], // 3rd party
       // core & shared
@@ -978,6 +1014,67 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       declarations: [],
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]]
     })], CoreModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/layout/authlayout/authlayout.component.css": function srcAppLayoutAuthlayoutAuthlayoutComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".main {\r\n  min-height: 100vh;\r\n  background-color: #f2f2f2;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2F1dGhsYXlvdXQvYXV0aGxheW91dC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0VBQ2pCLHlCQUF5QjtBQUMzQiIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9hdXRobGF5b3V0L2F1dGhsYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluIHtcclxuICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xyXG59XHJcbiJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/layout/authlayout/authlayout.component.ts": function srcAppLayoutAuthlayoutAuthlayoutComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AuthlayoutComponent", function () {
+      return AuthlayoutComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var AuthlayoutComponent = /*#__PURE__*/function () {
+      function AuthlayoutComponent() {
+        _classCallCheck(this, AuthlayoutComponent);
+      }
+
+      _createClass(AuthlayoutComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return AuthlayoutComponent;
+    }();
+
+    AuthlayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-authlayout',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./authlayout.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/authlayout/authlayout.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./authlayout.component.css */
+      "./src/app/layout/authlayout/authlayout.component.css"))["default"]]
+    })], AuthlayoutComponent);
     /***/
   },
 
