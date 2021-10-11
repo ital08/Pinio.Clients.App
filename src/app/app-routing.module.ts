@@ -4,11 +4,6 @@ import { NotFoundComponent } from "@shared/components/not-found/not-found.compon
 import { ContentlayoutComponent } from "./layout/contentlayout/contentlayout.component";
 
 const routes: Routes = [
-  // {
-  //   path: "",
-  //   redirectTo: "home/",
-  //   pathMatch: "full",
-  // },
   {
     path: "",
     component: ContentlayoutComponent, // Should be replaced with actual auth guard

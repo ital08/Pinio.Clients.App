@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"javascript:void(0)\" (click)=\"home()\"\r\n        ><span class=\"logo\"></span\r\n      ></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput />\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"\" (click)=\"home()\"><span class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput />\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"not-found-page\">\r\n  <div class=\"h-100 row align-items-center justify-content-center\">\r\n    <div class=\"title-not-found text-center\">\r\n      <a href=\"/home\">\r\n        <img\r\n          class=\"img-logo mb-4\"\r\n          style=\"width: 120px\"\r\n          src=\"../../../../assets/logo/logo_home.png\"\r\n        />\r\n      </a>\r\n      <h1>404</h1>\r\n      <p>Página no encontrada</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"not-found-page\">\r\n  <div class=\"h-100 row align-items-center justify-content-center\">\r\n    <div class=\"title-not-found text-center\">\r\n      <a href=\"#\">\r\n        <img\r\n          class=\"img-logo mb-4\"\r\n          style=\"width: 120px\"\r\n          src=\"../../../../assets/logo/logo_home.png\"\r\n        />\r\n      </a>\r\n      <h1>404</h1>\r\n      <p>Página no encontrada</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -376,11 +376,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    // {
-    //   path: "",
-    //   redirectTo: "home/",
-    //   pathMatch: "full",
-    // },
     {
         path: "",
         component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_4__["ContentlayoutComponent"],
@@ -676,7 +671,7 @@ let HeaderComponent = class HeaderComponent {
     }
     ngOnInit() { }
     home() {
-        this.router.navigateByUrl("");
+        this.router.navigateByUrl("#");
     }
 };
 HeaderComponent.ctorParameters = () => [
@@ -761,7 +756,7 @@ SubNavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".not-found-page {\r\n  height: 100%;\r\n  background: white;\r\n  color: black;\r\n}\r\n\r\n.row {\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  font-weight: bold;\r\n}\r\n\r\np {\r\n  font-size: 16px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxTQUFTO0FBQ1g7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5vdC1mb3VuZC1wYWdlIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG4ucm93IHtcclxuICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbmgxIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxucCB7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".not-found-page {\r\n  margin-top: 10%;\r\n  height: 100%;\r\n  background: white;\r\n  color: black;\r\n}\r\n\r\nh1 {\r\n  font-weight: bold;\r\n}\r\n\r\np {\r\n  font-size: 16px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL25vdC1mb3VuZC9ub3QtZm91bmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ub3QtZm91bmQtcGFnZSB7XHJcbiAgbWFyZ2luLXRvcDogMTAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbmgxIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxucCB7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -838,6 +833,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/cdk/a11y */ "./node_modules/@angular/cdk/esm2015/a11y.js");
 /* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm2015/portal.js");
 /* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/esm2015/scrolling.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+
 
 
 
@@ -878,6 +875,7 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [],
         imports: [
+            _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatPaginatorModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"],
             _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"],
@@ -909,6 +907,7 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material_tree__WEBPACK_IMPORTED_MODULE_26__["MatTreeModule"],
             _angular_material_stepper__WEBPACK_IMPORTED_MODULE_27__["MatStepperModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatPaginatorModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_32__["FormsModule"],
         ],
         exports: [
             _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__["MatSidenavModule"],
@@ -954,6 +953,7 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material__WEBPACK_IMPORTED_MODULE_28__["MatTableModule"],
             _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_30__["PortalModule"],
             _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_31__["ScrollingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_32__["FormsModule"],
         ],
     })
 ], MaterialModule);

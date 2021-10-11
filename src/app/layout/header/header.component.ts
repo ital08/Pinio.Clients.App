@@ -11,6 +11,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
   home() {
-    this.router.navigateByUrl("");
+    this.router.navigateByUrl("#");
   }
 }

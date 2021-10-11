@@ -1,11 +1,8 @@
 .not-found-page {
+  margin-top: 10%;
   height: 100%;
   background: white;
   color: black;
-}
-
-.row {
-  margin: 0;
 }
 
 h1 {
