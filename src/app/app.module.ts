@@ -13,6 +13,7 @@ import { SubNavComponent } from "./layout/sub-nav/sub-nav.component";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
+import { AvatarModule } from "ngx-avatar";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
     AuthlayoutComponent,
   ],
   imports: [
+    //avatar
+    AvatarModule,
     // angular
     BrowserModule,
 

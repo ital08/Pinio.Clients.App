@@ -18,7 +18,7 @@ export const routes: Routes = [
     component: StartComponent,
   },
   {
-    path: "products",
+    path: "not-found",
     component: NotFoundProductComponent,
   },
   {
