@@ -7,7 +7,57 @@
       </div>
       <!-- end image -->
       <!-- form -->
-      <div class="box3">aqui va el form</div>
+
+      <div class="box3">
+        <div>
+          <img class="img-lokus" src="../../../../../assets/logo/logo_home.png" />
+        </div>
+        <div class="nav-text" onlyread>
+          <div class="text" style="padding-right: 20px">
+            <p>Iniciar Sesion</p>
+            <hr color="#ed691e" size="50" />
+          </div>
+          <div class="text" style="padding-left: 20px"><p>Registrarse</p></div>
+        </div>
+        <div>
+          <div class="text"><p>Correo Electronico</p></div>
+          <div class="example-container">
+            <mat-form-field appearance="outline">
+              <input
+                matInput
+                placeholder="email@example.com"
+                [formControl]="email"
+                required
+              />
+              <mat-error *ngIf="email.invalid">{{
+                getErrorMessage()
+              }}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="text"><p>Contraseña</p></div>
+          <div class="example-container">
+            <mat-form-field [style.width.%]="100" appearance="outline">
+              <input
+                [formControl]="pwd"
+                placeholder="Contraseña"
+                matInput
+                [type]="hide ? 'password' : 'text'"
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
       <!-- end form -->
     </div>
   </div>

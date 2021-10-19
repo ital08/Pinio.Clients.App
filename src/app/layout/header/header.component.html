@@ -9,7 +9,16 @@
     <div class="search-section">
       <mat-form-field appearance="outline">
         <mat-label>Buscar productos</mat-label>
-        <input matInput />
+        <input matInput type="text" [(ngModel)]="value" />
+        <button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
       </mat-form-field>
     </div>
   </div>
@@ -25,7 +34,7 @@
       </div>
       <div class="profile-section">
         <div>
-          <a style="text-decoration: none" href="">
+          <a style="text-decoration: none" href="/auth/login">
             <div class="login-text">
               <p>Log In</p>
             </div>
