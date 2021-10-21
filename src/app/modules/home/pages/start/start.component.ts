@@ -1,82 +1,104 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { PageEvent } from "@angular/material";
+import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { Subscription } from "rxjs";
-import { FindProduct } from "src/app/data/models/response/product.model";
+import { ProductService } from "src/app/data/services/products.service";
 @Component({
   selector: "app-start",
   templateUrl: "./start.component.html",
   styleUrls: ["./start.component.css"],
 })
 export class StartComponent implements OnInit {
-  private routeSub: Subscription;
-
+  @ViewChild(MatAutocompleteTrigger, {
+    read: MatAutocompleteTrigger,
+    static: false,
+  })
+  products = [];
+  autocomplete: MatAutocompleteTrigger;
+  loading = true;
   toppings: FormGroup;
+  price = 0;
+  length = 100;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
 
+  tableOffset: number = 0;
+  pageNumber: number = 1;
+  offset: number = 0;
+  pageSize: number = 10;
+  count: number = 0;
+  sortColumn: string = "name";
+  sortType: string = "asc";
+  productCatalogList = [];
   category: string;
-  products: FindProduct[] = [
-    {
-      productId: 100001,
-      name: "Televisor 40'",
-      brand: "Samsung",
-      model: "S40LNK2019",
-      stock: 30,
-      description: "Televisor Nuevo",
-      price: 1999,
-      url: "https://i.linio.com/p/8637b377f896c4216ffa1354c2836275-product.webp",
-      category: "Televisores",
-    },
-    {
-      productId: 100001,
-      name: "Televisor 40'",
-      brand: "Samsung",
-      model: "S40LNK2019",
-      stock: 30,
-      description: "Televisor Nuevo",
-      price: 1999,
-      url: "https://i.linio.com/p/8637b377f896c4216ffa1354c2836275-product.webp",
-      category: "Televisor",
-    },
-    {
-      productId: 100002,
-      name: "S20+",
-      brand: "Samsung",
-      model: "SKLNHTO202020",
-      stock: 2,
-      description: "Celular Nuevo",
-      price: 3000,
-      url: "https://i.linio.com/p/8e1860d92da3ce3eada000c1d22fa5c1-product.webp",
-      category: "Celulares",
-    },
-    {
-      productId: 100003,
-      name: "Mando de Xbox Series XS + Cable USB-C Compatible con PC",
-      brand: "Microsoft",
-      model: "MXBOX123G",
-      stock: 5,
-      description: "Mando Nuevo",
-      price: 329,
-      url: "https://i.linio.com/p/5acc22fe0763ee8436cdaabf52184603-product.webp",
-      category: "Consolas y Accesorios",
-    },
-  ];
+  firstFilterForm: FormGroup;
   constructor(
-    fb: FormBuilder,
+    // private routeSub: Subscription,
+    private formBuilder: FormBuilder,
+    private productService: ProductService,
     private route: ActivatedRoute,
-    public router: Router
+    private router: Router
   ) {
-    this.toppings = fb.group({
+    this.toppings = formBuilder.group({
       pepperoni: false,
       extracheese: false,
       mushroom: false,
     });
   }
-
+  // this.routeSub = this.route.params.subscribe((params) => {
+  //   this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
+  // });
   ngOnInit() {
-    this.routeSub = this.route.params.subscribe((params) => {
-      this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
+    this.createFilterForm();
+    console.log(this.productService.getProductCatalog("", "", "", 0));
+
+    this.getListProducts();
+  }
+  createFilterForm() {
+    this.firstFilterForm = this.formBuilder.group({
+      autocomplete: [""],
+      idproductcatalog: [""],
+      productbrand: [""],
+      productmodel: [""],
+      unitprice: 0,
     });
+    console.log(this.firstFilterForm.value);
+  }
+  /**
+   * Get Products
+   */
+  getListProducts() {
+    let firstFilter = this.firstFilterForm.value;
+    this.productService
+      .getProductCatalog(
+        firstFilter.idproductcatalog,
+        firstFilter.productbrand,
+        firstFilter.productmodel,
+        firstFilter.unitprice
+      )
+      .subscribe(
+        (response: any) => {
+          let body = response.body;
+          let status = response.status;
+          this.loading = false;
+          switch (status) {
+            case 200:
+              this.productCatalogList = body.result;
+              this.productCatalogList.forEach((element) => {
+                this.products.push(element);
+              });
+              console.log(this.productCatalogList);
+              this.count = body.totalRows;
+              break;
+            default:
+              break;
+          }
+        },
+        (error) => {
+          this.loading = false;
+          console.log("Error al traer los productos");
+        }
+      );
   }
   /**Precio**/
   formatLabel(value: number) {
@@ -89,9 +111,6 @@ export class StartComponent implements OnInit {
   //Pagination
   //https://material.angular.io/components/paginator/overview
   // MatPaginator Inputs
-  length = 100;
-  pageSize = 10;
-  pageSizeOptions: number[] = [5, 10, 25, 100];
 
   // MatPaginator Output
   pageEvent: PageEvent;

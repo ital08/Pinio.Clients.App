@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"\" (click)=\"home()\"><span class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput />\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"\" (click)=\"home()\"><span class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput type=\"text\" [(ngModel)]=\"value\" />\r\n        <button\r\n          *ngIf=\"value\"\r\n          matSuffix\r\n          mat-icon-button\r\n          aria-label=\"Clear\"\r\n          (click)=\"value = ''\"\r\n        >\r\n          <mat-icon>close</mat-icon>\r\n        </button>\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"/auth/login\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -489,6 +489,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @shared/components/not-found/not-found.component */ "./src/app/shared/components/not-found/not-found.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./layout/authlayout/authlayout.component */ "./src/app/layout/authlayout/authlayout.component.ts");
+/* harmony import */ var ngx_avatar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-avatar */ "./node_modules/ngx-avatar/fesm2015/ngx-avatar.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
 
 
 
@@ -518,6 +522,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__["AuthlayoutComponent"],
         ],
         imports: [
+            //avatar
+            ngx_avatar__WEBPACK_IMPORTED_MODULE_15__["AvatarModule"],
             // angular
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             // 3rd party
@@ -529,6 +535,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ReactiveFormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_13__["FormsModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"],
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
@@ -1029,6 +1036,74 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/service/http.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/shared/service/http.service.ts ***!
+  \************************************************/
+/*! exports provided: HttpService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpService", function() { return HttpService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+let HttpService = class HttpService {
+    constructor(httpClient) {
+        this.httpClient = httpClient;
+    }
+    get(url, options = {}) {
+        let optionsMerge = Object.assign(options, { observe: "response" });
+        return this.httpClient.get(url, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((res) => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    post(url, data, options = {}) {
+        let optionsMerge = Object.assign(options, { observe: "response" });
+        return this.httpClient.post(url, data, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((res) => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    put(url, data, options = {}) {
+        let optionsMerge = Object.assign(options, { observe: "response" });
+        return this.httpClient.put(url, data, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((res) => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    delete(url, data, options = {}) {
+        let optionsMerge = Object.assign(options, { observe: "response" });
+        return this.httpClient.delete(url, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((res) => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    handleError(httpError) {
+        if (httpError.error instanceof ErrorEvent) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(httpError);
+        }
+        else {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(httpError);
+        }
+    }
+};
+HttpService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+HttpService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()
+], HttpService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/shared.module.ts":
 /*!*****************************************!*\
   !*** ./src/app/shared/shared.module.ts ***!
@@ -1043,6 +1118,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./material.module */ "./src/app/shared/material.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _service_http_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./service/http.service */ "./src/app/shared/service/http.service.ts");
+
+
+
 
 
 
@@ -1052,8 +1133,21 @@ let SharedModule = class SharedModule {
 SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [],
-        imports: [_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]],
-        exports: [_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"]],
+        imports: [
+            _material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatAutocompleteModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
+        ],
+        exports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
+            _material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatAutocompleteModule"],
+        ],
+        providers: [_service_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"]],
     })
 ], SharedModule);
 
@@ -1078,6 +1172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const environment = {
     production: true,
+    urlApiService: "https://pinio-services.herokuapp.com/",
 };
 /*
  * For easier debugging in development mode, you can import the following file

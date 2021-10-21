@@ -83,7 +83,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"\" (click)=\"home()\"><span class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput />\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"bg-nav\">\r\n  <div class=\"left\">\r\n    <div class=\"left-container\">\r\n      <a href=\"\" (click)=\"home()\"><span class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input matInput type=\"text\" [(ngModel)]=\"value\" />\r\n        <button\r\n          *ngIf=\"value\"\r\n          matSuffix\r\n          mat-icon-button\r\n          aria-label=\"Clear\"\r\n          (click)=\"value = ''\"\r\n        >\r\n          <mat-icon>close</mat-icon>\r\n        </button>\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"/auth/login\">\r\n            <div class=\"login-text\">\r\n              <p>Log In</p>\r\n            </div>\r\n          </a>\r\n        </div>\r\n        <div>\r\n          <a style=\"text-decoration: none\" href=\"\">\r\n            <div class=\"register-text\">\r\n              <p>Register</p>\r\n            </div></a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\" href=\"\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -957,6 +957,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ./layout/authlayout/authlayout.component */
     "./src/app/layout/authlayout/authlayout.component.ts");
+    /* harmony import */
+
+
+    var ngx_avatar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! ngx-avatar */
+    "./node_modules/ngx-avatar/fesm2015/ngx-avatar.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -964,11 +976,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _layout_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_7__["ContentlayoutComponent"], _layout_sub_nav_sub_nav_component__WEBPACK_IMPORTED_MODULE_11__["SubNavComponent"], _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__["NotFoundComponent"], _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__["AuthlayoutComponent"]],
-      imports: [// angular
+      imports: [//avatar
+      ngx_avatar__WEBPACK_IMPORTED_MODULE_15__["AvatarModule"], // angular
       _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], // 3rd party
       // core & shared
       _core_core_module__WEBPACK_IMPORTED_MODULE_8__["CoreModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"], // app
-      _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"]],
+      _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_16__["HttpClientModule"]],
       providers: [],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
@@ -1641,6 +1654,123 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/shared/service/http.service.ts": function srcAppSharedServiceHttpServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpService", function () {
+      return HttpService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+
+    var HttpService = /*#__PURE__*/function () {
+      function HttpService(httpClient) {
+        _classCallCheck(this, HttpService);
+
+        this.httpClient = httpClient;
+      }
+
+      _createClass(HttpService, [{
+        key: "get",
+        value: function get(url) {
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+          var optionsMerge = Object.assign(options, {
+            observe: "response"
+          });
+          return this.httpClient.get(url, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+            return res;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        }
+      }, {
+        key: "post",
+        value: function post(url, data) {
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          var optionsMerge = Object.assign(options, {
+            observe: "response"
+          });
+          return this.httpClient.post(url, data, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+            return res;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        }
+      }, {
+        key: "put",
+        value: function put(url, data) {
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          var optionsMerge = Object.assign(options, {
+            observe: "response"
+          });
+          return this.httpClient.put(url, data, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+            return res;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        }
+      }, {
+        key: "delete",
+        value: function _delete(url, data) {
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          var optionsMerge = Object.assign(options, {
+            observe: "response"
+          });
+          return this.httpClient["delete"](url, optionsMerge).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+            return res;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        }
+      }, {
+        key: "handleError",
+        value: function handleError(httpError) {
+          if (httpError.error instanceof ErrorEvent) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(httpError);
+          } else {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(httpError);
+          }
+        }
+      }]);
+
+      return HttpService;
+    }();
+
+    HttpService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+      }];
+    };
+
+    HttpService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()], HttpService);
+    /***/
+  },
+
+  /***/
   "./src/app/shared/shared.module.ts": function srcAppSharedSharedModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
@@ -1675,6 +1805,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ./material.module */
     "./src/app/shared/material.module.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _service_http_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./service/http.service */
+    "./src/app/shared/service/http.service.ts");
 
     var SharedModule = function SharedModule() {
       _classCallCheck(this, SharedModule);
@@ -1682,8 +1830,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [],
-      imports: [_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]],
-      exports: [_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"]]
+      imports: [_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatAutocompleteModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"]],
+      exports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatAutocompleteModule"]],
+      providers: [_service_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"]]
     })], SharedModule);
     /***/
   },
@@ -1710,7 +1859,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var environment = {
-      production: true
+      production: true,
+      urlApiService: "https://pinio-services.herokuapp.com/"
     };
     /*
      * For easier debugging in development mode, you can import the following file

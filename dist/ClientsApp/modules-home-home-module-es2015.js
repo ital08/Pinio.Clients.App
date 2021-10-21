@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>not-found-product works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("");
 
 /***/ }),
 
@@ -36,6 +36,46 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div style=\"background-color: #d3d3d3\">\r\n  <nav\r\n    style=\"padding-top: 20px\"\r\n    class=\"navbar navbar-expand-lg navbar-light bg-light\"\r\n  >\r\n    <button\r\n      class=\"navbar-toggler\"\r\n      type=\"button\"\r\n      data-toggle=\"collapse\"\r\n      data-target=\"#navbarNavDropdown\"\r\n      aria-controls=\"navbarNavDropdown\"\r\n      aria-expanded=\"false\"\r\n      aria-label=\"Toggle navigation\"\r\n    >\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            MARCA\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            PRECIO\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <mat-slider\r\n                thumbLabel\r\n                [displayWith]=\"formatLabel\"\r\n                tickInterval=\"1000\"\r\n                step=\"1000\"\r\n                min=\"0\"\r\n                max=\"10000\"\r\n                aria-label=\"units\"\r\n              ></mat-slider>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ENVIO\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ORDENAR POR\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <!--  -->\r\n</div>\r\n<!-- productos -->\r\n<div>\r\n  <div class=\"products\">\r\n    <div *ngIf=\"products\">\r\n      <div class=\"grid flex-container-main mt-3\">\r\n        <ng-container\r\n          style=\"grid-auto-columns: auto\"\r\n          *ngFor=\"let item of products\"\r\n        >\r\n          <mat-card class=\"example-card\">\r\n            <img\r\n              style=\"padding: 10px\"\r\n              mat-card-image\r\n              width=\"10px\"\r\n              src=\"{{ item.url }}\"\r\n              alt=\"{{ item.name }}\"\r\n            />\r\n            <mat-card-header\r\n              style=\"padding: 0%; margin: -15px; justify-content: left\"\r\n            >\r\n              <mat-card-title>\r\n                <div>\r\n                  <p\r\n                    style=\"\r\n                      width: 15ch;\r\n                      overflow: hidden;\r\n                      white-space: nowrap;\r\n                      text-overflow: ellipsis;\r\n                    \"\r\n                  >\r\n                    {{ item.name }}\r\n                  </p>\r\n                </div>\r\n              </mat-card-title>\r\n              <mat-card-subtitle style=\"color: red\"\r\n                >S/. {{ item.price }}</mat-card-subtitle\r\n              >\r\n            </mat-card-header>\r\n            <mat-card-content>\r\n              <div>\r\n                <p style=\"color: #868686\">Unidades:{{ item.stock }}</p>\r\n              </div>\r\n            </mat-card-content>\r\n            <mat-card-actions>\r\n              <button mat-button>LIKE</button>\r\n              <button mat-button>SHARE</button>\r\n            </mat-card-actions>\r\n          </mat-card>\r\n        </ng-container>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<!-- fin productos -->\r\n<!-- paginator -->\r\n\r\n<mat-paginator\r\n  [length]=\"length\"\r\n  [pageSize]=\"pageSize\"\r\n  [pageSizeOptions]=\"pageSizeOptions\"\r\n  (page)=\"pageEvent = $event\"\r\n  aria-label=\"Select page\"\r\n>\r\n</mat-paginator>\r\n\r\n<div *ngIf=\"pageEvent\">\r\n  <h5>Page Change Event Properties</h5>\r\n  <div>List length: {{ pageEvent.length }}</div>\r\n  <div>Page size: {{ pageEvent.pageSize }}</div>\r\n  <div>Page index: {{ pageEvent.pageIndex }}</div>\r\n</div>\r\n<!-- fin paginator -->\r\n");
+
+/***/ }),
+
+/***/ "./src/app/data/services/products.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/data/services/products.service.ts ***!
+  \***************************************************/
+/*! exports provided: ProductService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _env__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @env */ "./src/environments/environment.ts");
+/* harmony import */ var _shared_service_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shared/service/http.service */ "./src/app/shared/service/http.service.ts");
+
+
+
+
+let ProductService = class ProductService {
+    constructor(httpService) {
+        this.httpService = httpService;
+        this.APIENDPOINT = _env__WEBPACK_IMPORTED_MODULE_2__["environment"].urlApiService;
+    }
+    getProductCatalog(productId, brand, model, price) {
+        return this.httpService.get(`${this.APIENDPOINT}/products/productcatalog?idProductCatalog=${productId}&productBrand=${brand}&productModel=${model}&unitprice=${price}&urlimage=string`);
+    }
+};
+ProductService.ctorParameters = () => [
+    { type: _shared_service_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"] }
+];
+ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: "root",
+    })
+], ProductService);
+
+
 
 /***/ }),
 
@@ -75,7 +115,7 @@ const routes = [
         component: _pages_start_start_component__WEBPACK_IMPORTED_MODULE_2__["StartComponent"],
     },
     {
-        path: "products",
+        path: "not-found",
         component: _pages_not_found_product_not_found_product_component__WEBPACK_IMPORTED_MODULE_5__["NotFoundProductComponent"],
     },
     {
@@ -114,6 +154,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shared/shared.module */ "./src/app/shared/shared.module.ts");
 /* harmony import */ var _pages_not_found_product_not_found_product_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/not-found-product/not-found-product.component */ "./src/app/modules/home/pages/not-found-product/not-found-product.component.ts");
 /* harmony import */ var _pages_products_products_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/products/products.component */ "./src/app/modules/home/pages/products/products.component.ts");
+/* harmony import */ var ngx_avatar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-avatar */ "./node_modules/ngx-avatar/fesm2015/ngx-avatar.js");
+
 
 
 
@@ -127,7 +169,7 @@ let HomeModule = class HomeModule {
 HomeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [_pages_start_start_component__WEBPACK_IMPORTED_MODULE_3__["StartComponent"], _pages_not_found_product_not_found_product_component__WEBPACK_IMPORTED_MODULE_6__["NotFoundProductComponent"], _pages_products_products_component__WEBPACK_IMPORTED_MODULE_7__["ProductsComponent"]],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_4__["HomeRoutingModule"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], ngx_avatar__WEBPACK_IMPORTED_MODULE_8__["AvatarModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_4__["HomeRoutingModule"]],
         exports: [],
         providers: [],
         entryComponents: [],
@@ -167,12 +209,11 @@ __webpack_require__.r(__webpack_exports__);
 
 let NotFoundProductComponent = class NotFoundProductComponent {
     constructor() { }
-    ngOnInit() {
-    }
+    ngOnInit() { }
 };
 NotFoundProductComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-not-found-product',
+        selector: "app-not-found-product",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./not-found-product.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/home/pages/not-found-product/not-found-product.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./not-found-product.component.css */ "./src/app/modules/home/pages/not-found-product/not-found-product.component.css")).default]
     })
@@ -215,19 +256,6 @@ let ProductsComponent = class ProductsComponent {
     constructor(route, router) {
         this.route = route;
         this.router = router;
-        this.products = [
-            {
-                productId: 100001,
-                name: "Televisor 40'",
-                brand: "Samsung",
-                model: "S40LNK2019",
-                stock: 30,
-                description: "Accesorios incluidos Control Remoto, Manual de uso y Tarjeta de garantía / Alto (con/sin base) 72.1 cm con base/ Ancho 116.4 cm/ Aplicaciones destacadas Netflix, Google y Youtube. /Conexión Bluetooth Sí/ Conexión WiFi Sí/ Contraste Gran contraste/ Control remoto incluido Sí / Entrada Internet Sí / Entradas auxiliares de 3.5 mm No incluye / Entradas HDMI 3 / Entradas RCA Sin entradas / Entradas USB 2 / Entradas VGA Sin entradas / Garantía del proveedor 1 Año / Hecho en México / Lentes 3D incluidos No / Peso 12.9 kg / Potencia de los parlantes 20 Watts / Profundidad 32.5 cm con base / Resolución 4K Ultra HD / Sintonizador digital Sí / Sintonizador TDT No Aplica / Smart TV Sí / Tamaño de la pantalla 50 pulgadas / Tasa de refresco nativa AC100-240V 50/60Hz / Tecnología LED / Tipo de pantalla Plana / Tipo Televisores",
-                price: 1999,
-                url: "https://i.linio.com/p/8637b377f896c4216ffa1354c2836275-product.webp",
-                category: "Televisores",
-            },
-        ];
     }
     ngOnInit() {
         this.routeSub = this.route.params.subscribe((params) => {
@@ -277,76 +305,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/data/services/products.service */ "./src/app/data/services/products.service.ts");
+
+
 
 
 
 
 let StartComponent = class StartComponent {
-    constructor(fb, route, router) {
+    constructor(
+    // private routeSub: Subscription,
+    formBuilder, productService, route, router) {
+        this.formBuilder = formBuilder;
+        this.productService = productService;
         this.route = route;
         this.router = router;
-        this.products = [
-            {
-                productId: 100001,
-                name: "Televisor 40'",
-                brand: "Samsung",
-                model: "S40LNK2019",
-                stock: 30,
-                description: "Televisor Nuevo",
-                price: 1999,
-                url: "https://i.linio.com/p/8637b377f896c4216ffa1354c2836275-product.webp",
-                category: "Televisores",
-            },
-            {
-                productId: 100001,
-                name: "Televisor 40'",
-                brand: "Samsung",
-                model: "S40LNK2019",
-                stock: 30,
-                description: "Televisor Nuevo",
-                price: 1999,
-                url: "https://i.linio.com/p/8637b377f896c4216ffa1354c2836275-product.webp",
-                category: "Televisor",
-            },
-            {
-                productId: 100002,
-                name: "S20+",
-                brand: "Samsung",
-                model: "SKLNHTO202020",
-                stock: 2,
-                description: "Celular Nuevo",
-                price: 3000,
-                url: "https://i.linio.com/p/8e1860d92da3ce3eada000c1d22fa5c1-product.webp",
-                category: "Celulares",
-            },
-            {
-                productId: 100003,
-                name: "Mando de Xbox Series XS + Cable USB-C Compatible con PC",
-                brand: "Microsoft",
-                model: "MXBOX123G",
-                stock: 5,
-                description: "Mando Nuevo",
-                price: 329,
-                url: "https://i.linio.com/p/5acc22fe0763ee8436cdaabf52184603-product.webp",
-                category: "Consolas y Accesorios",
-            },
-        ];
-        //Pagination
-        //https://material.angular.io/components/paginator/overview
-        // MatPaginator Inputs
+        this.products = [];
+        this.loading = true;
+        this.price = 0;
         this.length = 100;
-        this.pageSize = 10;
         this.pageSizeOptions = [5, 10, 25, 100];
-        this.toppings = fb.group({
+        this.tableOffset = 0;
+        this.pageNumber = 1;
+        this.offset = 0;
+        this.pageSize = 10;
+        this.count = 0;
+        this.sortColumn = "name";
+        this.sortType = "asc";
+        this.productCatalogList = [];
+        this.toppings = formBuilder.group({
             pepperoni: false,
             extracheese: false,
             mushroom: false,
         });
     }
+    // this.routeSub = this.route.params.subscribe((params) => {
+    //   this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
+    // });
     ngOnInit() {
-        this.routeSub = this.route.params.subscribe((params) => {
-            this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
+        this.createFilterForm();
+        console.log(this.productService.getProductCatalog("", "", "", 0));
+        this.getListProducts();
+    }
+    createFilterForm() {
+        this.firstFilterForm = this.formBuilder.group({
+            autocomplete: [""],
+            idproductcatalog: [""],
+            productbrand: [""],
+            productmodel: [""],
+            unitprice: 0,
+        });
+        console.log(this.firstFilterForm.value);
+    }
+    /**
+     * Get Products
+     */
+    getListProducts() {
+        let firstFilter = this.firstFilterForm.value;
+        this.productService
+            .getProductCatalog(firstFilter.idproductcatalog, firstFilter.productbrand, firstFilter.productmodel, firstFilter.unitprice)
+            .subscribe((response) => {
+            let body = response.body;
+            let status = response.status;
+            this.loading = false;
+            switch (status) {
+                case 200:
+                    this.productCatalogList = body.result;
+                    this.productCatalogList.forEach((element) => {
+                        this.products.push(element);
+                    });
+                    console.log(this.productCatalogList);
+                    this.count = body.totalRows;
+                    break;
+                default:
+                    break;
+            }
+        }, (error) => {
+            this.loading = false;
+            console.log("Error al traer los productos");
         });
     }
     /**Precio**/
@@ -366,9 +404,16 @@ let StartComponent = class StartComponent {
 };
 StartComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    { type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_5__["ProductService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteTrigger"], {
+        read: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteTrigger"],
+        static: false,
+    })
+], StartComponent.prototype, "products", void 0);
 StartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: "app-start",

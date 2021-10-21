@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 import { AvatarModule } from "ngx-avatar";
 import { MatAutocomplete, MatAutocompleteModule } from "@angular/material";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MatAutocomplete, MatAutocompleteModule } from "@angular/material";
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

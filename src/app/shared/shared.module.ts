@@ -2,8 +2,10 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MaterialModule } from "./material.module";
 import { AvatarModule } from "ngx-avatar";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteModule } from "@angular/material";
+import { HttpService } from "./service/http.service";
+import { NotFoundComponent } from "./components/not-found/not-found.component";
 
 @NgModule({
   declarations: [],
@@ -13,6 +15,15 @@ import { MatAutocompleteModule } from "@angular/material";
     MatAutocompleteModule,
     ReactiveFormsModule,
   ],
-  exports: [MaterialModule, ReactiveFormsModule, MatAutocompleteModule],
+
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+  ],
+  providers: [HttpService],
 })
 export class SharedModule {}

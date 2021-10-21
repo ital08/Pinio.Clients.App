@@ -4,6 +4,7 @@
 
 export const environment = {
   production: true,
+  urlApiService: "https://pinio-services.herokuapp.com/",
 };
 
 /*
