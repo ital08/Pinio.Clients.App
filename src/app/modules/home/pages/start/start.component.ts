@@ -50,8 +50,6 @@ export class StartComponent implements OnInit {
   // });
   ngOnInit() {
     this.createFilterForm();
-    console.log(this.productService.getProductCatalog("", "", "", 0));
-
     this.getListProducts();
   }
   createFilterForm() {
@@ -59,10 +57,9 @@ export class StartComponent implements OnInit {
       autocomplete: [""],
       idproductcatalog: [""],
       productbrand: [""],
-      productmodel: [""],
+      productmodel: ["G"],
       unitprice: 0,
     });
-    console.log(this.firstFilterForm.value);
   }
   /**
    * Get Products
@@ -70,7 +67,7 @@ export class StartComponent implements OnInit {
   getListProducts() {
     let firstFilter = this.firstFilterForm.value;
     this.productService
-      .getProductCatalog(
+      .getProductCatalog1(
         firstFilter.idproductcatalog,
         firstFilter.productbrand,
         firstFilter.productmodel,
@@ -83,12 +80,8 @@ export class StartComponent implements OnInit {
           this.loading = false;
           switch (status) {
             case 200:
-              this.productCatalogList = body.result;
-              this.productCatalogList.forEach((element) => {
-                this.products.push(element);
-              });
-              console.log(this.productCatalogList);
-              this.count = body.totalRows;
+              this.products = body.listProductCatalog;
+              console.log(this.products);
               break;
             default:
               break;

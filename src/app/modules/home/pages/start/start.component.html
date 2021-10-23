@@ -126,8 +126,8 @@
               style="padding: 10px"
               mat-card-image
               width="10px"
-              src="{{ item.url }}"
-              alt="{{ item.name }}"
+              src="{{ item.urlimage }}"
+              alt="{{ item.productModel }}"
             />
             <mat-card-header
               style="padding: 0%; margin: -15px; justify-content: left"
@@ -136,23 +136,23 @@
                 <div>
                   <p
                     style="
-                      width: 15ch;
+                      width: 20ch;
                       overflow: hidden;
                       white-space: nowrap;
                       text-overflow: ellipsis;
                     "
                   >
-                    {{ item.name }}
+                    {{ item.productModel }}
                   </p>
                 </div>
               </mat-card-title>
               <mat-card-subtitle style="color: red"
-                >S/. {{ item.price }}</mat-card-subtitle
+                >S/. {{ item.unitprice }}</mat-card-subtitle
               >
             </mat-card-header>
             <mat-card-content>
               <div>
-                <p style="color: #868686">Unidades:{{ item.stock }}</p>
+                <p style="color: #868686">Unidades:FALTA CALCULAR</p>
               </div>
             </mat-card-content>
             <mat-card-actions>
