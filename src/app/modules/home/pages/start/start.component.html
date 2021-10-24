@@ -114,56 +114,62 @@
 </div>
 <!-- productos -->
 <div>
-  <div class="products">
-    <div *ngIf="products">
-      <div class="grid flex-container-main mt-3">
-        <ng-container
-          style="grid-auto-columns: auto"
-          *ngFor="let item of products"
-        >
-          <mat-card class="example-card">
-            <img
-              style="padding: 10px"
-              mat-card-image
-              width="10px"
-              src="{{ item.urlimage }}"
-              alt="{{ item.productModel }}"
-            />
-            <mat-card-header
-              style="padding: 0%; margin: -15px; justify-content: left"
-            >
-              <mat-card-title>
-                <div>
-                  <p
-                    style="
-                      width: 20ch;
-                      overflow: hidden;
-                      white-space: nowrap;
-                      text-overflow: ellipsis;
-                    "
-                  >
-                    {{ item.productModel }}
-                  </p>
-                </div>
-              </mat-card-title>
-              <mat-card-subtitle style="color: red"
-                >S/. {{ item.unitprice }}</mat-card-subtitle
+  <div *ngIf="loading === true; else elseBlock">
+    <mat-progress-spinner color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+  <ng-template #elseBlock>
+    <div class="products">
+      <div *ngIf="products">
+        <div class="grid flex-container-main mt-3">
+          <ng-container
+            style="grid-auto-columns: auto"
+            *ngFor="let item of products"
+          >
+            <mat-card class="example-card">
+              <img
+                style="padding: 10px"
+                mat-card-image
+                width="10px"
+                src="{{ item.urlimage }}"
+                alt="{{ item.productModel }}"
+              />
+              <mat-card-header
+                style="padding: 0%; margin: -15px; justify-content: left"
               >
-            </mat-card-header>
-            <mat-card-content>
-              <div>
-                <p style="color: #868686">Unidades:FALTA CALCULAR</p>
-              </div>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-        </ng-container>
+                <mat-card-title>
+                  <div>
+                    <p
+                      style="
+                        width: 20ch;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                      {{ item.productModel }}
+                    </p>
+                  </div>
+                </mat-card-title>
+                <mat-card-subtitle style="color: red"
+                  >S/. {{ item.unitprice }}</mat-card-subtitle
+                >
+              </mat-card-header>
+              <mat-card-content>
+                <div>
+                  <p style="color: #868686">Unidades:FALTA CALCULAR</p>
+                </div>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </ng-container>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-template>
 </div>
 <!-- fin productos -->
 <!-- paginator -->

@@ -37,7 +37,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div style=\"background-color: #d3d3d3\">\r\n  <nav\r\n    style=\"padding-top: 20px\"\r\n    class=\"navbar navbar-expand-lg navbar-light bg-light\"\r\n  >\r\n    <button\r\n      class=\"navbar-toggler\"\r\n      type=\"button\"\r\n      data-toggle=\"collapse\"\r\n      data-target=\"#navbarNavDropdown\"\r\n      aria-controls=\"navbarNavDropdown\"\r\n      aria-expanded=\"false\"\r\n      aria-label=\"Toggle navigation\"\r\n    >\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            MARCA\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            PRECIO\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <mat-slider\r\n                thumbLabel\r\n                [displayWith]=\"formatLabel\"\r\n                tickInterval=\"1000\"\r\n                step=\"1000\"\r\n                min=\"0\"\r\n                max=\"10000\"\r\n                aria-label=\"units\"\r\n              ></mat-slider>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ENVIO\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ORDENAR POR\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <!--  -->\r\n</div>\r\n<!-- productos -->\r\n<div>\r\n  <div class=\"products\">\r\n    <div *ngIf=\"products\">\r\n      <div class=\"grid flex-container-main mt-3\">\r\n        <ng-container\r\n          style=\"grid-auto-columns: auto\"\r\n          *ngFor=\"let item of products\"\r\n        >\r\n          <mat-card class=\"example-card\">\r\n            <img\r\n              style=\"padding: 10px\"\r\n              mat-card-image\r\n              width=\"10px\"\r\n              src=\"{{ item.url }}\"\r\n              alt=\"{{ item.name }}\"\r\n            />\r\n            <mat-card-header\r\n              style=\"padding: 0%; margin: -15px; justify-content: left\"\r\n            >\r\n              <mat-card-title>\r\n                <div>\r\n                  <p\r\n                    style=\"\r\n                      width: 15ch;\r\n                      overflow: hidden;\r\n                      white-space: nowrap;\r\n                      text-overflow: ellipsis;\r\n                    \"\r\n                  >\r\n                    {{ item.name }}\r\n                  </p>\r\n                </div>\r\n              </mat-card-title>\r\n              <mat-card-subtitle style=\"color: red\"\r\n                >S/. {{ item.price }}</mat-card-subtitle\r\n              >\r\n            </mat-card-header>\r\n            <mat-card-content>\r\n              <div>\r\n                <p style=\"color: #868686\">Unidades:{{ item.stock }}</p>\r\n              </div>\r\n            </mat-card-content>\r\n            <mat-card-actions>\r\n              <button mat-button>LIKE</button>\r\n              <button mat-button>SHARE</button>\r\n            </mat-card-actions>\r\n          </mat-card>\r\n        </ng-container>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<!-- fin productos -->\r\n<!-- paginator -->\r\n\r\n<mat-paginator\r\n  [length]=\"length\"\r\n  [pageSize]=\"pageSize\"\r\n  [pageSizeOptions]=\"pageSizeOptions\"\r\n  (page)=\"pageEvent = $event\"\r\n  aria-label=\"Select page\"\r\n>\r\n</mat-paginator>\r\n\r\n<div *ngIf=\"pageEvent\">\r\n  <h5>Page Change Event Properties</h5>\r\n  <div>List length: {{ pageEvent.length }}</div>\r\n  <div>Page size: {{ pageEvent.pageSize }}</div>\r\n  <div>Page index: {{ pageEvent.pageIndex }}</div>\r\n</div>\r\n<!-- fin paginator -->\r\n";
+    __webpack_exports__["default"] = "<div style=\"background-color: #d3d3d3\">\r\n  <nav\r\n    style=\"padding-top: 20px\"\r\n    class=\"navbar navbar-expand-lg navbar-light bg-light\"\r\n  >\r\n    <button\r\n      class=\"navbar-toggler\"\r\n      type=\"button\"\r\n      data-toggle=\"collapse\"\r\n      data-target=\"#navbarNavDropdown\"\r\n      aria-controls=\"navbarNavDropdown\"\r\n      aria-expanded=\"false\"\r\n      aria-label=\"Toggle navigation\"\r\n    >\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            MARCA\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            PRECIO\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <mat-slider\r\n                thumbLabel\r\n                [displayWith]=\"formatLabel\"\r\n                tickInterval=\"1000\"\r\n                step=\"1000\"\r\n                min=\"0\"\r\n                max=\"10000\"\r\n                aria-label=\"units\"\r\n              ></mat-slider>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ENVIO\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ORDENAR POR\r\n          </a>\r\n          <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <!--  -->\r\n</div>\r\n<!-- productos -->\r\n<div>\r\n  <div *ngIf=\"loading === true; else elseBlock\">\r\n    <mat-progress-spinner color=\"primary\" mode=\"indeterminate\">\r\n    </mat-progress-spinner>\r\n  </div>\r\n  <ng-template #elseBlock>\r\n    <div class=\"products\">\r\n      <div *ngIf=\"products\">\r\n        <div class=\"grid flex-container-main mt-3\">\r\n          <ng-container\r\n            style=\"grid-auto-columns: auto\"\r\n            *ngFor=\"let item of products\"\r\n          >\r\n            <mat-card class=\"example-card\">\r\n              <img\r\n                style=\"padding: 10px\"\r\n                mat-card-image\r\n                width=\"10px\"\r\n                src=\"{{ item.urlimage }}\"\r\n                alt=\"{{ item.productModel }}\"\r\n              />\r\n              <mat-card-header\r\n                style=\"padding: 0%; margin: -15px; justify-content: left\"\r\n              >\r\n                <mat-card-title>\r\n                  <div>\r\n                    <p\r\n                      style=\"\r\n                        width: 20ch;\r\n                        overflow: hidden;\r\n                        white-space: nowrap;\r\n                        text-overflow: ellipsis;\r\n                      \"\r\n                    >\r\n                      {{ item.productModel }}\r\n                    </p>\r\n                  </div>\r\n                </mat-card-title>\r\n                <mat-card-subtitle style=\"color: red\"\r\n                  >S/. {{ item.unitprice }}</mat-card-subtitle\r\n                >\r\n              </mat-card-header>\r\n              <mat-card-content>\r\n                <div>\r\n                  <p style=\"color: #868686\">Unidades:FALTA CALCULAR</p>\r\n                </div>\r\n              </mat-card-content>\r\n              <mat-card-actions>\r\n                <button mat-button>LIKE</button>\r\n                <button mat-button>SHARE</button>\r\n              </mat-card-actions>\r\n            </mat-card>\r\n          </ng-container>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n</div>\r\n<!-- fin productos -->\r\n<!-- paginator -->\r\n\r\n<mat-paginator\r\n  [length]=\"length\"\r\n  [pageSize]=\"pageSize\"\r\n  [pageSizeOptions]=\"pageSizeOptions\"\r\n  (page)=\"pageEvent = $event\"\r\n  aria-label=\"Select page\"\r\n>\r\n</mat-paginator>\r\n\r\n<div *ngIf=\"pageEvent\">\r\n  <h5>Page Change Event Properties</h5>\r\n  <div>List length: {{ pageEvent.length }}</div>\r\n  <div>Page size: {{ pageEvent.pageSize }}</div>\r\n  <div>Page index: {{ pageEvent.pageIndex }}</div>\r\n</div>\r\n<!-- fin paginator -->\r\n";
     /***/
   },
 
@@ -61,34 +61,78 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
-    var _env__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _env__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @env */
     "./src/environments/environment.ts");
     /* harmony import */
 
 
-    var _shared_service_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _shared_service_http_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @shared/service/http.service */
     "./src/app/shared/service/http.service.ts");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var ProductService = /*#__PURE__*/function () {
-      function ProductService(httpService) {
+      function ProductService(httpService, http) {
         _classCallCheck(this, ProductService);
 
         this.httpService = httpService;
-        this.APIENDPOINT = _env__WEBPACK_IMPORTED_MODULE_2__["environment"].urlApiService;
-      }
+        this.http = http;
+        this.httpOptions = {
+          headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            "Content-Type": "application/json;charset=utf-8"
+          })
+        };
+        this.APIENDPOINT = _env__WEBPACK_IMPORTED_MODULE_3__["environment"].urlApiService;
+      } // tslint:disable-next-line:typedef
+
 
       _createClass(ProductService, [{
-        key: "getProductCatalog",
-        value: function getProductCatalog(productId, brand, model, price) {
+        key: "errorHandl",
+        value: function errorHandl(error) {
+          var errorMessage = "";
+
+          if (error.error instanceof ErrorEvent) {
+            errorMessage = error.error.message;
+          } else {
+            errorMessage = "Error Code: ".concat(error.status, "\nMessage: ").concat(error.message);
+          }
+
+          console.log(errorMessage);
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["throwError"])(errorMessage);
+        }
+      }, {
+        key: "getProductCatalog1",
+        value: function getProductCatalog1(productId, brand, model, price) {
           return this.httpService.get("".concat(this.APIENDPOINT, "/products/productcatalog?idProductCatalog=").concat(productId, "&productBrand=").concat(brand, "&productModel=").concat(model, "&unitprice=").concat(price, "&urlimage=string"));
+        }
+      }, {
+        key: "getProductCatalog2",
+        value: function getProductCatalog2(productId, brand, model, price) {
+          return this.http.get("".concat(this.APIENDPOINT, "/products/productcatalog?idProductCatalog=").concat(productId, "&productBrand=").concat(brand, "&productModel=").concat(model, "&unitprice=").concat(price, "&urlimage=string"), this.httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["retry"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["catchError"])(this.errorHandl));
         }
       }]);
 
@@ -97,11 +141,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     ProductService.ctorParameters = function () {
       return [{
-        type: _shared_service_http_service__WEBPACK_IMPORTED_MODULE_3__["HttpService"]
+        type: _shared_service_http_service__WEBPACK_IMPORTED_MODULE_4__["HttpService"]
+      }, {
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
       }];
     };
 
-    ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+    ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
       providedIn: "root"
     })], ProductService);
     /***/
@@ -470,26 +516,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! src/app/data/services/products.service */
     "./src/app/data/services/products.service.ts");
 
     var StartComponent = /*#__PURE__*/function () {
       function StartComponent( // private routeSub: Subscription,
-      formBuilder, productService, route, router) {
+      formBuilder, productService) {
         _classCallCheck(this, StartComponent);
 
         this.formBuilder = formBuilder;
         this.productService = productService;
-        this.route = route;
-        this.router = router;
-        this.products = [];
         this.loading = true;
         this.price = 0;
         this.length = 100;
@@ -502,6 +539,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.sortColumn = "name";
         this.sortType = "asc";
         this.productCatalogList = [];
+        this.products = [];
         this.toppings = formBuilder.group({
           pepperoni: false,
           extracheese: false,
@@ -516,7 +554,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "ngOnInit",
         value: function ngOnInit() {
           this.createFilterForm();
-          console.log(this.productService.getProductCatalog("", "", "", 0));
           this.getListProducts();
         }
       }, {
@@ -529,7 +566,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             productmodel: [""],
             unitprice: 0
           });
-          console.log(this.firstFilterForm.value);
         }
         /**
          * Get Products
@@ -541,21 +577,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this2 = this;
 
           var firstFilter = this.firstFilterForm.value;
-          this.productService.getProductCatalog(firstFilter.idproductcatalog, firstFilter.productbrand, firstFilter.productmodel, firstFilter.unitprice).subscribe(function (response) {
+          this.productService.getProductCatalog1(firstFilter.idproductcatalog, firstFilter.productbrand, firstFilter.productmodel, firstFilter.unitprice).subscribe(function (response) {
             var body = response.body;
             var status = response.status;
             _this2.loading = false;
 
             switch (status) {
               case 200:
-                _this2.productCatalogList = body.result;
-
-                _this2.productCatalogList.forEach(function (element) {
-                  _this2.products.push(element);
-                });
-
-                console.log(_this2.productCatalogList);
-                _this2.count = body.totalRows;
+                _this2.products = body.listProductCatalog;
+                console.log(_this2.products);
                 break;
 
               default:
@@ -586,6 +616,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             });
           }
         }
+        /**fin pagination */
+
+      }, {
+        key: "comprobar",
+        value: function comprobar() {
+          console.log(this.products);
+        }
       }]);
 
       return StartComponent;
@@ -595,23 +632,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return [{
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }, {
-        type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_5__["ProductService"]
-      }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]
-      }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"]
       }];
     };
 
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteTrigger"], {
       read: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteTrigger"],
       "static": false
-    })], StartComponent.prototype, "products", void 0);
+    })], StartComponent.prototype, "autocomplete", void 0);
     StartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-start",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./start.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/home/pages/start/start.component.html"))["default"],
+      encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./start.component.css */
       "./src/app/modules/home/pages/start/start.component.css"))["default"]]

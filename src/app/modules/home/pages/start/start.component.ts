@@ -1,20 +1,29 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  OnInit,
+  ViewChild,
+  ViewEncapsulation,
+} from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
+
 @Component({
   selector: "app-start",
   templateUrl: "./start.component.html",
   styleUrls: ["./start.component.css"],
+
+  encapsulation: ViewEncapsulation.None,
 })
 export class StartComponent implements OnInit {
   @ViewChild(MatAutocompleteTrigger, {
     read: MatAutocompleteTrigger,
     static: false,
   })
-  products = [];
   autocomplete: MatAutocompleteTrigger;
   loading = true;
   toppings: FormGroup;
@@ -34,10 +43,8 @@ export class StartComponent implements OnInit {
   firstFilterForm: FormGroup;
   constructor(
     // private routeSub: Subscription,
-    private formBuilder: FormBuilder,
-    private productService: ProductService,
-    private route: ActivatedRoute,
-    private router: Router
+    public formBuilder: FormBuilder,
+    public productService: ProductService
   ) {
     this.toppings = formBuilder.group({
       pepperoni: false,
@@ -52,12 +59,14 @@ export class StartComponent implements OnInit {
     this.createFilterForm();
     this.getListProducts();
   }
+  products = [];
+
   createFilterForm() {
     this.firstFilterForm = this.formBuilder.group({
       autocomplete: [""],
       idproductcatalog: [""],
       productbrand: [""],
-      productmodel: ["G"],
+      productmodel: [""],
       unitprice: 0,
     });
   }
@@ -115,4 +124,7 @@ export class StartComponent implements OnInit {
     }
   }
   /**fin pagination */
+  comprobar() {
+    console.log(this.products);
+  }
 }

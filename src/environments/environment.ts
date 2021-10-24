@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  urlApiService: "https://pinio-services.herokuapp.com",
+  urlApiService: "https://pinio-clients-services-1635028903238.azurewebsites.net",
 };
 
 /*

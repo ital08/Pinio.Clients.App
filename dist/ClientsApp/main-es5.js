@@ -1860,7 +1860,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: true,
-      urlApiService: "https://pinio-services.herokuapp.com/"
+      urlApiService: "https://pinio-clients-services-1635028903238.azurewebsites.net"
     };
     /*
      * For easier debugging in development mode, you can import the following file

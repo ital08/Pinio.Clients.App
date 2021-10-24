@@ -1172,7 +1172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const environment = {
     production: true,
-    urlApiService: "https://pinio-services.herokuapp.com/",
+    urlApiService: "https://pinio-clients-services-1635028903238.azurewebsites.net",
 };
 /*
  * For easier debugging in development mode, you can import the following file
