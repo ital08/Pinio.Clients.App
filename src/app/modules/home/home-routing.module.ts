@@ -16,16 +16,12 @@ export const routes: Routes = [
   },
   { path: "category/:category", component: StartComponent },
   {
-    path: "category/:category/:brand",
-    component: StartComponent,
-  },
-  {
-    path: "not-found",
-    component: NotFoundProductComponent,
-  },
-  {
-    path: "products/:id",
+    path: "product/:id",
     component: ProductsComponent,
+  },
+  {
+    path: "not-fount",
+    component: NotFoundProductComponent,
   },
 ];
 

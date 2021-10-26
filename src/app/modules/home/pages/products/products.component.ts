@@ -8,14 +8,11 @@ import { Subscription } from "rxjs";
   styleUrls: ["./products.component.css"],
 })
 export class ProductsComponent implements OnInit {
-  private routeSub: Subscription;
-  category: string;
-
-  constructor(private route: ActivatedRoute, public router: Router) {}
-
+  constructor() {}
+  // this.routeSub = this.route.params.subscribe((params) => {
+  //   this.id = params["id"]; //obtenemos el id del route para usarlo en servicios
+  // });
   ngOnInit() {
-    this.routeSub = this.route.params.subscribe((params) => {
-      this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
-    });
+    console.log("entramos");
   }
 }

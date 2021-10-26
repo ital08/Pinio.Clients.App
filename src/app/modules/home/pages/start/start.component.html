@@ -115,8 +115,18 @@
 <!-- productos -->
 <div>
   <div *ngIf="loading === true; else elseBlock">
-    <mat-progress-spinner color="primary" mode="indeterminate">
-    </mat-progress-spinner>
+    <div class="container justify-content-center" style="padding: 10%">
+      <div class="row justify-content-center">
+        <div class="justify-content-center">
+          <mat-progress-spinner
+            class="justify-content-center"
+            color="primary"
+            mode="indeterminate"
+          >
+          </mat-progress-spinner>
+        </div>
+      </div>
+    </div>
   </div>
   <ng-template #elseBlock>
     <div class="products">
@@ -130,7 +140,8 @@
               <img
                 style="padding: 10px"
                 mat-card-image
-                width="10px"
+                width="200px"
+                height="150px"
                 src="{{ item.urlimage }}"
                 alt="{{ item.productModel }}"
               />
@@ -138,9 +149,11 @@
                 style="padding: 0%; margin: -15px; justify-content: left"
               >
                 <mat-card-title>
-                  <div>
+                  <div style="max-width: 200px; min-width: 200px">
                     <p
                       style="
+                        font-size: small;
+                        text-size-adjust: auto;
                         width: 20ch;
                         overflow: hidden;
                         white-space: nowrap;
@@ -160,9 +173,33 @@
                   <p style="color: #868686">Unidades:FALTA CALCULAR</p>
                 </div>
               </mat-card-content>
-              <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
+              <mat-card-actions class="justify-content-center">
+                <div class="button center justify-content-center">
+                  <a href="/product/{{ item.idProductCatalog }}">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: small;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                      DETALLES
+                    </p></a
+                  >
+                </div>
+                <div class="button center justify-content-center">
+                  <p
+                    style="
+                      color: white;
+                      font-weight: bold;
+                      font-size: small;
+                      text-overflow: ellipsis;
+                    "
+                  >
+                    AÑADIR A CARRITO
+                  </p>
+                </div>
               </mat-card-actions>
             </mat-card>
           </ng-container>

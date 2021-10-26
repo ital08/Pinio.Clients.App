@@ -1,3 +1,4 @@
+import { Route } from "@angular/compiler/src/core";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -44,7 +45,8 @@ export class StartComponent implements OnInit {
   constructor(
     // private routeSub: Subscription,
     public formBuilder: FormBuilder,
-    public productService: ProductService
+    public productService: ProductService,
+    private router: Router
   ) {
     this.toppings = formBuilder.group({
       pepperoni: false,
@@ -126,5 +128,8 @@ export class StartComponent implements OnInit {
   /**fin pagination */
   comprobar() {
     console.log(this.products);
+  }
+  gotoproduct(product: string) {
+    this.router.navigateByUrl("product/${product}");
   }
 }
