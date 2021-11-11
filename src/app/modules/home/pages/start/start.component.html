@@ -114,56 +114,99 @@
 </div>
 <!-- productos -->
 <div>
-  <div class="products">
-    <div *ngIf="products">
-      <div class="grid flex-container-main mt-3">
-        <ng-container
-          style="grid-auto-columns: auto"
-          *ngFor="let item of products"
-        >
-          <mat-card class="example-card">
-            <img
-              style="padding: 10px"
-              mat-card-image
-              width="10px"
-              src="{{ item.url }}"
-              alt="{{ item.name }}"
-            />
-            <mat-card-header
-              style="padding: 0%; margin: -15px; justify-content: left"
-            >
-              <mat-card-title>
-                <div>
-                  <p
-                    style="
-                      width: 15ch;
-                      overflow: hidden;
-                      white-space: nowrap;
-                      text-overflow: ellipsis;
-                    "
-                  >
-                    {{ item.name }}
-                  </p>
-                </div>
-              </mat-card-title>
-              <mat-card-subtitle style="color: red"
-                >S/. {{ item.price }}</mat-card-subtitle
-              >
-            </mat-card-header>
-            <mat-card-content>
-              <div>
-                <p style="color: #868686">Unidades:{{ item.stock }}</p>
-              </div>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-        </ng-container>
+  <div *ngIf="loading === true; else elseBlock">
+    <div class="container justify-content-center" style="padding: 10%">
+      <div class="row justify-content-center">
+        <div class="justify-content-center">
+          <mat-progress-spinner
+            class="justify-content-center"
+            color="primary"
+            mode="indeterminate"
+          >
+          </mat-progress-spinner>
+        </div>
       </div>
     </div>
   </div>
+  <ng-template #elseBlock>
+    <div class="products">
+      <div *ngIf="products">
+        <div class="grid flex-container-main mt-3">
+          <ng-container
+            style="grid-auto-columns: auto"
+            *ngFor="let item of products"
+          >
+            <mat-card class="example-card">
+              <img
+                style="padding: 10px"
+                mat-card-image
+                width="200px"
+                height="150px"
+                src="{{ item.urlimage }}"
+                alt="{{ item.productModel }}"
+              />
+              <mat-card-header
+                style="padding: 0%; margin: -15px; justify-content: left"
+              >
+                <mat-card-title>
+                  <div style="max-width: 200px; min-width: 200px">
+                    <p
+                      style="
+                        font-size: small;
+                        text-size-adjust: auto;
+                        width: 20ch;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                      {{ item.productModel }}
+                    </p>
+                  </div>
+                </mat-card-title>
+                <mat-card-subtitle style="color: red"
+                  >S/. {{ item.unitprice }}</mat-card-subtitle
+                >
+              </mat-card-header>
+              <mat-card-content>
+                <div>
+                  <p style="color: #868686">Unidades:FALTA CALCULAR</p>
+                </div>
+              </mat-card-content>
+              <mat-card-actions class="justify-content-center">
+                <div class="button center justify-content-center">
+                  <a href="/product/{{ item.idProductCatalog }}">
+                    <p
+                      style="
+                        color: white;
+                        font-weight: bold;
+                        font-size: small;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                      DETALLES
+                    </p></a
+                  >
+                </div>
+                <div class="button center justify-content-center">
+                  <p
+                    style="
+                      color: white;
+                      font-weight: bold;
+                      font-size: small;
+                      text-overflow: ellipsis;
+                    "
+                  >
+                    AÑADIR A CARRITO
+                  </p>
+                </div>
+              </mat-card-actions>
+            </mat-card>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </ng-template>
 </div>
 <!-- fin productos -->
 <!-- paginator -->

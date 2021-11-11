@@ -4,6 +4,7 @@
 
 export const environment = {
   production: true,
+  urlApiService: "http://pruebajava1.azurewebsites.net",
 };
 
 /*

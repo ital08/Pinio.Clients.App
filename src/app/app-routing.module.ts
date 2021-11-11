@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
 import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 import { ContentlayoutComponent } from "./layout/contentlayout/contentlayout.component";
+import { ProfileComponent } from "./layout/profile/profile.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,12 @@ const routes: Routes = [
           import("@modules/home/home.module").then((m) => m.HomeModule),
       },
     ],
+  },
+  {
+    path: "profile",
+    component: ProfileComponent,
+    loadChildren: () =>
+      import("./modules/profile/profile.module").then((m) => m.ProfileModule),
   },
   {
     path: "auth",

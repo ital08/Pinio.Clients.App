@@ -1,11 +1,14 @@
-export class FindProduct {
-  productId: number;
-  name: string;
+export class ProductCatalogModel {
+  productId: string;
   brand: string;
   model: string;
-  stock: number;
-  description: string;
   price: number;
   url: string;
-  category: string;
 }
+// {
+//   "idProductCatalog": "string",
+//   "productBrand": "string",
+//   "productModel": "string",
+//   "unitprice": 0,
+//   "urlimage": "string"
+// }

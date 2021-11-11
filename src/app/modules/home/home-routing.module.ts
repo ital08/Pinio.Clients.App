@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
 import { NotFoundProductComponent } from "./pages/not-found-product/not-found-product.component";
 import { ProductsComponent } from "./pages/products/products.component";
+import { HeaderComponent } from "src/app/layout/header/header.component";
+import { SubNavComponent } from "src/app/layout/sub-nav/sub-nav.component";
 
 export const routes: Routes = [
   {
@@ -14,16 +16,12 @@ export const routes: Routes = [
   },
   { path: "category/:category", component: StartComponent },
   {
-    path: "category/:category/:brand",
-    component: StartComponent,
-  },
-  {
-    path: "products",
-    component: NotFoundProductComponent,
-  },
-  {
-    path: "products/:id",
+    path: "product/:id",
     component: ProductsComponent,
+  },
+  {
+    path: "not-fount",
+    component: NotFoundProductComponent,
   },
 ];
 
