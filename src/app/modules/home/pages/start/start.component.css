@@ -1,3 +1,7 @@
+mat-card {
+  width: calc(100% - 200px);
+  height: calc(100% - 600px);
+}
 .button-category {
   background-color: #4f4e4e;
   height: 80px;
@@ -142,4 +146,13 @@ mat-slider {
     display: grid;
     grid-template-columns: 1fr; /* Create 2 columns and auto-place rows */
   }
+}
+.button {
+  cursor: pointer;
+  background-color: #ed691e;
+  border-radius: 100px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: auto;
+  padding-right: auto;
 }

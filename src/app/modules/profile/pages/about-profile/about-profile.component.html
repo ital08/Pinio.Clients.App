@@ -1,0 +1,59 @@
+<!-- profile options -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col border profile-option">
+      <a
+        class="profile-options-a"
+        routerLink="/profile/me"
+        routerLinkActive="active"
+        ><div>Datos Personales</div></a
+      >
+    </div>
+    <div class="col border profile-option">
+      <div>
+        <a
+          class="profile-options-a"
+          routerLink="/profile/history"
+          routerLinkActive="active"
+          >Historial de pedidos</a
+        >
+      </div>
+    </div>
+    <div class="col border profile-option">
+      <div>
+        <a
+          class="profile-options-a"
+          routerLink="/profile/my-address"
+          routerLinkActive="active"
+          >Mis Direcciones</a
+        >
+      </div>
+    </div>
+    <div class="col border profile-option">
+      <div>
+        <a
+          class="profile-options-a"
+          routerLink="/profile/messages"
+          routerLinkActive="active"
+          >Mensajes</a
+        >
+      </div>
+    </div>
+    <div class="col border profile-option">
+      <div>
+        <div
+          class="profile-options-a"
+          style="cursor: pointer"
+          (click)="logout()"
+          routerLinkActive="active"
+        >
+          Cerrar Sesión
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- fin profile options -->
+<div>
+  <router-outlet></router-outlet>
+</div>

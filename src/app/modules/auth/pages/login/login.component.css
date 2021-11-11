@@ -1,3 +1,49 @@
+::ng-deep .mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #ed691e !important;
+}
+
+::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+  .mat-form-field-outline-thick {
+  color: #ed691e !important;
+}
+
+::ng-deep .mat-input-element {
+  caret-color: #ed691e !important;
+}
+::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+  caret-color: #ed691e !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ed691e !important;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #ed691e !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 40px;
+  width: 100%;
+  color: #ed691e !important;
+  opacity: 1 !important;
+}
+mat-form-field {
+  width: 95%;
+}
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 40px 0 0 40px !important;
+  min-width: 40px !important;
+}
+
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 40px 40px 0 !important;
+}
 .container-main {
   padding: 10vh;
   padding-top: 6vh;
@@ -9,7 +55,7 @@
   bottom: 10px;
   filter: contrast(100%);
   filter: drop-shadow(0px 0px 5px white);
-  width: 40%;
+  width: 30%;
   color: black;
   text-align: center;
 }
@@ -32,7 +78,20 @@
 .footer {
   margin-top: 20px;
 }
+.nav-text {
+  display: flex;
+}
+mat-form-field {
+}
+
 .box3 {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  place-items: center;
 }
 @media screen and (max-width: 800px) {
   .box1 {
@@ -42,9 +101,15 @@
     border-radius: 20px 20px 0 0;
     height: 200px;
   }
-  .img-logus {
-    left: 5px;
-    top: 5px;
-    width: 20%;
+  .img-lokus {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
+}
+.example-container .mat-form-field + .mat-form-field {
+  width: 400px;
+}
+.text {
+  color: aliceblue;
 }
