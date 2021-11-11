@@ -16,7 +16,7 @@ import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 import { AvatarModule } from "ngx-avatar";
 import { MatAutocomplete, MatAutocompleteModule } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
-import { ProfileComponent } from './layout/profile/profile.component';
+import { ProfileComponent } from "./layout/profile/profile.component";
 
 @NgModule({
   declarations: [

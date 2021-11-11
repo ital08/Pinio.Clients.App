@@ -1,18 +1,12 @@
 import { Route } from "@angular/compiler/src/core";
-import {
-  ChangeDetectionStrategy,
-  Component,
-  HostListener,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation,
-} from "@angular/core";
+import { Component, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
+
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
+import { BootstrapModalModule } from "ngx-bootstrap-modal";
 import { Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
-
 @Component({
   selector: "app-start",
   templateUrl: "./start.component.html",

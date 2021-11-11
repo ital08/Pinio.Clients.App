@@ -462,7 +462,14 @@ let ProfileModule = class ProfileModule {
 };
 ProfileModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_pages_about_profile_about_profile_component__WEBPACK_IMPORTED_MODULE_6__["AboutProfileComponent"], _pages_me_me_component__WEBPACK_IMPORTED_MODULE_7__["MeComponent"], _pages_history_history_component__WEBPACK_IMPORTED_MODULE_8__["HistoryComponent"], _pages_address_address_component__WEBPACK_IMPORTED_MODULE_9__["AddressComponent"], _pages_messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"], _pages_mainprofile_mainprofile_component__WEBPACK_IMPORTED_MODULE_11__["MainprofileComponent"]],
+        declarations: [
+            _pages_about_profile_about_profile_component__WEBPACK_IMPORTED_MODULE_6__["AboutProfileComponent"],
+            _pages_me_me_component__WEBPACK_IMPORTED_MODULE_7__["MeComponent"],
+            _pages_history_history_component__WEBPACK_IMPORTED_MODULE_8__["HistoryComponent"],
+            _pages_address_address_component__WEBPACK_IMPORTED_MODULE_9__["AddressComponent"],
+            _pages_messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"],
+            _pages_mainprofile_mainprofile_component__WEBPACK_IMPORTED_MODULE_11__["MainprofileComponent"],
+        ],
         imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"], ngx_avatar__WEBPACK_IMPORTED_MODULE_4__["AvatarModule"], _profile_routing_module__WEBPACK_IMPORTED_MODULE_5__["ProfileRoutingModule"]],
         exports: [],
         providers: [],

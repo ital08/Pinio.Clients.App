@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  urlApiService: "https://pinio-clients-services-1635028903238.azurewebsites.net",
+  urlApiService: "http://pruebajava1.azurewebsites.net",
 };
 
 /*
