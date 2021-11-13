@@ -7,10 +7,26 @@ import { Router } from "@angular/router";
   styleUrls: ["./header.component.css"],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router) {}
+  dato: String;
 
-  ngOnInit() {}
+  constructor(private router: Router) {}
+  cond;
+  ngOnInit() {
+    this.statuslogin();
+  }
+  statuslogin() {
+    this.dato = localStorage.getItem("clientname");
+    if (this.dato != null) {
+      this.cond = false;
+    } else {
+      this.cond = true;
+    }
+  }
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl("");
+  }
   home() {
-    this.router.navigateByUrl("#");
+    this.router.navigateByUrl("");
   }
 }

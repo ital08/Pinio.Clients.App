@@ -111,10 +111,18 @@ let AboutProfileComponent = class AboutProfileComponent {
     constructor(router) {
         this.router = router;
     }
-    ngOnInit() { }
+    ngOnInit() {
+        this.statuslogin();
+    }
+    statuslogin() {
+        this.dato = localStorage.getItem("clientname");
+        if (this.dato == null) {
+            this.router.navigateByUrl("");
+        }
+    }
     logout() {
-        console.log("cerrando sesion");
-        this.router.navigateByUrl("/");
+        localStorage.clear();
+        this.router.navigateByUrl("");
     }
 };
 AboutProfileComponent.ctorParameters = () => [

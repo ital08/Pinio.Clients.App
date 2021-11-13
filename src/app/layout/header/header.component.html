@@ -33,20 +33,42 @@
         </a>
       </div>
       <div class="profile-section">
-        <div>
-          <a style="text-decoration: none" href="/auth/login">
-            <div class="login-text">
-              <p>Log In</p>
-            </div>
-          </a>
+        <div *ngIf="cond === true; else elseBlock">
+          <div>
+            <a style="text-decoration: none" href="/auth/login">
+              <div style="cursor: pointer" class="login-text">
+                <p>Log In</p>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a style="text-decoration: none">
+              <div style="cursor: pointer" class="register-text">
+                <p>Register</p>
+              </div></a
+            >
+          </div>
         </div>
-        <div>
-          <a style="text-decoration: none">
-            <div class="register-text">
-              <p>Register</p>
-            </div></a
-          >
-        </div>
+        <ng-template #elseBlock>
+          <div>
+            <a style="text-decoration: none" href="/profile">
+              <div style="cursor: pointer" class="login-text">
+                <p>{{ dato }}</p>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a style="text-decoration: none">
+              <div
+                style="cursor: pointer"
+                class="register-text"
+                (click)="logout()"
+              >
+                <p>Logout</p>
+              </div></a
+            >
+          </div>
+        </ng-template>
       </div>
     </div>
     <div class="shopping-cart">

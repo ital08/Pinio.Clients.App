@@ -128,12 +128,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       _createClass(AboutProfileComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.statuslogin();
+        }
+      }, {
+        key: "statuslogin",
+        value: function statuslogin() {
+          this.dato = localStorage.getItem("clientname");
+
+          if (this.dato == null) {
+            this.router.navigateByUrl("");
+          }
+        }
       }, {
         key: "logout",
         value: function logout() {
-          console.log("cerrando sesion");
-          this.router.navigateByUrl("/");
+          localStorage.clear();
+          this.router.navigateByUrl("");
         }
       }]);
 
