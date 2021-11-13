@@ -578,7 +578,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 break;
             }
           }, function (error) {
-            _this.loading = false;
+            _this.loading = true;
             console.log("Error al traer los productos");
           });
         }

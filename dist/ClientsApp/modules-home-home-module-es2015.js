@@ -394,7 +394,7 @@ let StartComponent = class StartComponent {
                     break;
             }
         }, (error) => {
-            this.loading = false;
+            this.loading = true;
             console.log("Error al traer los productos");
         });
     }
