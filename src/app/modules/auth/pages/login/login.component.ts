@@ -5,8 +5,11 @@ import {
   FormGroup,
   Validators,
 } from "@angular/forms";
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Router } from "@angular/router";
+import { BootstrapModalModule } from "ngx-bootstrap-modal";
 import { UserService } from "src/app/data/services/user.service";
+import { ModalLoginErrorComponent } from "@modules/auth/modals/modal-login-error/modal-login-error.component";
 
 @Component({
   selector: "app-login",
@@ -18,11 +21,14 @@ export class LoginComponent implements OnInit {
   email = new FormControl("", [Validators.required, Validators.email]);
   pwd = new FormControl("");
   hide = true;
+  bsModalRef: BsModalRef;
   log: FormGroup;
+
   constructor(
     private userService: UserService,
     private router: Router,
-    public formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private modalService:  BsModalService
   ) {}
 
   ngOnInit() {
@@ -44,7 +50,9 @@ export class LoginComponent implements OnInit {
   }
 
   getlogin() {
+
     let firstform = this.log.value;
+    if(this.log.valid){
     this.userService
       .login(firstform.email, firstform.pwd)
       .subscribe((response: any) => {
@@ -63,9 +71,24 @@ export class LoginComponent implements OnInit {
               localStorage.setItem("idclient", body.idclient);
               this.router.navigateByUrl("profile");
             }
+            this.router.navigateByUrl('profile');
           default:
             break;
         }
       });
+    }
+    else {
+      const initialState = {
+        title: "Inicio de Sesión",
+        message: "Las credenciales ingresadas son incorrectas/inválidas",
+        acceptButton:{
+            text: "Reintentar"
+        },
+        cancelButton:{
+            text: "Seguir navegando"
+        }
+    };
+      this.bsModalRef = this.modalService.show(ModalLoginErrorComponent, { class: 'modal-dialog-centered', backdrop: 'static', keyboard: false, initialState })
+    }
   }
 }

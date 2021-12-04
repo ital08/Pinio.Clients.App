@@ -47,9 +47,8 @@ import { ProfileComponent } from "./layout/profile/profile.component";
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-  ],
-  providers: [],
+  ], providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }

@@ -113,3 +113,11 @@ mat-form-field {
 .text {
   color: aliceblue;
 }
+.custom-button{
+  color: white;
+  background-color: #ed691e;
+  border-radius: 20px;
+  margin: 20px;
+  padding:10px;
+  cursor: pointer;
+}

@@ -23,4 +23,9 @@ export class UserService {
       `${this.APIENDPOINT}/products/user?clientemail=${email}&clientpassword=${pwd}`
     );
   }
+  register(email: String, pwd: String) {
+    return this.httpService.get(
+      `${this.APIENDPOINT}/products/register?clientemail=${email}&clientpassword=${pwd}`
+    );
+  }
 }

@@ -7,12 +7,8 @@ import { FormsModule } from "@angular/forms";
 import { NotFoundProductComponent } from "./pages/not-found-product/not-found-product.component";
 import { ProductsComponent } from "./pages/products/products.component";
 import { AvatarModule } from "ngx-avatar";
-
 @NgModule({
   declarations: [StartComponent, NotFoundProductComponent, ProductsComponent],
   imports: [CommonModule, SharedModule, AvatarModule, HomeRoutingModule],
-  exports: [],
-  providers: [],
-  entryComponents: [],
 })
-export class HomeModule {}
+export class HomeModule { }

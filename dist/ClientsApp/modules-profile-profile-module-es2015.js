@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-md\">\n  <div class=\"row w-50 p-5 mx-auto\">\n    <div class=\"col-sm-6\">\n      <div>\n        <svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width=\"200\"\n          height=\"200\"\n          fill=\"currentColor\"\n          class=\"bi bi-person\"\n          viewBox=\"0 0 16 16\"\n          style=\"padding: 30px; border-radius: 100px; background-color: #ed691e\"\n        >\n          <path\n            d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"\n          />\n        </svg>\n      </div>\n    </div>\n    <div class=\"col-sm-5 left\">\n      <p style=\"color: #ed691e; font-size: 35px; font-weight: bold\">\n        BIENVENIDO A TU CUENTA\n      </p>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-md\">\n  <div class=\"row justify-content-center mt-5 mb-5\">\n    <div class=\"col-4\" style=\"width: 100%;\">\n        <svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width=\"170\"\n          height=\"170\"\n          fill=\"currentColor\"\n          class=\"bi bi-person\"\n          viewBox=\"0 0 16 16\"\n          style=\"padding: 30px; border-radius: 100px; background-color: #ed691e\"\n        >\n          <path\n            d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"\n          />\n        </svg>\n    </div>\n    <div class=\"col-3 my-auto\">\n      <p style=\"color: #ed691e; font-size: 3vh; font-weight: bold\">\n        BIENVENIDO A TU CUENTA\n      </p>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>me works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("");
 
 /***/ }),
 

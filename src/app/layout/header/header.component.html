@@ -1,11 +1,11 @@
 <div class="bg-nav">
-  <div class="left">
+  <div class="left justify-content-center">
     <div class="left-container">
       <a href="" (click)="home()"><span class="logo"></span></a>
     </div>
   </div>
 
-  <div class="main">
+  <div class="main justify-content-center">
     <div class="search-section">
       <mat-form-field appearance="outline">
         <mat-label>Buscar productos</mat-label>
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="right">
+  <div class="right justify-content-center">
     <div class="user-section">
       <div>
         <a style="text-decoration: none" href="">
@@ -42,7 +42,7 @@
             </a>
           </div>
           <div>
-            <a style="text-decoration: none">
+            <a style="text-decoration: none" href="/auth/register">
               <div style="cursor: pointer" class="register-text">
                 <p>Register</p>
               </div></a
@@ -71,7 +71,7 @@
         </ng-template>
       </div>
     </div>
-    <div class="shopping-cart">
+    <div (click)="openCart()" style="cursor:pointer;" class="shopping-cart">
       <a style="text-decoration: none">
         <div class="cart-container">
           <span class="cart-logo"></span>

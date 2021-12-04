@@ -6,9 +6,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteModule } from "@angular/material";
 import { HttpService } from "./service/http.service";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+import { CartComponent } from "@modules/home/modals/cart/cart.component";
+import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [NoCartComponent, CartComponent],
   imports: [
     MaterialModule,
     CommonModule,
@@ -25,5 +27,6 @@ import { NotFoundComponent } from "./components/not-found/not-found.component";
     MatAutocompleteModule,
   ],
   providers: [HttpService],
+  entryComponents: [NoCartComponent, CartComponent]
 })
-export class SharedModule {}
+export class SharedModule { }
