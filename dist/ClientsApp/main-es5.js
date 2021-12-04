@@ -1402,7 +1402,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
           } else {
             var initialState = {
-              title: "Ups ! Parece que no haz iniciado sesion aun :(",
+              title: "Ups ! Parece que no has iniciado sesion aun :(",
               message: "Accede para ingresar a tu carrito de compras",
               acceptButton: {
                 text: "Iniciar Sesión"
