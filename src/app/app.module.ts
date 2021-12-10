@@ -17,6 +17,8 @@ import { AvatarModule } from "ngx-avatar";
 import { MatAutocomplete, MatAutocompleteModule } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
 import { ProfileComponent } from "./layout/profile/profile.component";
+import { FooterAdminComponent } from './layout/footer-admin/footer-admin.component';
+import { HeaderAdminComponent } from './header-admin/header-admin.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ProfileComponent } from "./layout/profile/profile.component";
     NotFoundComponent,
     AuthlayoutComponent,
     ProfileComponent,
+    FooterAdminComponent,
+    HeaderAdminComponent,
   ],
   imports: [
     //avatar
