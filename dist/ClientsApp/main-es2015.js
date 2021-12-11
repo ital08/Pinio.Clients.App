@@ -36,6 +36,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/admin-layout/admin-layout.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/layout/admin-layout/admin-layout.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <app-header-admin></app-header-admin>\r\n  <router-outlet></router-outlet>\r\n  <app-footer-admin></app-footer-admin>\r\n</div>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/authlayout/authlayout.component.html":
 /*!***************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/layout/authlayout/authlayout.component.html ***!
@@ -58,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\r\n  <div class=\"mat-app-background\">\r\n    <app-header></app-header>\r\n    <app-sub-nav></app-sub-nav>\r\n    <div>\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    <div class=\"mat-app-footer\">\r\n      <app-footer></app-footer>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\r\n  <div class=\"mat-app-background\">\r\n    <app-header></app-header>\r\n    <app-sub-nav></app-sub-nav>\r\n    <div>\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    \r\n  </div>\r\n  <div class=\"mat-app-footer\">\r\n    <app-footer></app-footer>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\n  <div class=\"mat-app-background\">\n    <app-header></app-header>\n    <div>\n      <router-outlet></router-outlet>\n    </div>\n    <div class=\"mat-app-footer\">\n      <app-footer></app-footer>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\r\n  <div class=\"mat-app-background\">\r\n    <app-header></app-header>\r\n    <div>\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    <div class=\"mat-app-footer\">\r\n      <app-footer></app-footer>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -123,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cart\">\n  <div class=\"flex\">\n    <div>\n      <div class=\"row\">\n        <div class=\"col-4\">\n          <mat-icon style=\"font-size: 70px; color: black\"\n            >add_shopping_cart</mat-icon\n          >\n        </div>\n        <div class=\"col-8\">\n          <h6>Tu carrito de compras</h6>\n        </div>\n      </div>\n      <span *ngIf=\"valid\">\n        <div class=\"row mt-4 mb-4\">\n          <div class=\"col-4\">\n            <mat-icon style=\"font-size: 70px; color: black\"\n              >remove_shopping_cart</mat-icon\n            >\n          </div>\n          <div class=\"col-8\">\n            <h6>Tu carrito está vacío</h6>\n            <h6>Sigue comprando!</h6>\n          </div>\n        </div>\n      </span>\n    </div>\n    <div class=\"mt-1 mb-1\">\n      <mat-divider></mat-divider>\n      <div class=\"row\">\n        <div class=\"col-6\">Subtotal</div>\n        <div class=\"col-6 right\">S/0.00</div>\n      </div>\n\n      <div class=\"row mb-1\">\n        <div class=\"col-6\">Envio</div>\n        <div class=\"col-6 right\">---</div>\n      </div>\n      <mat-divider></mat-divider>\n      <div class=\"row justify-content-center mt-3\">\n        <button class=\"custom-button\" mat-button [disabled]=\"valid\">\n          <div class=\"custom-font\">COMPRAR</div>\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cart\">\r\n  <div class=\"flex\">\r\n    <div>\r\n      <div class=\"row\">\r\n        <div class=\"col-4\">\r\n          <mat-icon style=\"font-size: 70px; color: black\"\r\n            >add_shopping_cart</mat-icon\r\n          >\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <h6>Tu carrito de compras</h6>\r\n        </div>\r\n      </div>\r\n      <span *ngIf=\"valid\">\r\n        <div class=\"row mt-4 mb-4\">\r\n          <div class=\"col-4\">\r\n            <mat-icon style=\"font-size: 70px; color: black\"\r\n              >remove_shopping_cart</mat-icon\r\n            >\r\n          </div>\r\n          <div class=\"col-8\">\r\n            <h6>Tu carrito está vacío</h6>\r\n            <h6>Sigue comprando!</h6>\r\n          </div>\r\n        </div>\r\n      </span>\r\n    </div>\r\n    <div class=\"mt-1 mb-1\">\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row\">\r\n        <div class=\"col-6\">Subtotal</div>\r\n        <div class=\"col-6 right\">S/0.00</div>\r\n      </div>\r\n\r\n      <div class=\"row mb-1\">\r\n        <div class=\"col-6\">Envio</div>\r\n        <div class=\"col-6 right\">---</div>\r\n      </div>\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row justify-content-center mt-3\">\r\n        <button class=\"custom-button\" mat-button [disabled]=\"valid\">\r\n          <div class=\"custom-font\">COMPRAR</div>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -136,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-content\">\n  <div class=\"modal-header justify-content-center\">\n    <div class=\"cart-container\">\n      <span class=\"cart-logo\"></span>\n    </div>\n    <div class=\"col-8\">\n      <h6 class=\"modal-title pull-center\">{{ title }}</h6>\n    </div>\n  </div>\n  <div class=\"modal-body\">\n    <div class=\"row justify-content-center\">\n      {{ message }}\n    </div>\n  </div>\n  <div class=\"modal-footer justify-content-center\">\n    <button mat-raised-button *ngIf=\"cancelButton\" (click)=\"cancel()\">\n      {{ cancelButton.text }}\n    </button>\n    <button\n      mat-raised-button\n      *ngIf=\"acceptButton\"\n      color=\"accent\"\n      class=\"ml-3 text-button\"\n      (click)=\"accept()\"\n    >\n      {{ acceptButton.text }}\n    </button>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-content\">\r\n  <div class=\"modal-header justify-content-center\">\r\n    <div class=\"cart-container\">\r\n      <span class=\"cart-logo\"></span>\r\n    </div>\r\n    <div class=\"col-8\">\r\n      <h6 class=\"modal-title pull-center\">{{ title }}</h6>\r\n    </div>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <div class=\"row justify-content-center\">\r\n      {{ message }}\r\n    </div>\r\n  </div>\r\n  <div class=\"modal-footer justify-content-center\">\r\n    <button mat-raised-button *ngIf=\"cancelButton\" (click)=\"cancel()\">\r\n      {{ cancelButton.text }}\r\n    </button>\r\n    <button\r\n      mat-raised-button\r\n      *ngIf=\"acceptButton\"\r\n      color=\"accent\"\r\n      class=\"ml-3 text-button\"\r\n      (click)=\"accept()\"\r\n    >\r\n      {{ acceptButton.text }}\r\n    </button>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -421,9 +434,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shared/components/not-found/not-found.component */ "./src/app/shared/components/not-found/not-found.component.ts");
-/* harmony import */ var _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout/authlayout/authlayout.component */ "./src/app/layout/authlayout/authlayout.component.ts");
-/* harmony import */ var _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./layout/contentlayout/contentlayout.component */ "./src/app/layout/contentlayout/contentlayout.component.ts");
-/* harmony import */ var _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layout/profile/profile.component */ "./src/app/layout/profile/profile.component.ts");
+/* harmony import */ var _layout_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout/admin-layout/admin-layout.component */ "./src/app/layout/admin-layout/admin-layout.component.ts");
+/* harmony import */ var _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./layout/authlayout/authlayout.component */ "./src/app/layout/authlayout/authlayout.component.ts");
+/* harmony import */ var _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layout/contentlayout/contentlayout.component */ "./src/app/layout/contentlayout/contentlayout.component.ts");
+/* harmony import */ var _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./layout/profile/profile.component */ "./src/app/layout/profile/profile.component.ts");
+
 
 
 
@@ -434,7 +449,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: "",
-        component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_5__["ContentlayoutComponent"],
+        component: _layout_contentlayout_contentlayout_component__WEBPACK_IMPORTED_MODULE_6__["ContentlayoutComponent"],
         children: [
             {
                 path: "",
@@ -444,13 +459,18 @@ const routes = [
     },
     {
         path: "profile",
-        component: _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"],
+        component: _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"],
         loadChildren: () => __webpack_require__.e(/*! import() | modules-profile-profile-module */ "modules-profile-profile-module").then(__webpack_require__.bind(null, /*! ./modules/profile/profile.module */ "./src/app/modules/profile/profile.module.ts")).then((m) => m.ProfileModule),
     },
     {
         path: "auth",
-        component: _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_4__["AuthlayoutComponent"],
+        component: _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_5__["AuthlayoutComponent"],
         loadChildren: () => __webpack_require__.e(/*! import() | modules-auth-auth-module */ "modules-auth-auth-module").then(__webpack_require__.bind(null, /*! ./modules/auth/auth.module */ "./src/app/modules/auth/auth.module.ts")).then((m) => m.AuthModule),
+    },
+    {
+        path: "admin",
+        component: _layout_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_4__["AdminLayoutComponent"],
+        loadChildren: () => __webpack_require__.e(/*! import() | modules-admin-admin-module */ "modules-admin-admin-module").then(__webpack_require__.bind(null, /*! ./modules/admin/admin.module */ "./src/app/modules/admin/admin.module.ts")).then((m) => m.AdminModule),
     },
     { path: "404", component: _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_3__["NotFoundComponent"] },
     { path: "**", redirectTo: "/404" },
@@ -538,6 +558,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_avatar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-avatar */ "./node_modules/ngx-avatar/fesm2015/ngx-avatar.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./layout/profile/profile.component */ "./src/app/layout/profile/profile.component.ts");
+/* harmony import */ var _layout_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./layout/admin-layout/admin-layout.component */ "./src/app/layout/admin-layout/admin-layout.component.ts");
+
 
 
 
@@ -569,6 +591,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _shared_components_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_12__["NotFoundComponent"],
             _layout_authlayout_authlayout_component__WEBPACK_IMPORTED_MODULE_14__["AuthlayoutComponent"],
             _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_17__["ProfileComponent"],
+            _layout_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_18__["AdminLayoutComponent"]
         ],
         imports: [
             //avatar
@@ -621,6 +644,50 @@ CoreModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         ]
     })
 ], CoreModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/layout/admin-layout/admin-layout.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/layout/admin-layout/admin-layout.component.css ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9hZG1pbi1sYXlvdXQvYWRtaW4tbGF5b3V0LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/layout/admin-layout/admin-layout.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/layout/admin-layout/admin-layout.component.ts ***!
+  \***************************************************************/
+/*! exports provided: AdminLayoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLayoutComponent", function() { return AdminLayoutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AdminLayoutComponent = class AdminLayoutComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+AdminLayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-admin-layout',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./admin-layout.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/admin-layout/admin-layout.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./admin-layout.component.css */ "./src/app/layout/admin-layout/admin-layout.component.css")).default]
+    })
+], AdminLayoutComponent);
 
 
 
@@ -679,7 +746,7 @@ AuthlayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".main {\r\n  margin-top: -16px;\r\n}\r\n.mat-app-background {\r\n  height: 100%;\r\n}\r\n.mat-app-footer {\r\n  background-color: #313030;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2NvbnRlbnRsYXlvdXQvY29udGVudGxheW91dC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxZQUFZO0FBQ2Q7QUFDQTtFQUNFLHlCQUF5QjtBQUMzQiIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9jb250ZW50bGF5b3V0L2NvbnRlbnRsYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluIHtcclxuICBtYXJnaW4tdG9wOiAtMTZweDtcclxufVxyXG4ubWF0LWFwcC1iYWNrZ3JvdW5kIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuLm1hdC1hcHAtZm9vdGVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzEzMDMwO1xyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".main {\r\n  margin-top: -16px;\r\n}\r\n.mat-app-background {\r\n  height: 100%;\r\n}\r\n.mat-app-footer {\r\n  background-color: #313030;\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2NvbnRlbnRsYXlvdXQvY29udGVudGxheW91dC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxZQUFZO0FBQ2Q7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9jb250ZW50bGF5b3V0L2NvbnRlbnRsYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluIHtcclxuICBtYXJnaW4tdG9wOiAtMTZweDtcclxufVxyXG4ubWF0LWFwcC1iYWNrZ3JvdW5kIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuLm1hdC1hcHAtZm9vdGVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzEzMDMwO1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICBib3R0b206IDA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -852,7 +919,7 @@ let HeaderComponent = class HeaderComponent {
                     text: "Seguir navegando"
                 }
             };
-            this.bsModalRef = this.modalService.show(_modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_5__["NoCartComponent"], { class: 'modal-dialog-centered', backdrop: 'static', keyboard: false, initialState });
+            this.bsModalRef = this.modalService.show(_modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_5__["NoCartComponent"], { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState });
         }
     }
 };

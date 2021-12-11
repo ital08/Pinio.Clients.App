@@ -6,4 +6,7 @@
 }
 .mat-app-footer {
   background-color: #313030;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
