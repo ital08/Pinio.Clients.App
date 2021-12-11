@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- profile options -->\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col border profile-option\">\n      <a\n        class=\"profile-options-a\"\n        routerLink=\"/profile/me\"\n        routerLinkActive=\"active\"\n        ><div>Datos Personales</div></a\n      >\n    </div>\n    <div class=\"col border profile-option\">\n      <div>\n        <a\n          class=\"profile-options-a\"\n          routerLink=\"/profile/history\"\n          routerLinkActive=\"active\"\n          >Historial de pedidos</a\n        >\n      </div>\n    </div>\n    <div class=\"col border profile-option\">\n      <div>\n        <a\n          class=\"profile-options-a\"\n          routerLink=\"/profile/my-address\"\n          routerLinkActive=\"active\"\n          >Mis Direcciones</a\n        >\n      </div>\n    </div>\n    <div class=\"col border profile-option\">\n      <div>\n        <a\n          class=\"profile-options-a\"\n          routerLink=\"/profile/messages\"\n          routerLinkActive=\"active\"\n          >Mensajes</a\n        >\n      </div>\n    </div>\n    <div class=\"col border profile-option\">\n      <div>\n        <div\n          class=\"profile-options-a\"\n          style=\"cursor: pointer\"\n          (click)=\"logout()\"\n          routerLinkActive=\"active\"\n        >\n          Cerrar Sesión\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<!-- fin profile options -->\n<div>\n  <router-outlet></router-outlet>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- profile options -->\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col border profile-option\">\r\n      <a\r\n        class=\"profile-options-a\"\r\n        routerLink=\"/profile/me\"\r\n        routerLinkActive=\"active\"\r\n        ><div>Datos Personales</div></a\r\n      >\r\n    </div>\r\n    <div class=\"col border profile-option\">\r\n      <div>\r\n        <a\r\n          class=\"profile-options-a\"\r\n          routerLink=\"/profile/history\"\r\n          routerLinkActive=\"active\"\r\n          >Historial de pedidos</a\r\n        >\r\n      </div>\r\n    </div>\r\n    <div class=\"col border profile-option\">\r\n      <div>\r\n        <a\r\n          class=\"profile-options-a\"\r\n          routerLink=\"/profile/my-address\"\r\n          routerLinkActive=\"active\"\r\n          >Mis Direcciones</a\r\n        >\r\n      </div>\r\n    </div>\r\n    <div class=\"col border profile-option\">\r\n      <div>\r\n        <a\r\n          class=\"profile-options-a\"\r\n          routerLink=\"/profile/messages\"\r\n          routerLinkActive=\"active\"\r\n          >Mensajes</a\r\n        >\r\n      </div>\r\n    </div>\r\n    <div class=\"col border profile-option\">\r\n      <div>\r\n        <div\r\n          class=\"profile-options-a\"\r\n          style=\"cursor: pointer\"\r\n          (click)=\"logout()\"\r\n          routerLinkActive=\"active\"\r\n        >\r\n          Cerrar Sesión\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<!-- fin profile options -->\r\n<div>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>address works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>address works!</p>\r\n");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>history works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>history works!</p>\r\n");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-md\">\n  <div class=\"row justify-content-center mt-5 mb-5\">\n    <div class=\"col-4\" style=\"width: 100%;\">\n        <svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width=\"170\"\n          height=\"170\"\n          fill=\"currentColor\"\n          class=\"bi bi-person\"\n          viewBox=\"0 0 16 16\"\n          style=\"padding: 30px; border-radius: 100px; background-color: #ed691e\"\n        >\n          <path\n            d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"\n          />\n        </svg>\n    </div>\n    <div class=\"col-3 my-auto\">\n      <p style=\"color: #ed691e; font-size: 3vh; font-weight: bold\">\n        BIENVENIDO A TU CUENTA\n      </p>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-md\">\r\n  <div class=\"row justify-content-center mt-5 mb-5\">\r\n    <div class=\"col-4\" style=\"width: 100%;\">\r\n        <svg\r\n          xmlns=\"http://www.w3.org/2000/svg\"\r\n          width=\"170\"\r\n          height=\"170\"\r\n          fill=\"currentColor\"\r\n          class=\"bi bi-person\"\r\n          viewBox=\"0 0 16 16\"\r\n          style=\"padding: 30px; border-radius: 100px; background-color: #ed691e\"\r\n        >\r\n          <path\r\n            d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z\"\r\n          />\r\n        </svg>\r\n    </div>\r\n    <div class=\"col-3 my-auto\">\r\n      <p style=\"color: #ed691e; font-size: 3vh; font-weight: bold\">\r\n        BIENVENIDO A TU CUENTA\r\n      </p>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -74,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>messages works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>messages works!</p>\r\n");
 
 /***/ }),
 

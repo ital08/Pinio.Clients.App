@@ -128,30 +128,32 @@
     </div>
   </div>
 </div>
-<div class="row justify-content-center mt-2 mb-2">
-  <div *ngFor="let item of products">
-    <div class="col-4 mt-1 mb-1 justify-content-center">
-      <mat-card style="width: 280px">
-        <mat-card-title align="center" style="font-size: small">
-          {{ item.productModel }}
-        </mat-card-title>
-        <mat-card-subtitle align="center" color="primary">
-          S/.{{ item.unitprice }}
-        </mat-card-subtitle>
-        <mat-card-content align="center">
-          <img src="{{ item.urlimage }}" mat-card-lg-image />
-        </mat-card-content>
-        <mat-card-actions align="center">
-          <button class="col-8 m-1" mat-stroked-button color="accent">
-            Detalles
-            <mat-icon>dehaze</mat-icon>
-          </button>
-          <button class="col-8 m-1" mat-flat-button color="accent">
-            Comprar
-            <mat-icon>add_shopping_cart</mat-icon>
-          </button>
-        </mat-card-actions>
-      </mat-card>
+<div class="container">
+  <div class="row justify-content-center mt-2 mb-2">
+    <div *ngFor="let item of products">
+      <div class="col-4 mt-1 mb-1 justify-content-center">
+        <mat-card style="width: 280px">
+          <mat-card-title align="center" style="font-size: small">
+            {{ item.productModel }}
+          </mat-card-title>
+          <mat-card-subtitle align="center" color="primary">
+            S/.{{ item.unitprice }}
+          </mat-card-subtitle>
+          <mat-card-content align="center">
+            <img src="{{ item.urlimage }}" mat-card-lg-image />
+          </mat-card-content>
+          <mat-card-actions align="center">
+            <button class="col-8 m-1" mat-stroked-button color="accent">
+              Detalles
+              <mat-icon>dehaze</mat-icon>
+            </button>
+            <button class="col-8 m-1" mat-flat-button color="accent">
+              Comprar
+              <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
