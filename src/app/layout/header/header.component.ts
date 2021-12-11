@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit {
           text: "Seguir navegando"
         }
       };
-      this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', backdrop: 'static', keyboard: false, initialState })
+      this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState })
 
     }
   }
