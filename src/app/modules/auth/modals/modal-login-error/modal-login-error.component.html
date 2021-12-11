@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h6 class="modal-title pull-left">{{title}}</h6>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="cancel()">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row justify-content-center">
+      {{ message }}
+  </div>
+</div>
+<div class="modal-footer justify-content-center">
+  <button mat-raised-button *ngIf="cancelButton" (click)="cancel()">{{ cancelButton.text}}</button>
+  <button mat-raised-button *ngIf="acceptButton" color="accent" class="ml-3 text-button" (click)="accept()">{{ acceptButton.text }}</button>
+</div>

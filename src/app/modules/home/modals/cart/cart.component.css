@@ -1,0 +1,15 @@
+.cart {
+  color: white;
+}
+.custom-button {
+  background-color: white;
+
+  width: 240px;
+  border-radius: 16px;
+}
+.mat-divider {
+  height: 10px;
+}
+.custom-font {
+  color: #ed691e;
+}

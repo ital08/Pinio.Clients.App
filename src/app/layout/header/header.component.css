@@ -93,7 +93,7 @@ mat-form-field {
 }
 .profile-section {
   padding-left: 10px;
-  margin-top: -12px;
+  margin-top: -4px;
 }
 .shopping-cart,
 .user-section {
@@ -167,3 +167,4 @@ mat-form-field {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
 }
+

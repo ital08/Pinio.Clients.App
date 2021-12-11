@@ -1,0 +1,99 @@
+<div class="container-main">
+  <div class="custom-container">
+    <div class="box1">
+      <!-- image -->
+      <div class="box2">
+        <img class="img-logus" src="../../../../../assets/logo/logo_home.png" />
+      </div>
+      <!-- end image -->
+      <!-- form -->
+      <form [formGroup]="log" autocomplete="false">
+        <div class="box3 text-center justify-content-center">
+          <div>
+            <img
+              class="img-lokus"
+              src="../../../../../assets/logo/logo_home.png"
+            />
+          </div>
+          <div class="nav-text mt-3" onlyread>
+            <div class="text"  style="padding-right: 20px">
+              <a routerLink="../../auth/login" style="text-decoration: none; color:white;"><p>Iniciar Sesion</p></a>
+
+            </div>
+            <div class="text" style="padding-left: 20px">
+              <p>Registrarse</p>
+              <hr color="#ed691e" size="50" />
+            </div>
+          </div>
+
+          <div>
+            <div class="text"><p>Correo Electronico</p></div>
+            <div class="example-container">
+              <mat-form-field [style.width.%]="100" appearance="outline">
+                <input
+                  autocomplete="off"
+                  matInput
+                  placeholder="email@example.com"
+                  formControlName="email"
+                  required
+                />
+                <mat-error *ngIf="email.invalid">{{
+                  getErrorMessage()
+                }}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="text"><p>Contraseña</p></div>
+            <div class="example-container">
+              <mat-form-field [style.width.%]="100" appearance="outline">
+                <input matInput placeholder="Password" formControlName="password" (input)="onPasswordInput()"
+                [type]="hide ? 'password' : 'text'"><button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+                <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+                <mat-error *ngIf="password.hasError('minlength')">Password must have at least {{minPw}} characters</mat-error>
+              </mat-form-field>
+
+              <mat-form-field [style.width.%]="100" appearance="outline">
+                <input matInput placeholder="Confirm password" formControlName="password2" (input)="onPasswordInput()"
+                [type]="hide ? 'password' : 'text'"><button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+                <mat-error *ngIf="password2.hasError('required')">Please confirm your password</mat-error>
+                <mat-error *ngIf="password2.invalid && !password2.hasError('required')">Passwords don't match</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="custom-button" (click)="getRegister()">Registrar</div>
+          </div>
+        </div>
+      </form>
+      <!-- end form -->
+    </div>
+  </div>
+  <div class="footer">
+    <p style="text-align: justify">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum
+    </p>
+  </div>
+</div>

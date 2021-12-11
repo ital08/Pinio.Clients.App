@@ -93,7 +93,7 @@ export class StartComponent implements OnInit {
           }
         },
         (error) => {
-          this.loading = false;
+          this.loading = true;
           console.log("Error al traer los productos");
         }
       );
