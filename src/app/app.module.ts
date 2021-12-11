@@ -17,8 +17,13 @@ import { AvatarModule } from "ngx-avatar";
 import { MatAutocomplete, MatAutocompleteModule } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
 import { ProfileComponent } from "./layout/profile/profile.component";
+<<<<<<< HEAD
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { HeaderAdminComponent } from './layout/header-admin/header-admin.component';
+=======
 import { FooterAdminComponent } from './layout/footer-admin/footer-admin.component';
 import { HeaderAdminComponent } from './header-admin/header-admin.component';
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -30,7 +35,11 @@ import { HeaderAdminComponent } from './header-admin/header-admin.component';
     NotFoundComponent,
     AuthlayoutComponent,
     ProfileComponent,
+<<<<<<< HEAD
+    AdminLayoutComponent,
+=======
     FooterAdminComponent,
+>>>>>>> master
     HeaderAdminComponent,
   ],
   imports: [
@@ -51,9 +60,8 @@ import { HeaderAdminComponent } from './header-admin/header-admin.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-  ],
-  providers: [],
+  ], providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }

@@ -91,9 +91,8 @@ mat-slider {
 }
 /**cards**/
 .example-card {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  min-width: 100%;
+  width: 500px;
 }
 /**paginator**/
 .mat-form-field {

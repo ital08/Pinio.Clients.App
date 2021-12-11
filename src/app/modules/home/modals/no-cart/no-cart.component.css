@@ -1,0 +1,38 @@
+.modal-body {
+  padding: 20px 40px;
+  background-color: #313030;
+  color: white;
+  border-color: #313030;
+}
+
+.modal-open .modal {
+  background: #313030;
+  border-color: #313030;
+}
+.modal-content {
+  background: #313030;
+  border-color: #313030;
+}
+.modal-header {
+  background-color: #313030;
+  color: white;
+  border-color: #313030;
+}
+.modal-footer {
+  background-color: #313030;
+  color: white;
+  border-color: #313030;
+}
+
+.cart-logo {
+  content: url("../../../../../assets/shopping-cart.svg");
+  text-align: center;
+  margin: 15%;
+  height: 45px;
+}
+.cart-container {
+  height: 65px;
+  width: 65px;
+  background-color: #ed691e;
+  border-radius: 100px;
+}

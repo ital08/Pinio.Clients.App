@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { NotFoundComponent } from "@shared/components/not-found/not-found.component";
+import { AdminLayoutComponent } from "./layout/admin-layout/admin-layout.component";
 import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 import { ContentlayoutComponent } from "./layout/contentlayout/contentlayout.component";
 import { ProfileComponent } from "./layout/profile/profile.component";
@@ -29,6 +30,12 @@ const routes: Routes = [
     loadChildren: () =>
       import("./modules/auth/auth.module").then((m) => m.AuthModule),
   },
+  {
+    path: "admin",
+    component: AdminLayoutComponent,
+    loadChildren: () =>
+      import("./modules/admin/admin.module").then((m) => m.AdminModule),
+  },
   { path: "404", component: NotFoundComponent },
   { path: "**", redirectTo: "/404" },
 ];
@@ -38,4 +45,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

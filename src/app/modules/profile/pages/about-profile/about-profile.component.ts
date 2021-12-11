@@ -7,11 +7,20 @@ import { Router, RouterLink } from "@angular/router";
   styleUrls: ["./about-profile.component.css"],
 })
 export class AboutProfileComponent implements OnInit {
+  dato: String;
   constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.statuslogin();
+  }
+  statuslogin() {
+    this.dato = localStorage.getItem("clientname");
+    if (this.dato == null) {
+      this.router.navigateByUrl("");
+    }
+  }
   logout() {
-    console.log("cerrando sesion");
-    this.router.navigateByUrl("/");
+    localStorage.clear();
+    this.router.navigateByUrl("");
   }
 }

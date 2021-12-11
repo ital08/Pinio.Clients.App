@@ -1,0 +1,47 @@
+<div class="cart">
+  <div class="flex">
+    <div>
+      <div class="row">
+        <div class="col-4">
+          <mat-icon style="font-size: 70px; color: black"
+            >add_shopping_cart</mat-icon
+          >
+        </div>
+        <div class="col-8">
+          <h6>Tu carrito de compras</h6>
+        </div>
+      </div>
+      <span *ngIf="valid">
+        <div class="row mt-4 mb-4">
+          <div class="col-4">
+            <mat-icon style="font-size: 70px; color: black"
+              >remove_shopping_cart</mat-icon
+            >
+          </div>
+          <div class="col-8">
+            <h6>Tu carrito está vacío</h6>
+            <h6>Sigue comprando!</h6>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="mt-1 mb-1">
+      <mat-divider></mat-divider>
+      <div class="row">
+        <div class="col-6">Subtotal</div>
+        <div class="col-6 right">S/0.00</div>
+      </div>
+
+      <div class="row mb-1">
+        <div class="col-6">Envio</div>
+        <div class="col-6 right">---</div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="row justify-content-center mt-3">
+        <button class="custom-button" mat-button [disabled]="valid">
+          <div class="custom-font">COMPRAR</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

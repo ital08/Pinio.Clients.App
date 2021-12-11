@@ -6,12 +6,12 @@ describe('HeaderAdminComponent', () => {
   let component: HeaderAdminComponent;
   let fixture: ComponentFixture<HeaderAdminComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ HeaderAdminComponent ]
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [HeaderAdminComponent]
     })
-    .compileComponents();
-  });
+      .compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderAdminComponent);

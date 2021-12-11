@@ -45,6 +45,7 @@ import { CdkStepperModule } from "@angular/cdk/stepper";
 import { PortalModule } from "@angular/cdk/portal";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 import { FormsModule } from "@angular/forms";
+import { ModalModule } from "ngx-bootstrap/modal";
 
 // Others
 
@@ -84,6 +85,7 @@ import { FormsModule } from "@angular/forms";
     MatStepperModule,
     MatPaginatorModule,
     FormsModule,
+    ModalModule.forRoot(),
   ],
   exports: [
     MatSidenavModule,
