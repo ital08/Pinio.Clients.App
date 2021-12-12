@@ -1,0 +1,30 @@
+.botones{
+    margin: 10%;
+    margin-left: 20%;
+}
+.col{
+    margin: 30px;
+}
+.btn-block{
+    height: 150px;
+    width: 60%!important;
+}
+.material-icons {
+    font-size: 100px;
+    color: black;
+}
+.mat-icon{
+    width: 94px;
+}
+.btn-primary {
+    color: #000;
+    background-color: #ef7c21;
+    border-color: #ef7c21;
+}
+.btn-primary:hover{
+    background-color: #cc6b1c!important;
+    border-color:#cc6b1c!important;
+}
+.btn-primary:active{
+    border-color:#cc6b1c!important;
+}

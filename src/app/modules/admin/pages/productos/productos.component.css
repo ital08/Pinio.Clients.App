@@ -1,0 +1,24 @@
+.btn-light{
+    width: 130%;
+    margin: 10%;
+}
+.card{
+    background-color: transparent;
+    margin-top: 5%;
+    float: left;
+    width: 25rem;
+    height: 260px;
+    border: 0px;
+}
+.card.agregar{
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    width: 50%!important;
+    height: 480px;
+    float: right;
+    background-color: gray!important;
+}
+.form-group{
+    width: 45%;
+}
