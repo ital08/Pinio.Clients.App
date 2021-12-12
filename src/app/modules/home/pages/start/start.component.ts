@@ -1,7 +1,7 @@
 import { Route } from "@angular/compiler/src/core";
 import { Component, Input, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
+import { MatAutocompleteTrigger, MatDialog, MatDialogRef, PageEvent } from "@angular/material";
 import { Options } from "@angular-slider/ngx-slider";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { BootstrapModalModule } from "ngx-bootstrap-modal";
@@ -9,6 +9,9 @@ import { concat, Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
 import * as internal from "assert";
 import { SharedService } from "src/app/data/services/search.service";
+import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
+import { CartComponent } from "@modules/home/modals/cart/cart.component";
+import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component";
 @Component({
   selector: "app-start",
   templateUrl: "./start.component.html",
@@ -21,6 +24,10 @@ export class StartComponent implements OnInit {
     read: MatAutocompleteTrigger,
     static: false,
   })
+  //cart open
+  bsModalRef: BsModalRef;
+  dialogRef: MatDialogRef<any>;
+  //
   //IMG LOADER
   @Input() loader: string = './../../../../../assets/loader.gif';
   @Input() height: number = 200;
@@ -109,7 +116,9 @@ export class StartComponent implements OnInit {
     public formBuilder: FormBuilder,
     public productService: ProductService,
     private router: Router,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private modalService: BsModalService,
+    private dialog: MatDialog
   ) { this.isLoading = true; }
   hideLoader() {
     this.isLoading = false;
@@ -213,5 +222,43 @@ export class StartComponent implements OnInit {
   gotoproduct(product) {
     let link = "product/" + product;
     this.router.navigateByUrl(link, { state: product });
+  }
+  openCart() {
+    if (localStorage.getItem("clientname") != null) {
+
+      // const initialState = {
+      //   title: "Inicio de Sesión",
+      //   message: "Las credenciales ingresadas son incorrectas/inválidas",
+      //   acceptButton: {
+      //     text: "Reintentar"
+      //   },
+      //   cancelButton: {
+      //     text: "Seguir navegando"
+      //   }
+      // };
+      // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
+      this.dialogRef = this.dialog.open(CartComponent, {
+        position: { right: "0", top: "0" },
+        height: "100%",
+        width: "300px",
+        hasBackdrop: true,
+        panelClass: ["animate__bounceOutRight"],
+
+      })
+    }
+    else {
+      const initialState = {
+        title: "Ups ! Parece que no has iniciado sesion aun :(",
+        message: "Accede para ingresar a tu carrito de compras",
+        acceptButton: {
+          text: "Iniciar Sesión"
+        },
+        cancelButton: {
+          text: "Seguir navegando"
+        }
+      };
+      this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState })
+
+    }
   }
 }

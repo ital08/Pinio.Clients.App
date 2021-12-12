@@ -86,6 +86,15 @@ mat-card {
 .example-section {
   margin-left: 20px;
 }
+.bg-filters {
+  color: white;
+  background-color: #ed691e;
+}
+.example-section1 {
+  width: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 mat-slider {
   width: 300px;
 }

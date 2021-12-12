@@ -1,7 +1,7 @@
 <div class="bg-nav">
   <div class="left justify-content-center">
     <div class="left-container">
-      <a href="" (click)="home()"><span class="logo"></span></a>
+      <a (click)="home()"><span style="cursor: pointer" class="logo"></span></a>
     </div>
   </div>
 
@@ -9,13 +9,20 @@
     <div class="search-section">
       <mat-form-field appearance="outline">
         <mat-label>Buscar productos</mat-label>
-        <input matInput type="text" [(ngModel)]="value" />
+        <input
+          matInput
+          type="text"
+          name="Search"
+          (keydown.enter)="onSearch(value)"
+          [(ngModel)]="value"
+        />
+
         <button
           *ngIf="value"
           matSuffix
           mat-icon-button
           aria-label="Clear"
-          (click)="value = ''"
+          (click)="value = ''; onSearch(value)"
         >
           <mat-icon>close</mat-icon>
         </button>
@@ -71,7 +78,7 @@
         </ng-template>
       </div>
     </div>
-    <div (click)="openCart()" style="cursor:pointer;" class="shopping-cart">
+    <div (click)="openCart()" style="cursor: pointer" class="shopping-cart">
       <a style="text-decoration: none">
         <div class="cart-container">
           <span class="cart-logo"></span>

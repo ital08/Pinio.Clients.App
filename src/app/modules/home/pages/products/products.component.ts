@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { MatAutocompleteTrigger } from "@angular/material";
+import { MatAutocompleteTrigger, MatDialog, MatDialogRef } from "@angular/material";
 import { ActivatedRoute, Route, Router, RouterLinkActive } from "@angular/router";
+import { CartComponent } from "@modules/home/modals/cart/cart.component";
+import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component";
+import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
 import { Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
 import { SharedService } from "src/app/data/services/search.service";
@@ -37,10 +40,16 @@ export class ProductsComponent implements OnInit {
   firstFilterForm: FormGroup;
   idp: string = history.state.id;
   subscription: Subscription;
+  //carrito modal
+  bsModalRef: BsModalRef;
+  dialogRef: MatDialogRef<any>;
+  //
   constructor(private productService: ProductService,
     private formBuilder: FormBuilder,
     private routeSub: ActivatedRoute,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private modalService: BsModalService,
+    private dialog: MatDialog
   ) { this.isLoading = true; }
 
   ngOnInit() {
@@ -111,5 +120,43 @@ export class ProductsComponent implements OnInit {
           console.log("Error al traer los productos");
         }
       );
+  }
+  openCart() {
+    if (localStorage.getItem("clientname") != null) {
+
+      // const initialState = {
+      //   title: "Inicio de Sesión",
+      //   message: "Las credenciales ingresadas son incorrectas/inválidas",
+      //   acceptButton: {
+      //     text: "Reintentar"
+      //   },
+      //   cancelButton: {
+      //     text: "Seguir navegando"
+      //   }
+      // };
+      // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
+      this.dialogRef = this.dialog.open(CartComponent, {
+        position: { right: "0", top: "0" },
+        height: "100%",
+        width: "300px",
+        hasBackdrop: true,
+        panelClass: ["animate__bounceOutRight"],
+
+      })
+    }
+    else {
+      const initialState = {
+        title: "Ups ! Parece que no has iniciado sesion aun :(",
+        message: "Accede para ingresar a tu carrito de compras",
+        acceptButton: {
+          text: "Iniciar Sesión"
+        },
+        cancelButton: {
+          text: "Seguir navegando"
+        }
+      };
+      this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState })
+
+    }
   }
 }
