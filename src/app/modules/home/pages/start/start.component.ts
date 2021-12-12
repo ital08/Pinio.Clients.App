@@ -23,7 +23,7 @@ export class StartComponent implements OnInit {
   value: number = 40;
   highValue: number = 60;
   options: Options = {
-    floor: 0,
+    floor: 100,
     ceil: 10000,
     translate: (value: number): string => {
       return 'S/.' + value;
