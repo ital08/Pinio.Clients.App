@@ -5,7 +5,7 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
 import { MenuComponent } from './menu/menu.component';
 import {ProductosComponent} from './productos/productos.component';
 import {EmpleadosComponent} from './empleados/empleados.component';
-
+import {UsuariosComponent} from './usuarios/usuarios.component';
 
 const routes: Routes = [
     {
@@ -23,6 +23,10 @@ const routes: Routes = [
     {
       path: "Empleados",
       component: EmpleadosComponent,
+    },
+    {
+      path: "Usuarios",
+      component: UsuariosComponent,
     },
 ];
 @NgModule({

@@ -7,11 +7,12 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { ProductosComponent } from './productos/productos.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 
 @NgModule({
-  declarations: [ DashboardAdminComponent, MenuComponent, ProductosComponent, EmpleadosComponent],
+  declarations: [ DashboardAdminComponent, MenuComponent, ProductosComponent, EmpleadosComponent, UsuariosComponent],
   imports: [
     CommonModule,
     SharedModule,
