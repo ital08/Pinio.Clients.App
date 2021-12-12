@@ -1,0 +1,14 @@
+.mat-app-background {
+  height: 100%;
+  width: 100%;
+}
+.mat-app-footer {
+  background-color: #313030;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.bg-dashboard {
+  background: url(./../../../assets/admin_bg.jpg);
+  background-position: center;   background-repeat: no-repeat;   background-size: cover;
+}

@@ -1,11 +1,16 @@
 <div class="bg-nav">
-  <div class="left">
+  <div class="left justify-content-center">
     <div class="left-container">
       <a href="" (click)="home()"><span class="logo"></span></a>
     </div>
   </div>
 
-  <div class="right">
+  <div class="main justify-content-center">
+    <div class="search-section">
+    </div>
+  </div>
+
+  <div class="right justify-content-center">
     <div class="user-section">
       <div>
         <a style="text-decoration: none" href="">
@@ -15,21 +20,39 @@
         </a>
       </div>
       <div class="profile-section">
-        <div>
-          <a style="text-decoration: none" href="/auth/login">
-            <div class="login-text">
-              <p>Log In</p>
-            </div>
-          </a>
+        <div *ngIf="cond === true; else elseBlock">
+          <div>
+            <a style="text-decoration: none" href="/auth/login">
+              <div style="cursor: pointer" class="login-text">
+                <p>Log In</p>
+              </div>
+            </a>
+          </div>
+          <div>
+          </div>
         </div>
+        <ng-template #elseBlock>
+          <div>
+            <a style="text-decoration: none" href="/profile">
+              <div style="cursor: pointer" class="login-text">
+                <p>{{ dato }}</p>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a style="text-decoration: none">
+              <div
+                style="cursor: pointer"
+                class="register-text"
+                (click)="logout()"
+              >
+                <p>Logout</p>
+              </div></a
+            >
+          </div>
+        </ng-template>
       </div>
     </div>
-    <div class="shopping-cart">
-      <a style="text-decoration: none">
-        <div class="cart-container">
-          <span class="cart-logo"></span>
-        </div>
-      </a>
-    </div>
+
   </div>
 </div>
