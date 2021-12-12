@@ -2,10 +2,10 @@ import { Route } from "@angular/compiler/src/core";
 import { Component, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
-
+import { Options } from "@angular-slider/ngx-slider";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { BootstrapModalModule } from "ngx-bootstrap-modal";
-import { Subscription } from "rxjs";
+import { concat, Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
 @Component({
   selector: "app-start",
@@ -19,6 +19,26 @@ export class StartComponent implements OnInit {
     read: MatAutocompleteTrigger,
     static: false,
   })
+  //SLIDER//
+  value: number = 40;
+  highValue: number = 60;
+  options: Options = {
+    floor: 0,
+    ceil: 10000,
+    translate: (value: number): string => {
+      return 'S/.' + value;
+    },
+    getPointerColor: (value: number): string => {
+      return '#ed691e';
+    },
+    getSelectionBarColor: (value: number): string => {
+      return '#ed691e';
+    },
+    getTickColor: (value: number): string => {
+      return 'white';
+    },
+  };
+  //
   autocomplete: MatAutocompleteTrigger;
   loading = true;
   toppings: FormGroup;
@@ -36,6 +56,26 @@ export class StartComponent implements OnInit {
   productCatalogList = [];
   category: string;
   firstFilterForm: FormGroup;
+  labelPosition: 'before' | 'after' = 'after';
+  Brands = [
+    {
+      "id": 1,
+      "BrandName": "Samsung"
+    }, {
+      "id": 2,
+      "BrandName": "Huawei"
+    }, {
+      "id": 3,
+      "BrandName": "Apple"
+    }, {
+      "id": 4,
+      "BrandName": "Motorola"
+    }, {
+      "id": 5,
+      "BrandName": "Xiaomi"
+    },
+  ];
+
   constructor(
     // private routeSub: Subscription,
     public formBuilder: FormBuilder,
@@ -51,10 +91,13 @@ export class StartComponent implements OnInit {
   // this.routeSub = this.route.params.subscribe((params) => {
   //   this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
   // });
+
   ngOnInit() {
     this.createFilterForm();
     this.getListProducts();
   }
+
+
   products = [];
 
   createFilterForm() {
@@ -86,7 +129,6 @@ export class StartComponent implements OnInit {
           switch (status) {
             case 200:
               this.products = body.listProductCatalog;
-              console.log(this.products);
               break;
             default:
               break;
@@ -120,10 +162,8 @@ export class StartComponent implements OnInit {
     }
   }
   /**fin pagination */
-  comprobar() {
-    console.log(this.products);
-  }
-  gotoproduct(product: string) {
-    this.router.navigateByUrl(`product/${product}`);
+  gotoproduct(product) {
+    let link = "product/" + product;
+    this.router.navigateByUrl(link, { state: product });
   }
 }

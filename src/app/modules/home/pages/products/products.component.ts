@@ -29,7 +29,7 @@ export class ProductsComponent implements OnInit {
   productCatalogList = [];
   category: string;
   firstFilterForm: FormGroup;
-  id: string;
+  idp: string = history.state.id;
 
   constructor(private productService: ProductService,
     private formBuilder: FormBuilder,
@@ -37,11 +37,20 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.createFilterForm();
-    this.routeSub.params.subscribe((params) => {
-      this.id = params["id"];
-      this.firstFilterForm.value.idproductcatalog = this.id;
-    });
-    console.log(this.firstFilterForm.value.idproductcatalog)
+    if (this.idp == undefined) {
+      console.log("sacando del url");
+      console.log(this.idp)
+      this.routeSub.params.subscribe((params) => {
+        this.idp = params["id"];
+        this.firstFilterForm.value.idproductcatalog = this.idp;
+
+      });
+    }
+    else {
+      this.firstFilterForm.value.idproductcatalog = this.idp;
+      console.log("recibido de la anterior");
+      console.log(this.idp)
+    }
     this.getListProducts();
   }
   products = [];
@@ -74,8 +83,7 @@ export class ProductsComponent implements OnInit {
           this.loading = false;
           switch (status) {
             case 200:
-              this.products = body.listProductCatalog;
-              console.log(this.products);
+              this.productCatalogList = body.listProductCatalog;
               break;
             default:
               break;

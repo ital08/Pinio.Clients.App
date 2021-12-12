@@ -8,6 +8,7 @@ import { HttpService } from "./service/http.service";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { CartComponent } from "@modules/home/modals/cart/cart.component";
 import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component";
+import { NgxSliderModule } from "@angular-slider/ngx-slider";
 
 @NgModule({
   declarations: [NoCartComponent, CartComponent],
@@ -16,6 +17,7 @@ import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component"
     CommonModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    NgxSliderModule
   ],
 
   exports: [

@@ -7,8 +7,9 @@ import { FormsModule } from "@angular/forms";
 import { NotFoundProductComponent } from "./pages/not-found-product/not-found-product.component";
 import { ProductsComponent } from "./pages/products/products.component";
 import { AvatarModule } from "ngx-avatar";
+import { NgxSliderModule } from "@angular-slider/ngx-slider";
 @NgModule({
   declarations: [StartComponent, NotFoundProductComponent, ProductsComponent],
-  imports: [CommonModule, SharedModule, AvatarModule, HomeRoutingModule],
+  imports: [CommonModule, SharedModule, AvatarModule, HomeRoutingModule, NgxSliderModule],
 })
 export class HomeModule { }
