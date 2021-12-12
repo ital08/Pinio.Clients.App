@@ -124,6 +124,6 @@ export class StartComponent implements OnInit {
     console.log(this.products);
   }
   gotoproduct(product: string) {
-    this.router.navigateByUrl("product/${product}");
+    this.router.navigateByUrl(`product/${product}`);
   }
 }

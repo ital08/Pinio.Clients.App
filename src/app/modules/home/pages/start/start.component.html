@@ -143,11 +143,21 @@
             <img src="{{ item.urlimage }}" mat-card-lg-image />
           </mat-card-content>
           <mat-card-actions align="center">
-            <button class="col-8 m-1" mat-stroked-button color="accent">
+            <button
+              (click)="gotoproduct(item.idProductCatalog)"
+              class="col-8 m-1"
+              mat-stroked-button
+              color="accent"
+            >
               Detalles
               <mat-icon>dehaze</mat-icon>
             </button>
-            <button class="col-8 m-1" mat-flat-button color="accent">
+            <button
+              (click)="addToCart(item.idProductCatalog)"
+              class="col-8 m-1"
+              mat-flat-button
+              color="accent"
+            >
               Comprar
               <mat-icon>add_shopping_cart</mat-icon>
             </button>
@@ -168,11 +178,4 @@
   aria-label="Select page"
 >
 </mat-paginator>
-
-<div *ngIf="pageEvent">
-  <h5>Page Change Event Properties</h5>
-  <div>List length: {{ pageEvent.length }}</div>
-  <div>Page size: {{ pageEvent.pageSize }}</div>
-  <div>Page index: {{ pageEvent.pageIndex }}</div>
-</div>
 <!-- fin paginator -->

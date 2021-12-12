@@ -1,44 +1,59 @@
-<!-- <div>
+<div>
   <div *ngIf="products">
     <div class="flex-container-main mt-3">
       <ng-container
         style="grid-auto-columns: auto"
         *ngFor="let item of products"
-      > -->
-<div style="background-color: white">
-  <div class="products-router-container">
-    <a style="text-decoration: none" href="category/item.category"
-      >item.category</a
-    >
-    <span class="material-icons"> arrow_forward_ios </span>
-    <a style="text-decoration: none" href="">item.brand</a>
-    <span class="material-icons"> arrow_forward_ios </span>
-    <a style="text-decoration: none" href="product/item.productId"
-      >item.name}</a
-    >
-  </div>
-  <div style="background-color: #ed691e; height: 1vh"></div>
-  <div class="products-details-container">
-    <!-- /***left***/ -->
-    <div class="box1">
-      <img class="product-image" alt="item.name" src="item.url" />
+      >
+        <div style="background-color: white">
+          <div class="products-router-container">
+            <a style="text-decoration: none" href="category/item.category">{{
+              item.category
+            }}</a>
+            <span class="material-icons"> arrow_forward_ios </span>
+            <a style="text-decoration: none" href="">{{ item.productBrand }}</a>
+            <span class="material-icons"> arrow_forward_ios </span>
+            <a style="text-decoration: none" href="product/item.productId">{{
+              item.productModel
+            }}</a>
+          </div>
+          <div style="background-color: #ed691e; height: 1vh"></div>
+          <div class="container">
+            <div class="row mt-3 mb-3">
+              <div class="col-md-6">
+                <img class="img-fluid" src="{{ item.urlimage }}" />
+              </div>
+              <div class="col-md-6 my-auto justify-content-center">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>{{ item.productModel }}</h3>
+                  </div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="row">
+                  <div class="col-3">Stock:</div>
+                  <div class="col-5">20+ Unidades</div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="row">
+                  <div class="col-3">Marca:</div>
+                  <div class="col-5">{{ item.productBrand }}</div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="row">
+                  <div class="col-3">Modelo:</div>
+                  <div class="col-5">{{ item.idProductCatalog }}</div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="row">
+                  <div class="col-3">Precio</div>
+                  <div class="col-5">{{ item.idProductCatalog }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
     </div>
-    <!-- end left -->
-    <!-- right -->
-    <div>
-      <div class="products-details">
-        <h3>item.name</h3>
-        <p>Stock:&nbsp;item.stock</p>
-        <p>Marca:&nbsp;item.brand</p>
-        <p>Descripcion:&nbsp;item.description</p>
-        <p style="color: red">Precio:&nbsp;item.price</p>
-      </div>
-      <button>pal carrito</button>
-    </div>
-    <!-- end right -->
   </div>
 </div>
-<!-- </ng-container>
-    </div>
-  </div>
-</div> -->
