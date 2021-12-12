@@ -34,7 +34,13 @@ const routes: Routes = [
     path: "admin",
     component: AdminLayoutComponent,
     loadChildren: () =>
-      import("./modules/admin/admin.module").then((m) => m.AdminModule),
+      import("./modules/admin/pages/pages.module").then((m) => m.PagesModule),
+  },
+  {
+    path: "authAdmin",
+    component: AuthlayoutComponent,
+    loadChildren: () =>
+      import("./modules/admin/authAdmin/authAdmin.module").then((m) => m.AuthAdminModule),
   },
   { path: "404", component: NotFoundComponent },
   { path: "**", redirectTo: "/404" },

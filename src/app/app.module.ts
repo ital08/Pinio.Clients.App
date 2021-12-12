@@ -18,6 +18,8 @@ import { MatAutocomplete, MatAutocompleteModule } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
 import { ProfileComponent } from "./layout/profile/profile.component";
 import { AdminLayoutComponent } from "./layout/admin-layout/admin-layout.component";
+import { HeaderAdminComponent } from "./layout/header-admin/header-admin.component";
+import { FooterAdminComponent } from "./layout/footer-admin/footer-admin.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,9 @@ import { AdminLayoutComponent } from "./layout/admin-layout/admin-layout.compone
     NotFoundComponent,
     AuthlayoutComponent,
     ProfileComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    HeaderAdminComponent,
+    FooterAdminComponent
   ],
   imports: [
     //avatar
