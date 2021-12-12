@@ -178,7 +178,18 @@
               S/.{{ item.unitprice }}
             </mat-card-subtitle>
             <mat-card-content align="center">
-              <img src="{{ item.urlimage }}" mat-card-lg-image />
+              <div *ngIf="isLoading">
+                <img mat-card-lg-image [src]="loader" />
+              </div>
+              <img
+                src="{{ item.urlimage }}"
+                mat-card-lg-image
+                [ngStyle]="{
+                  visibility: isLoading ? 'hidden' : ''
+                }"
+                (load)="hideLoader()"
+                (error)="hideLoader()"
+              />
             </mat-card-content>
             <mat-card-actions align="center">
               <button

@@ -6,4 +6,5 @@ import { Subject } from 'rxjs';
 export class SharedService {
 
   searchSubject = new Subject<String>(); // a new subject of type String, replace it with your data type
+  searchProductCart = new Subject<String>();
 }

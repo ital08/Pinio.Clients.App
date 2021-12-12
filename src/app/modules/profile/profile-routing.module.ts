@@ -7,6 +7,7 @@ import { HistoryComponent } from "./pages/history/history.component";
 import { MainprofileComponent } from "./pages/mainprofile/mainprofile.component";
 import { MeComponent } from "./pages/me/me.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
+import { PurchaseComponent } from "./pages/purchase/purchase.component";
 
 export const routes: Routes = [
   {
@@ -33,6 +34,10 @@ export const routes: Routes = [
         path: "messages",
         component: MessagesComponent,
       },
+      {
+        path: "purchase",
+        component: PurchaseComponent,
+      },
     ],
   },
 ];
@@ -40,4 +45,4 @@ export const routes: Routes = [
   imports: [FormsModule, ReactiveFormsModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ProfileRoutingModule {}
+export class ProfileRoutingModule { }

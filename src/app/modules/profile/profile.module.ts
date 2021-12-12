@@ -9,6 +9,7 @@ import { HistoryComponent } from "./pages/history/history.component";
 import { AddressComponent } from "./pages/address/address.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { MainprofileComponent } from "./pages/mainprofile/mainprofile.component";
+import { PurchaseComponent } from './pages/purchase/purchase.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MainprofileComponent } from "./pages/mainprofile/mainprofile.component"
     AddressComponent,
     MessagesComponent,
     MainprofileComponent,
+    PurchaseComponent,
   ],
   imports: [CommonModule, SharedModule, AvatarModule, ProfileRoutingModule],
   exports: [],

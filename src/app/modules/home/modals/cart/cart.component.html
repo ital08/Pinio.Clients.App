@@ -11,7 +11,7 @@
           <h6>Tu carrito de compras</h6>
         </div>
       </div>
-      <span *ngIf="valid">
+      <span *ngIf="valid; else elseBlock">
         <div class="row mt-4 mb-4">
           <div class="col-4">
             <mat-icon style="font-size: 70px; color: black"
@@ -24,12 +24,57 @@
           </div>
         </div>
       </span>
+      <ng-template #elseBlock>
+        <div *ngFor="let item of CartUser">
+          <div class="row bg-white m-1 mt-2 mb-2" style="border-radius: 15px">
+            <div class="col-5 mt-2">
+              <div *ngIf="isLoading">
+                <img style="height: 70px; width: 70px" [src]="loader" />
+              </div>
+              <img
+                style="height: 70px; width: 70px"
+                src="{{ item.urlimage }}"
+                [ngStyle]="{
+                  visibility: isLoading ? 'hidden' : ''
+                }"
+                (load)="hideLoader()"
+                (error)="hideLoader()"
+              />
+            </div>
+            <div class="col-7 mt-2">
+              <div
+                class="row float-right"
+                style="color: #ed691e; font-size: 1px; cursor: pointer"
+                (click)="removeItemCartUser(item.idProductCatalog)"
+              >
+                <mat-icon>close</mat-icon>
+              </div>
+              <div
+                (click)="goToProduct(item.idProductCatalog)"
+                class="row"
+                style="color: black; font-size: 12px; cursor: pointer"
+              >
+                <p>{{ item.productModel }}</p>
+              </div>
+              <div class="row" style="color: black; font-size: 10px">
+                Precio:
+              </div>
+              <div class="row" style="color: red; font-weight: 400">
+                <div class="col-6">S/.{{ item.unitprice }}</div>
+                <div class="col-2" style="color: black; font-weight: 400">
+                  x{{ item.amount }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
     </div>
     <div class="mt-1 mb-1">
       <mat-divider></mat-divider>
       <div class="row">
         <div class="col-6">Subtotal</div>
-        <div class="col-6 right">S/0.00</div>
+        <div class="col-6 right">S/{{ Subtotal }}</div>
       </div>
 
       <div class="row mb-1">
@@ -38,7 +83,12 @@
       </div>
       <mat-divider></mat-divider>
       <div class="row justify-content-center mt-3">
-        <button class="custom-button" mat-button [disabled]="valid">
+        <button
+          class="custom-button"
+          (click)="goToPurchase()"
+          mat-button
+          disabled="valid"
+        >
           <div class="custom-font">COMPRAR</div>
         </button>
       </div>

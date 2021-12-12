@@ -1,9 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { MatAutocompleteTrigger } from "@angular/material";
 import { ActivatedRoute, Route, Router, RouterLinkActive } from "@angular/router";
 import { Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
+import { SharedService } from "src/app/data/services/search.service";
 
 @Component({
   selector: "app-products",
@@ -11,7 +12,12 @@ import { ProductService } from "src/app/data/services/products.service";
   styleUrls: ["./products.component.css"],
 })
 export class ProductsComponent implements OnInit {
+  @Input() loader: string = './../../../../../assets/loader.gif';
+  @Input() height: number = 200;
+  @Input() width: number = 200;
+  @Input() image: string;
 
+  isLoading: boolean;
 
   autocomplete: MatAutocompleteTrigger;
   loading = true;
@@ -30,10 +36,12 @@ export class ProductsComponent implements OnInit {
   category: string;
   firstFilterForm: FormGroup;
   idp: string = history.state.id;
-
+  subscription: Subscription;
   constructor(private productService: ProductService,
     private formBuilder: FormBuilder,
-    private routeSub: ActivatedRoute) { }
+    private routeSub: ActivatedRoute,
+    private sharedService: SharedService
+  ) { this.isLoading = true; }
 
   ngOnInit() {
     this.createFilterForm();
@@ -52,6 +60,15 @@ export class ProductsComponent implements OnInit {
       console.log(this.idp)
     }
     this.getListProducts();
+    this.subscription = this.sharedService.searchProductCart.subscribe((mySearch: String) => {
+      if (mySearch != undefined) {
+        this.firstFilterForm.value.idproductcatalog = mySearch;
+        this.getListProducts();
+      }
+    });
+  }
+  hideLoader() {
+    this.isLoading = false;
   }
   products = [];
 

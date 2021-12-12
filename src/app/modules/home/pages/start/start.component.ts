@@ -1,5 +1,5 @@
 import { Route } from "@angular/compiler/src/core";
-import { Component, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
+import { Component, Input, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
 import { Options } from "@angular-slider/ngx-slider";
@@ -21,6 +21,13 @@ export class StartComponent implements OnInit {
     read: MatAutocompleteTrigger,
     static: false,
   })
+  //IMG LOADER
+  @Input() loader: string = './../../../../../assets/loader.gif';
+  @Input() height: number = 200;
+  @Input() width: number = 200;
+  @Input() image: string;
+  isLoading: boolean;
+  //
   //SLIDER//
   floor: number;
   ceil: number;
@@ -103,8 +110,10 @@ export class StartComponent implements OnInit {
     public productService: ProductService,
     private router: Router,
     private sharedService: SharedService
-  ) { }
-
+  ) { this.isLoading = true; }
+  hideLoader() {
+    this.isLoading = false;
+  }
   ngOnInit() {
     this.generateSlide();
     this.createFilterForm();
