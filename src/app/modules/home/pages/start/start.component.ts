@@ -1,12 +1,14 @@
 import { Route } from "@angular/compiler/src/core";
 import { Component, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
-import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteTrigger, PageEvent } from "@angular/material";
 import { Options } from "@angular-slider/ngx-slider";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { BootstrapModalModule } from "ngx-bootstrap-modal";
 import { concat, Subscription } from "rxjs";
 import { ProductService } from "src/app/data/services/products.service";
+import * as internal from "assert";
+import { SharedService } from "src/app/data/services/search.service";
 @Component({
   selector: "app-start",
   templateUrl: "./start.component.html",
@@ -20,27 +22,32 @@ export class StartComponent implements OnInit {
     static: false,
   })
   //SLIDER//
-  value: number = 40;
-  highValue: number = 60;
+  floor: number;
+  ceil: number;
+  sliderForm: FormGroup;
+  minValue: number = 0;
+  maxValue: number = 10000;
   options: Options = {
-    floor: 100,
+    floor: 0,
     ceil: 10000,
+
     translate: (value: number): string => {
       return 'S/.' + value;
     },
     getPointerColor: (value: number): string => {
-      return '#ed691e';
+      return 'white';
     },
     getSelectionBarColor: (value: number): string => {
-      return '#ed691e';
+      return 'white';
     },
     getTickColor: (value: number): string => {
-      return 'white';
+      return '#ed691e';
     },
   };
   //
   autocomplete: MatAutocompleteTrigger;
   loading = true;
+  NoItemMessage = false;
   toppings: FormGroup;
   price = 0;
   length = 100;
@@ -75,29 +82,55 @@ export class StartComponent implements OnInit {
       "BrandName": "Xiaomi"
     },
   ];
+  OrderBy = [
+    {
+      "id": 1,
+      "OptionOrderName": "Nombre"
+    }, {
+      "id": 2,
+      "OptionOrderName": "Mayor a Menor Precio"
+    }, {
+      "id": 3,
+      "OptionOrderName": "Menor a Mayor Precio"
+    }
+  ];
+  //search
+  nameSearch: string = history.state.nameSearch;
+  subscription: Subscription
 
   constructor(
-    // private routeSub: Subscription,
     public formBuilder: FormBuilder,
     public productService: ProductService,
-    private router: Router
-  ) {
-    this.toppings = formBuilder.group({
-      pepperoni: false,
-      extracheese: false,
-      mushroom: false,
-    });
-  }
-  // this.routeSub = this.route.params.subscribe((params) => {
-  //   this.category = params["category"]; //obtenemos el id del route para usarlo en servicios
-  // });
+    private router: Router,
+    private sharedService: SharedService
+  ) { }
 
   ngOnInit() {
+    this.generateSlide();
     this.createFilterForm();
     this.getListProducts();
+    this.subscription = this.sharedService.searchSubject.subscribe((mySearch: String) => {
+      if (mySearch != undefined) {
+        this.primaryFilterSearch(mySearch);
+      }
+    });
   }
-
-
+  primaryFilterSearch(name: any) {
+    this.products = new Array();
+    this.createFilterForm();
+    this.firstFilterForm.controls.productmodel.setValue(name);
+    this.loading = true;
+    this.getListProducts();
+  }
+  restablecer() {
+    this.minValue = 0;
+    this.maxValue = 10000;
+  }
+  generateSlide() {
+    this.sliderForm = new FormGroup({
+      sliderControl: new FormControl([this.floor, this.ceil])
+    });
+  }
   products = [];
 
   createFilterForm() {
@@ -129,6 +162,12 @@ export class StartComponent implements OnInit {
           switch (status) {
             case 200:
               this.products = body.listProductCatalog;
+              if (this.products.length > 0) {
+                this.NoItemMessage = false;
+              }
+              else {
+                this.NoItemMessage = true;
+              }
               break;
             default:
               break;

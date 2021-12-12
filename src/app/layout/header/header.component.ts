@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { CartComponent } from "@modules/home/modals/cart/cart.component";
 import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component";
 import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
+import { SharedService } from "src/app/data/services/search.service";
 
 @Component({
   selector: "app-header",
@@ -14,12 +15,18 @@ export class HeaderComponent implements OnInit {
   dato: String;
   bsModalRef: BsModalRef;
   dialogRef: MatDialogRef<any>;
-  constructor(private router: Router,
+  constructor(
+    private sharedService: SharedService,
+    private router: Router,
     private modalService: BsModalService,
     private dialog: MatDialog) { }
   cond;
   ngOnInit() {
     this.statuslogin();
+  }
+  onSearch(value: string) {
+    // just emit the event
+    this.sharedService.searchSubject.next(value); // emit the value to the shared service
   }
   statuslogin() {
     this.dato = localStorage.getItem("clientname");
@@ -72,5 +79,8 @@ export class HeaderComponent implements OnInit {
       this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState })
 
     }
+  }
+  goToItem(name) {
+    this.router.navigateByUrl("/", { state: name });
   }
 }
