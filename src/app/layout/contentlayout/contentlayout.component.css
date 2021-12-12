@@ -5,5 +5,7 @@
   height: 100%;
 }
 .mat-app-footer {
-  background-color: #4f4e4e;
+  background-color: #313030;
+  bottom: 0;
+  width: 100%;
 }

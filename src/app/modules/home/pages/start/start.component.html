@@ -27,10 +27,7 @@
           >
             MARCA
           </a>
-          <div
-            class="bg-filters dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <section class="example-section">
               <div *ngFor="let item of Brands; let i = index">
                 <mat-checkbox
@@ -53,44 +50,17 @@
           >
             PRECIO
           </a>
-          <div
-            class="bg-filters dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <section class="example-section1">
-              <div>
-                <mat-form-field
-                  class="w-100"
-                  appearance="fill"
-                  color="primary"
-                  floatLabel="always"
-                >
-                  <mat-label>Desde</mat-label>
-                  <input matInput type="number" [(ngModel)]="minValue" />
-                  <span matPrefix>S/.&nbsp;</span>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field
-                  class="w-100"
-                  appearance="fill"
-                  floatLabel="always"
-                >
-                  <mat-label>Hasta</mat-label>
-                  <input matInput type="number" [(ngModel)]="maxValue" />
-                  <span matPrefix>S/.&nbsp;</span>
-                </mat-form-field>
-              </div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <section class="example-section">
               <ngx-slider
-                [(value)]="minValue"
-                [(highValue)]="maxValue"
+                [(value)]="value"
+                [(highValue)]="highValue"
                 [options]="options"
               ></ngx-slider>
-              <div class="float-right" (click)="restablecer()">Restablecer</div>
             </section>
           </div>
         </li>
-        <!-- <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -101,10 +71,7 @@
           >
             ENVIO
           </a>
-          <div
-            class="bg-filters dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <section class="example-section">
               <li>
                 <mat-checkbox class="example-margin">Check me!</mat-checkbox>
@@ -114,7 +81,7 @@
               </li>
             </section>
           </div>
-        </li> -->
+        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -126,21 +93,14 @@
           >
             ORDENAR POR
           </a>
-          <div
-            class="bg-filters dropdown-menu"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <section class="example-section w-auto">
-              <div
-                style="width: 200px"
-                *ngFor="let item of OrderBy; let i = index"
-              >
-                <mat-checkbox
-                  [checked]="selected === i"
-                  (change)="selected = i"
-                  >{{ item.OptionOrderName }}</mat-checkbox
-                >
-              </div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <section class="example-section">
+              <li>
+                <mat-checkbox class="example-margin">Check me</mat-checkbox>
+              </li>
+              <li>
+                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              </li>
             </section>
           </div>
         </li>
@@ -151,7 +111,7 @@
 </div>
 <!-- productos -->
 
-<div *ngIf="loading; else elseBlock">
+<div *ngIf="loading === true">
   <div class="container justify-content-center" style="padding: 10%">
     <div class="row justify-content-center">
       <div class="justify-content-center">
