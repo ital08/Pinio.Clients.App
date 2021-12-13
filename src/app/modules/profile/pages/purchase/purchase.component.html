@@ -1,1 +1,208 @@
-<p>purchase works!</p>
+<div class="bg-white p-3">
+  <div class="border border-0 container bg-white pt-lg-3 pb-5">
+    <div class="ml-1 mr-1">
+      <div class="row mt-3 mb-3 justify-content-center">
+        <div class="border container col-md-5 mt-lg-5">
+          <div class="row">
+            <div class="row">
+              <mat-icon style="color: #ed691e; font-size: 20px">
+                local_shipping</mat-icon
+              >
+              <h6>Direcciones de Envio</h6>
+            </div>
+          </div>
+          <div class="">
+            <div>
+              <div *ngFor="let items of UserAddress; let i = index">
+                <mat-checkbox
+                  class="row mt-2 mb-2"
+                  [checked]="selected === i"
+                  (change)="selected = i"
+                >
+                  <div class="col-md-3 justify-content-center">
+                    <div>{{ items.Address }}</div>
+                    <div>
+                      {{ items.idDepartment }},{{ items.IdProvince }},{{
+                        items.IdDistrict
+                      }}
+                    </div>
+                    <div>{{ items.PhoneNumber }}</div>
+                  </div>
+                  <div class="col-md-2 justify-content-center">
+                    <button
+                      style="border-color: #ed691e"
+                      mat-stroked-button
+                      color="accent"
+                    >
+                      Cambiar Direccion
+                    </button>
+                  </div>
+                </mat-checkbox>
+              </div>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="row">
+            <div class="row">
+              <mat-icon style="color: #ed691e; font-size: 20px">home</mat-icon>
+              <h6>Recoger en tienda</h6>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="row mt-2 mb-2">
+                <div iv class="col-md-6 justify-content-center">
+                  <div>
+                    Puedes recoger tus productos en una tienda, elige la mas
+                    cercana
+                  </div>
+                </div>
+                <div class="col-md-2 justify-content-center">
+                  <button
+                    style="border-color: #ed691e"
+                    mat-stroked-button
+                    color="accent"
+                  >
+                    Buscar Tienda
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="row">
+            <div class="row">
+              <mat-icon style="color: #ed691e; font-size: 20px"
+                >credit_card</mat-icon
+              >
+              <h6>Metodo de pago</h6>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="row mt-2 mb-2">
+                <div iv class="col-md-6 justify-content-center">
+                  <div>
+                    Puedes recoger tus productos en una tienda, elige la mas
+                    cercana
+                  </div>
+                </div>
+                <div class="col-md-6 justify-content-center">
+                  <div>
+                    Puedes recoger tus productos en una tienda, elige la mas
+                    cercana
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border container col-md-3 mt-lg-5">
+          <div class="row">
+            <div class="row">
+              <mat-icon style="color: #ed691e; font-size: 20px"
+                >loyalty</mat-icon
+              >
+              <h6>Tus Productos</h6>
+            </div>
+          </div>
+          <div class="row">
+            <span *ngIf="valid; else elseBlock">
+              <div class="row mt-4 mb-4">
+                <div class="col-4">
+                  <mat-icon style="font-size: 70px; color: black"
+                    >remove_shopping_cart</mat-icon
+                  >
+                </div>
+                <div class="col-8">
+                  <h6>Tu carrito está vacío</h6>
+                  <h6>Sigue comprando!</h6>
+                </div>
+              </div>
+            </span>
+            <ng-template #elseBlock>
+              <div *ngFor="let item of CartUser">
+                <div class="row mt-2 mb-2" style="border-radius: 15px">
+                  <div class="col-5 mt-2">
+                    <div *ngIf="isLoading">
+                      <img style="height: 70px; width: 70px" [src]="loader" />
+                    </div>
+                    <img
+                      style="height: 70px; width: 70px"
+                      src="{{ item.urlimage }}"
+                      [ngStyle]="{
+                        visibility: isLoading ? 'hidden' : ''
+                      }"
+                      (load)="hideLoader()"
+                      (error)="hideLoader()"
+                    />
+                  </div>
+                  <div class="col-6 mt-2">
+                    <div
+                      (click)="goToProduct(item.idProductCatalog)"
+                      class="row"
+                      style="color: black; font-size: 12px; cursor: pointer"
+                    >
+                      <p>{{ item.productModel }}</p>
+                    </div>
+                    <div class="row" style="color: black; font-size: 10px">
+                      Precio:
+                    </div>
+                    <div class="row" style="color: red; font-weight: 400">
+                      <div class="col-8">S/.{{ item.unitprice }}</div>
+                      <div class="col-4" style="color: black; font-weight: 400">
+                        x{{ item.amount }}
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                    style="color: #ed691e; font-size: 1px; cursor: pointer"
+                    (click)="removeItemCartUser(item.idProductCatalog)"
+                  >
+                    <mat-icon>close</mat-icon>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+        <div class="container border col-md-3 mt-lg-5">
+          <div class="row">
+            <div class="row">
+              <mat-icon style="color: #ed691e; font-size: 20px"
+                >shopping_cart</mat-icon
+              >
+              <h6>Resumen</h6>
+            </div>
+          </div>
+          <div class="row">
+            <mat-divider></mat-divider>
+            <div class="row">
+              <div class="col-6">Subtotal</div>
+              <div class="col-6 right">S/{{ Subtotal }}</div>
+            </div>
+
+            <div class="row mb-1">
+              <div class="col-6">Envio</div>
+              <div class="col-6 right">---</div>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="mt-3">
+              <button
+                style="border-color: #ed691e"
+                mat-stroked-button
+                color="accent"
+                (click)="goPurchase()"
+              >
+                Finalizar Compra
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

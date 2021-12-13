@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   @Input() image: string;
   isLoading: boolean;
   //
-  valid: boolean = true;
+  valid: boolean;
   CartUser = [{ "idProductCatalog": "SGA31B128", "productBrand": "Samsung", "productModel": "Galaxy A31 Black 128", "unitprice": 1000.0, "urlimage": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/02/04113410/Samsung-Galaxy-A31-731.jpg", "amount": 1 }, { "idProductCatalog": "SGA31A128", "productBrand": "Samsung", "productModel": "Galaxy A51 AZUL 128", "unitprice": 1200.0, "urlimage": "https://images.samsung.com/is/image/samsung/pe-galaxy-a51-a515-sm-a515fzblpeo-back-202096929?$720_576_PNG$", "amount": 1 }, { "idProductCatalog": "SGS21U5G", "productBrand": "Samsung", "productModel": "Galaxy S21 Ultra 5G", "unitprice": 3000.0, "urlimage": "https://falabella.scene7.com/is/image/FalabellaPE/17892255_1?wid=800&hei=800&qlt=70", "amount": 1 }]
   Subtotal: number;
   constructor(
@@ -27,6 +27,9 @@ export class CartComponent implements OnInit {
     this.getCartUser();
     if (this.CartUser.length > 0) {
       this.valid = false;
+    }
+    else {
+      this.valid = true;
     }
     this.Subtotal = this.getSubTotal(this.CartUser);
     console.log(this.Subtotal)

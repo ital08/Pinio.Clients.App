@@ -33,12 +33,12 @@ export const routes: Routes = [
       {
         path: "messages",
         component: MessagesComponent,
-      },
-      {
-        path: "purchase",
-        component: PurchaseComponent,
-      },
+      }
     ],
+  },
+  {
+    path: "purchase",
+    component: PurchaseComponent,
   },
 ];
 @NgModule({
