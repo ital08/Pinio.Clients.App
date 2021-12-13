@@ -1,0 +1,11 @@
+.modal-body {
+  padding: 20px 40px;
+}
+
+.modal-open .modal {
+  background: #00000070;
+}
+
+.modal-header {
+  background-color: #e4e9eb;
+}

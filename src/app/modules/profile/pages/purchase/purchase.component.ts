@@ -2,7 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
-import { BsModalService } from 'ngx-bootstrap/modal';
+import { ModalLoginErrorComponent } from '@modules/auth/modals/modal-login-error/modal-login-error.component';
+import { ModalPurchaseComponent } from '@modules/profile/modals/modal-purchase/modal-purchase.component';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ProductService } from 'src/app/data/services/products.service';
 import { SharedService } from 'src/app/data/services/search.service';
 
@@ -43,6 +45,9 @@ export class PurchaseComponent implements OnInit {
   @Input() width: number = 200;
   @Input() image: string;
   isLoading: boolean;
+  //
+  //modal
+  bsModalRef: BsModalRef;
   //
   valid: boolean;
   CartUser = [{ "idProductCatalog": "SGA31B128", "productBrand": "Samsung", "productModel": "Galaxy A31 Black 128", "unitprice": 1000.0, "urlimage": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/02/04113410/Samsung-Galaxy-A31-731.jpg", "amount": 1 }, { "idProductCatalog": "SGA31A128", "productBrand": "Samsung", "productModel": "Galaxy A51 AZUL 128", "unitprice": 1200.0, "urlimage": "https://images.samsung.com/is/image/samsung/pe-galaxy-a51-a515-sm-a515fzblpeo-back-202096929?$720_576_PNG$", "amount": 1 }, { "idProductCatalog": "SGS21U5G", "productBrand": "Samsung", "productModel": "Galaxy S21 Ultra 5G", "unitprice": 3000.0, "urlimage": "https://falabella.scene7.com/is/image/FalabellaPE/17892255_1?wid=800&hei=800&qlt=70", "amount": 1 }]
@@ -88,6 +93,16 @@ export class PurchaseComponent implements OnInit {
     this.router.navigateByUrl(`product/${idProductCatalog}`)
   }
   goPurchase() {
-
+    const initialState = {
+      title: "Transacción Exitosa",
+      message: "Gracias por comprar en Pinio Peru!",
+      acceptButton: {
+        text: "Seguir Comprando"
+      },
+      cancelButton: {
+        text: "Seguir Comprando"
+      }
+    };
+    this.bsModalRef = this.modalService.show(ModalPurchaseComponent, { class: 'modal-dialog-centered', backdrop: 'static', keyboard: false, initialState })
   }
 }

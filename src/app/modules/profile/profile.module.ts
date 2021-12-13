@@ -10,6 +10,7 @@ import { AddressComponent } from "./pages/address/address.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { MainprofileComponent } from "./pages/mainprofile/mainprofile.component";
 import { PurchaseComponent } from './pages/purchase/purchase.component';
+import { ModalPurchaseComponent } from './modals/modal-purchase/modal-purchase.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { PurchaseComponent } from './pages/purchase/purchase.component';
     AddressComponent,
     MessagesComponent,
     MainprofileComponent,
-    PurchaseComponent,
+    PurchaseComponent, ModalPurchaseComponent
   ],
   imports: [CommonModule, SharedModule, AvatarModule, ProfileRoutingModule],
   exports: [],
   providers: [],
-  entryComponents: [],
+  entryComponents: [
+    ModalPurchaseComponent],
 })
-export class ProfileModule {}
+export class ProfileModule { }

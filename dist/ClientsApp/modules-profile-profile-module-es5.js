@@ -6,6 +6,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-profile-profile-module"], {
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.html": function node_modulesRawLoaderDistCjsJsSrcAppModulesProfileModalsModalPurchaseModalPurchaseComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"modal-header\">\n  <h6 class=\"modal-title pull-left\">{{ title }}</h6>\n  <button\n    type=\"button\"\n    class=\"close pull-right\"\n    aria-label=\"Close\"\n    (click)=\"cancel()\"\n  >\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"row justify-content-center\">\n    {{ message }}\n  </div>\n</div>\n<div class=\"modal-footer justify-content-center\">\n  <button\n    mat-raised-button\n    *ngIf=\"acceptButton\"\n    color=\"accent\"\n    class=\"ml-3 text-button\"\n    (click)=\"accept()\"\n  >\n    {{ acceptButton.text }}\n  </button>\n</div>\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/profile/pages/about-profile/about-profile.component.html": function node_modulesRawLoaderDistCjsJsSrcAppModulesProfilePagesAboutProfileAboutProfileComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
@@ -74,6 +86,124 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     __webpack_exports__["default"] = "<p>messages works!</p>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/profile/pages/purchase/purchase.component.html": function node_modulesRawLoaderDistCjsJsSrcAppModulesProfilePagesPurchasePurchaseComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"bg-white p-3\">\n  <div class=\"border border-0 container bg-white pt-lg-3 pb-5\">\n    <div class=\"ml-1 mr-1\">\n      <div class=\"row mt-3 mb-3 justify-content-center\">\n        <div class=\"border container col-md-5 mt-lg-5\">\n          <div class=\"row\">\n            <div class=\"row\">\n              <mat-icon style=\"color: #ed691e; font-size: 20px\">\n                local_shipping</mat-icon\n              >\n              <h6>Direcciones de Envío</h6>\n            </div>\n          </div>\n          <div class=\"\">\n            <div>\n              <div *ngFor=\"let items of UserAddress; let i = index\">\n                <mat-checkbox\n                  class=\"row mt-2 mb-2\"\n                  [checked]=\"selected === i\"\n                  (change)=\"selected = i\"\n                >\n                  <div class=\"col-md-3 justify-content-center\">\n                    <div>{{ items.Address }}</div>\n                    <div>\n                      {{ items.idDepartment }},{{ items.IdProvince }},{{\n                        items.IdDistrict\n                      }}\n                    </div>\n                    <div>{{ items.PhoneNumber }}</div>\n                  </div>\n                  <div class=\"col-md-2 justify-content-center\">\n                    <button\n                      style=\"border-color: #ed691e\"\n                      mat-stroked-button\n                      color=\"accent\"\n                    >\n                      Cambiar Dirección\n                    </button>\n                  </div>\n                </mat-checkbox>\n              </div>\n            </div>\n          </div>\n          <mat-divider></mat-divider>\n          <div class=\"row\">\n            <div class=\"row\">\n              <mat-icon style=\"color: #ed691e; font-size: 20px\">home</mat-icon>\n              <h6>Recoger en tienda</h6>\n            </div>\n          </div>\n\n          <div>\n            <div>\n              <div class=\"row mt-2 mb-2\">\n                <div iv class=\"col-md-6 justify-content-center\">\n                  <div>\n                    Puedes recoger tus productos en una tienda, elige la más\n                    cercana!\n                  </div>\n                </div>\n                <div class=\"col-md-2 justify-content-center\">\n                  <button\n                    style=\"border-color: #ed691e\"\n                    mat-stroked-button\n                    color=\"accent\"\n                  >\n                    Buscar Tienda\n                  </button>\n                </div>\n              </div>\n            </div>\n          </div>\n          <mat-divider></mat-divider>\n          <div class=\"row\">\n            <div class=\"row\">\n              <mat-icon style=\"color: #ed691e; font-size: 20px\"\n                >credit_card</mat-icon\n              >\n              <h6>Método de pago</h6>\n            </div>\n          </div>\n          <div>\n            <div>\n              <div class=\"row mt-2 mb-2\">\n                <div class=\"container p-0\">\n                  <div class=\"px-4\">\n                    <div class=\"row gx-3\">\n                      <div class=\"col-12\">\n                        <div class=\"d-flex flex-column\">\n                          <p class=\"text mb-1\">Nombre del Titular</p>\n                          <input\n                            autocomplete=\"off\"\n                            class=\"form-control mb-3\"\n                            type=\"text\"\n                            placeholder=\"Nombre\"\n                          />\n                        </div>\n                      </div>\n                      <div class=\"col-12\">\n                        <div class=\"d-flex flex-column\">\n                          <p class=\"text mb-1\">Número de Tarjeta</p>\n                          <input\n                            autocomplete=\"off\"\n                            class=\"form-control mb-3\"\n                            type=\"text\"\n                            placeholder=\"1234 5678 435678\"\n                          />\n                        </div>\n                      </div>\n                      <div class=\"col-6\">\n                        <div class=\"d-flex flex-column\">\n                          <p class=\"text mb-1\">Fecha de Expiración</p>\n                          <input\n                            autocomplete=\"off\"\n                            class=\"form-control mb-3\"\n                            type=\"text\"\n                            placeholder=\"MM/YYYY\"\n                          />\n                        </div>\n                      </div>\n                      <div class=\"col-6\">\n                        <div class=\"d-flex flex-column\">\n                          <p class=\"text mb-1\">CVV/CVC</p>\n                          <input\n                            autocomplete=\"off\"\n                            class=\"form-control mb-3 pt-2\"\n                            type=\"password\"\n                            placeholder=\"***\"\n                          />\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"border container col-md-3 mt-lg-5\">\n          <div class=\"row\">\n            <div class=\"row\">\n              <mat-icon style=\"color: #ed691e; font-size: 20px\"\n                >loyalty</mat-icon\n              >\n              <h6>Tus Productos</h6>\n            </div>\n          </div>\n          <div class=\"row\">\n            <span *ngIf=\"valid; else elseBlock\">\n              <div class=\"row mt-4 mb-4\">\n                <div class=\"col-4\">\n                  <mat-icon style=\"font-size: 70px; color: black\"\n                    >remove_shopping_cart</mat-icon\n                  >\n                </div>\n                <div class=\"col-8\">\n                  <h6>Tu carrito está vacío</h6>\n                  <h6>Sigue comprando!</h6>\n                </div>\n              </div>\n            </span>\n            <ng-template #elseBlock>\n              <div *ngFor=\"let item of CartUser\">\n                <div class=\"row mt-2 mb-2\" style=\"border-radius: 15px\">\n                  <div class=\"col-5 mt-2\">\n                    <div *ngIf=\"isLoading\">\n                      <img style=\"height: 70px; width: 70px\" [src]=\"loader\" />\n                    </div>\n                    <img\n                      style=\"height: 70px; width: 70px\"\n                      src=\"{{ item.urlimage }}\"\n                      [ngStyle]=\"{\n                        visibility: isLoading ? 'hidden' : ''\n                      }\"\n                      (load)=\"hideLoader()\"\n                      (error)=\"hideLoader()\"\n                    />\n                  </div>\n                  <div class=\"col-6 mt-2\">\n                    <div\n                      (click)=\"goToProduct(item.idProductCatalog)\"\n                      class=\"row\"\n                      style=\"color: black; font-size: 12px; cursor: pointer\"\n                    >\n                      <p>{{ item.productModel }}</p>\n                    </div>\n                    <div class=\"row\" style=\"color: black; font-size: 10px\">\n                      Precio:\n                    </div>\n                    <div class=\"row\" style=\"color: red; font-weight: 400\">\n                      <div class=\"col-8\">S/.{{ item.unitprice }}</div>\n                      <div class=\"col-4\" style=\"color: black; font-weight: 400\">\n                        x{{ item.amount }}\n                      </div>\n                    </div>\n                  </div>\n                  <div\n                    class=\"row\"\n                    style=\"color: #ed691e; font-size: 1px; cursor: pointer\"\n                    (click)=\"removeItemCartUser(item.idProductCatalog)\"\n                  >\n                    <mat-icon>close</mat-icon>\n                  </div>\n                </div>\n              </div>\n            </ng-template>\n          </div>\n        </div>\n        <div class=\"container border col-md-3 mt-lg-5\">\n          <div class=\"row\">\n            <div class=\"row\">\n              <mat-icon style=\"color: #ed691e; font-size: 20px\"\n                >shopping_cart</mat-icon\n              >\n              <h6>Resumen</h6>\n            </div>\n          </div>\n          <div class=\"row\">\n            <mat-divider></mat-divider>\n            <div class=\"row\">\n              <div class=\"col-6\">Subtotal</div>\n              <div class=\"col-6 right\">S/{{ Subtotal }}</div>\n            </div>\n\n            <div class=\"row mb-1\">\n              <div class=\"col-6\">Envío</div>\n              <div class=\"col-6 right\">---</div>\n            </div>\n            <mat-divider></mat-divider>\n            <div class=\"mt-3\">\n              <button\n                style=\"border-color: #ed691e\"\n                mat-stroked-button\n                color=\"accent\"\n                (click)=\"goPurchase()\"\n              >\n                Finalizar Compra\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.css": function srcAppModulesProfileModalsModalPurchaseModalPurchaseComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".modal-body {\r\n  padding: 20px 40px;\r\n}\r\n\r\n.modal-open .modal {\r\n  background: #00000070;\r\n}\r\n\r\n.modal-header {\r\n  background-color: #e4e9eb;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9wcm9maWxlL21vZGFscy9tb2RhbC1wdXJjaGFzZS9tb2RhbC1wdXJjaGFzZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9wcm9maWxlL21vZGFscy9tb2RhbC1wdXJjaGFzZS9tb2RhbC1wdXJjaGFzZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1vZGFsLWJvZHkge1xyXG4gIHBhZGRpbmc6IDIwcHggNDBweDtcclxufVxyXG5cclxuLm1vZGFsLW9wZW4gLm1vZGFsIHtcclxuICBiYWNrZ3JvdW5kOiAjMDAwMDAwNzA7XHJcbn1cclxuXHJcbi5tb2RhbC1oZWFkZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNlNGU5ZWI7XHJcbn1cclxuIl19 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.ts": function srcAppModulesProfileModalsModalPurchaseModalPurchaseComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ModalPurchaseComponent", function () {
+      return ModalPurchaseComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ngx-bootstrap/modal */
+    "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var ModalPurchaseComponent = /*#__PURE__*/function () {
+      function ModalPurchaseComponent(router, bsModalRefModalMessage) {
+        _classCallCheck(this, ModalPurchaseComponent);
+
+        this.router = router;
+        this.bsModalRefModalMessage = bsModalRefModalMessage;
+      }
+
+      _createClass(ModalPurchaseComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+        }
+      }, {
+        key: "cancel",
+        value: function cancel() {
+          this.onClose.next(false);
+          this.router.navigateByUrl('/');
+          this.bsModalRefModalMessage.hide();
+        }
+      }, {
+        key: "accept",
+        value: function accept() {
+          this.onClose.next(true);
+          this.router.navigateByUrl('/');
+          this.bsModalRefModalMessage.hide();
+        }
+      }]);
+
+      return ModalPurchaseComponent;
+    }();
+
+    ModalPurchaseComponent.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"]
+      }];
+    };
+
+    ModalPurchaseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-modal-purchase',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./modal-purchase.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./modal-purchase.component.css */
+      "./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.css"))["default"]]
+    })], ModalPurchaseComponent);
     /***/
   },
 
@@ -475,6 +605,254 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/modules/profile/pages/purchase/purchase.component.css": function srcAppModulesProfilePagesPurchasePurchaseComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".border {\r\n  padding-left: 40px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9wcm9maWxlL3BhZ2VzL3B1cmNoYXNlL3B1cmNoYXNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3Byb2ZpbGUvcGFnZXMvcHVyY2hhc2UvcHVyY2hhc2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ib3JkZXIge1xyXG4gIHBhZGRpbmctbGVmdDogNDBweDtcclxufVxyXG4iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/modules/profile/pages/purchase/purchase.component.ts": function srcAppModulesProfilePagesPurchasePurchaseComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PurchaseComponent", function () {
+      return PurchaseComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _modules_profile_modals_modal_purchase_modal_purchase_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @modules/profile/modals/modal-purchase/modal-purchase.component */
+    "./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.ts");
+    /* harmony import */
+
+
+    var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ngx-bootstrap/modal */
+    "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
+    /* harmony import */
+
+
+    var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! src/app/data/services/products.service */
+    "./src/app/data/services/products.service.ts");
+    /* harmony import */
+
+
+    var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! src/app/data/services/search.service */
+    "./src/app/data/services/search.service.ts");
+
+    var PurchaseComponent = /*#__PURE__*/function () {
+      function PurchaseComponent(formBuilder, productService, router, sharedService, modalService, dialog) {
+        _classCallCheck(this, PurchaseComponent);
+
+        this.formBuilder = formBuilder;
+        this.productService = productService;
+        this.router = router;
+        this.sharedService = sharedService;
+        this.modalService = modalService;
+        this.dialog = dialog;
+        this.UserAddress = [{
+          "idEmailAddress": "123",
+          "idclient": "123",
+          "Address": "Urb.VillaClub 2 Mz R lote 13",
+          "PhoneNumber": 992993734,
+          "idDepartment": "Lima",
+          "IdProvince": "Lima",
+          "IdDistrict": "Surco"
+        }, {
+          "idEmailAddress": "123",
+          "idclient": "123",
+          "Address": "Urb.VillaClub 2 Mz R lote 13",
+          "PhoneNumber": 992993734,
+          "idDepartment": "Lima",
+          "IdProvince": "Lima",
+          "IdDistrict": "Surco"
+        }, {
+          "idEmailAddress": "123",
+          "idclient": "123",
+          "Address": "Urb.VillaClub 2 Mz R lote 13",
+          "PhoneNumber": 992993734,
+          "idDepartment": "Lima",
+          "IdProvince": "Lima",
+          "IdDistrict": "Surco"
+        }]; //IMG LOADER
+
+        this.loader = './../../../../../assets/loader.gif';
+        this.height = 200;
+        this.width = 200;
+        this.CartUser = [{
+          "idProductCatalog": "SGA31B128",
+          "productBrand": "Samsung",
+          "productModel": "Galaxy A31 Black 128",
+          "unitprice": 1000.0,
+          "urlimage": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/02/04113410/Samsung-Galaxy-A31-731.jpg",
+          "amount": 1
+        }, {
+          "idProductCatalog": "SGA31A128",
+          "productBrand": "Samsung",
+          "productModel": "Galaxy A51 AZUL 128",
+          "unitprice": 1200.0,
+          "urlimage": "https://images.samsung.com/is/image/samsung/pe-galaxy-a51-a515-sm-a515fzblpeo-back-202096929?$720_576_PNG$",
+          "amount": 1
+        }, {
+          "idProductCatalog": "SGS21U5G",
+          "productBrand": "Samsung",
+          "productModel": "Galaxy S21 Ultra 5G",
+          "unitprice": 3000.0,
+          "urlimage": "https://falabella.scene7.com/is/image/FalabellaPE/17892255_1?wid=800&hei=800&qlt=70",
+          "amount": 1
+        }];
+      }
+
+      _createClass(PurchaseComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.getCartUser();
+          this.Subtotal = this.getSubTotal(this.CartUser);
+        }
+      }, {
+        key: "getCartUser",
+        value: function getCartUser() {}
+      }, {
+        key: "removeItemCartUser",
+        value: function removeItemCartUser(idProductCatalog) {
+          var _this = this;
+
+          this.CartUser.forEach(function (element) {
+            _this.CartUser = _this.CartUser.filter(function (element) {
+              return element.idProductCatalog !== idProductCatalog;
+            });
+          });
+          this.Subtotal = this.getSubTotal(this.CartUser);
+        } //IMG LOADER
+
+      }, {
+        key: "hideLoader",
+        value: function hideLoader() {
+          this.isLoading = false;
+        } //
+
+      }, {
+        key: "getSubTotal",
+        value: function getSubTotal(cart) {
+          var subtotal = 0;
+          cart.forEach(function (element) {
+            var amount = parseFloat(element.amount);
+            var unitprice = parseFloat(element.unitprice);
+            subtotal += amount * unitprice;
+          });
+          return subtotal;
+        }
+      }, {
+        key: "goToPurchase",
+        value: function goToPurchase() {
+          this.router.navigateByUrl("profile/purchase");
+        }
+      }, {
+        key: "goToProduct",
+        value: function goToProduct(idProductCatalog) {
+          this.sharedService.searchProductCart.next(idProductCatalog);
+          this.router.navigateByUrl("product/".concat(idProductCatalog));
+        }
+      }, {
+        key: "goPurchase",
+        value: function goPurchase() {
+          var initialState = {
+            title: "Transacción Exitosa",
+            message: "Gracias por comprar en Pinio Peru!",
+            acceptButton: {
+              text: "Seguir Comprando"
+            },
+            cancelButton: {
+              text: "Seguir Comprando"
+            }
+          };
+          this.bsModalRef = this.modalService.show(_modules_profile_modals_modal_purchase_modal_purchase_component__WEBPACK_IMPORTED_MODULE_5__["ModalPurchaseComponent"], {
+            "class": 'modal-dialog-centered',
+            backdrop: 'static',
+            keyboard: false,
+            initialState: initialState
+          });
+        }
+      }]);
+
+      return PurchaseComponent;
+    }();
+
+    PurchaseComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_7__["ProductService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }, {
+        type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_8__["SharedService"]
+      }, {
+        type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PurchaseComponent.prototype, "loader", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PurchaseComponent.prototype, "height", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PurchaseComponent.prototype, "width", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PurchaseComponent.prototype, "image", void 0);
+    PurchaseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-purchase',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./purchase.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/profile/pages/purchase/purchase.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./purchase.component.css */
+      "./src/app/modules/profile/pages/purchase/purchase.component.css"))["default"]]
+    })], PurchaseComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/modules/profile/profile-routing.module.ts": function srcAppModulesProfileProfileRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
@@ -551,6 +929,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _pages_messages_messages_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./pages/messages/messages.component */
     "./src/app/modules/profile/pages/messages/messages.component.ts");
+    /* harmony import */
+
+
+    var _pages_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ./pages/purchase/purchase.component */
+    "./src/app/modules/profile/pages/purchase/purchase.component.ts");
 
     var routes = [{
       path: "",
@@ -571,6 +955,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         path: "messages",
         component: _pages_messages_messages_component__WEBPACK_IMPORTED_MODULE_9__["MessagesComponent"]
       }]
+    }, {
+      path: "purchase",
+      component: _pages_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_10__["PurchaseComponent"]
     }];
 
     var ProfileRoutingModule = function ProfileRoutingModule() {
@@ -667,17 +1054,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _pages_mainprofile_mainprofile_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./pages/mainprofile/mainprofile.component */
     "./src/app/modules/profile/pages/mainprofile/mainprofile.component.ts");
+    /* harmony import */
+
+
+    var _pages_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./pages/purchase/purchase.component */
+    "./src/app/modules/profile/pages/purchase/purchase.component.ts");
+    /* harmony import */
+
+
+    var _modals_modal_purchase_modal_purchase_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! ./modals/modal-purchase/modal-purchase.component */
+    "./src/app/modules/profile/modals/modal-purchase/modal-purchase.component.ts");
 
     var ProfileModule = function ProfileModule() {
       _classCallCheck(this, ProfileModule);
     };
 
     ProfileModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_pages_about_profile_about_profile_component__WEBPACK_IMPORTED_MODULE_6__["AboutProfileComponent"], _pages_me_me_component__WEBPACK_IMPORTED_MODULE_7__["MeComponent"], _pages_history_history_component__WEBPACK_IMPORTED_MODULE_8__["HistoryComponent"], _pages_address_address_component__WEBPACK_IMPORTED_MODULE_9__["AddressComponent"], _pages_messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"], _pages_mainprofile_mainprofile_component__WEBPACK_IMPORTED_MODULE_11__["MainprofileComponent"]],
+      declarations: [_pages_about_profile_about_profile_component__WEBPACK_IMPORTED_MODULE_6__["AboutProfileComponent"], _pages_me_me_component__WEBPACK_IMPORTED_MODULE_7__["MeComponent"], _pages_history_history_component__WEBPACK_IMPORTED_MODULE_8__["HistoryComponent"], _pages_address_address_component__WEBPACK_IMPORTED_MODULE_9__["AddressComponent"], _pages_messages_messages_component__WEBPACK_IMPORTED_MODULE_10__["MessagesComponent"], _pages_mainprofile_mainprofile_component__WEBPACK_IMPORTED_MODULE_11__["MainprofileComponent"], _pages_purchase_purchase_component__WEBPACK_IMPORTED_MODULE_12__["PurchaseComponent"], _modals_modal_purchase_modal_purchase_component__WEBPACK_IMPORTED_MODULE_13__["ModalPurchaseComponent"]],
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"], ngx_avatar__WEBPACK_IMPORTED_MODULE_4__["AvatarModule"], _profile_routing_module__WEBPACK_IMPORTED_MODULE_5__["ProfileRoutingModule"]],
       exports: [],
       providers: [],
-      entryComponents: []
+      entryComponents: [_modals_modal_purchase_modal_purchase_component__WEBPACK_IMPORTED_MODULE_13__["ModalPurchaseComponent"]]
     })], ProfileModule);
     /***/
   }

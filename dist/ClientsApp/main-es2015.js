@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"bg\" class=\"m-0 bg-dashboard\">\r\n  <app-header-admin></app-header-admin>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"bg\" class=\"m-0 bg-dashboard\">\r\n  <app-header-admin></app-header-admin>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Site footer -->\r\n<footer class=\"site-footer\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-12 col-md-6\">\r\n        <h6>About</h6>\r\n        <p class=\"text-justify\">\r\n          Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help\r\n          the upcoming programmers with the code. Scanfcode focuses on providing\r\n          the most efficient code or snippets as the code wants to be simple. We\r\n          will help programmers build up concepts in different programming\r\n          languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript,\r\n          PHP, Android, SQL and Algorithm.\r\n        </p>\r\n      </div>\r\n\r\n      <div class=\"col-xs-12 col-md-3 float-left\">\r\n        <h6>Quick Links</h6>\r\n        <ul class=\"footer-links\">\r\n          <li><a href=\"http://scanfcode.com/about/\">About Us</a></li>\r\n          <li><a href=\"http://scanfcode.com/contact/\">Contact Us</a></li>\r\n          <li>\r\n            <a href=\"http://scanfcode.com/contribute-at-scanfcode/\"\r\n              >Contribute</a\r\n            >\r\n          </li>\r\n          <li>\r\n            <a href=\"http://scanfcode.com/privacy-policy/\">Privacy Policy</a>\r\n          </li>\r\n          <li><a href=\"http://scanfcode.com/sitemap/\">Sitemap</a></li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n    <hr />\r\n  </div>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-8 col-sm-6 col-xs-12\">\r\n        <p class=\"copyright-text\">\r\n          Copyright &copy; 2017 All Rights Reserved by\r\n          <a href=\"#\">Scanfcode</a>.\r\n        </p>\r\n      </div>\r\n\r\n      <div class=\"col-md-4 col-sm-6 col-xs-12\">\r\n        <ul class=\"social-icons\">\r\n          <li>\r\n            <a class=\"facebook\" href=\"#\"><i class=\"fa fa-facebook\"></i></a>\r\n          </li>\r\n          <li>\r\n            <a class=\"twitter\" href=\"#\"><i class=\"fa fa-twitter\"></i></a>\r\n          </li>\r\n          <li>\r\n            <a class=\"dribbble\" href=\"#\"><i class=\"fa fa-dribbble\"></i></a>\r\n          </li>\r\n          <li>\r\n            <a class=\"linkedin\" href=\"#\"><i class=\"fa fa-linkedin\"></i></a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</footer>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("  <!-- Site footer -->\r\n  <footer class=\"site-footer\">\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-8 col-sm-6 col-xs-12\">\r\n          <p class=\"copyright-text\">Copyright &copy; 2017 All Rights Reserved by\r\n       <a href=\"#\">Scanfcode</a>.\r\n          </p>\r\n        </div>\r\n\r\n        <div class=\"col-md-4 col-sm-6 col-xs-12\">\r\n          <ul class=\"social-icons\">\r\n            <li><a class=\"facebook\" href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\r\n            <li><a class=\"twitter\" href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\r\n            <li><a class=\"dribbble\" href=\"#\"><i class=\"fa fa-dribbble\"></i></a></li>\r\n            <li><a class=\"linkedin\" href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n</footer>\r\n");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bg-nav\">\r\n  <div class=\"left justify-content-center\">\r\n    <div class=\"left-container\">\r\n      <a href=\"\" (click)=\"home()\"><span class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main justify-content-center\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input\r\n          matInput\r\n          type=\"text\"\r\n          name=\"Search\"\r\n          (keydown.enter)=\"onSearch(value)\"\r\n          [(ngModel)]=\"value\"\r\n        />\r\n\r\n        <button\r\n          *ngIf=\"value\"\r\n          matSuffix\r\n          mat-icon-button\r\n          aria-label=\"Clear\"\r\n          (click)=\"value = ''; onSearch(value)\"\r\n        >\r\n          <mat-icon>close</mat-icon>\r\n        </button>\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right justify-content-center\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div *ngIf=\"cond === true; else elseBlock\">\r\n          <div>\r\n            <a style=\"text-decoration: none\" href=\"/auth/login\">\r\n              <div style=\"cursor: pointer\" class=\"login-text\">\r\n                <p>Log In</p>\r\n              </div>\r\n            </a>\r\n          </div>\r\n          <div>\r\n            <a style=\"text-decoration: none\" href=\"/auth/register\">\r\n              <div style=\"cursor: pointer\" class=\"register-text\">\r\n                <p>Register</p>\r\n              </div></a\r\n            >\r\n          </div>\r\n        </div>\r\n        <ng-template #elseBlock>\r\n          <div>\r\n            <a style=\"text-decoration: none\" href=\"/profile\">\r\n              <div style=\"cursor: pointer\" class=\"login-text\">\r\n                <p>{{ dato }}</p>\r\n              </div>\r\n            </a>\r\n          </div>\r\n          <div>\r\n            <a style=\"text-decoration: none\">\r\n              <div\r\n                style=\"cursor: pointer\"\r\n                class=\"register-text\"\r\n                (click)=\"logout()\"\r\n              >\r\n                <p>Logout</p>\r\n              </div></a\r\n            >\r\n          </div>\r\n        </ng-template>\r\n      </div>\r\n    </div>\r\n    <div (click)=\"openCart()\" style=\"cursor: pointer\" class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bg-nav\">\r\n  <div class=\"left justify-content-center\">\r\n    <div class=\"left-container\">\r\n      <a (click)=\"home()\"><span style=\"cursor: pointer\" class=\"logo\"></span></a>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"main justify-content-center\">\r\n    <div class=\"search-section\">\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Buscar productos</mat-label>\r\n        <input\r\n          matInput\r\n          type=\"text\"\r\n          name=\"Search\"\r\n          (keydown.enter)=\"onSearch(value)\"\r\n          [(ngModel)]=\"value\"\r\n        />\r\n\r\n        <button\r\n          *ngIf=\"value\"\r\n          matSuffix\r\n          mat-icon-button\r\n          aria-label=\"Clear\"\r\n          (click)=\"value = ''; onSearch(value)\"\r\n        >\r\n          <mat-icon>close</mat-icon>\r\n        </button>\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"right justify-content-center\">\r\n    <div class=\"user-section\">\r\n      <div>\r\n        <a style=\"text-decoration: none\" href=\"\">\r\n          <div class=\"avatar-container\">\r\n            <span class=\"avatar-logo\"></span>\r\n          </div>\r\n        </a>\r\n      </div>\r\n      <div class=\"profile-section\">\r\n        <div *ngIf=\"cond === true; else elseBlock\">\r\n          <div>\r\n            <a style=\"text-decoration: none\" href=\"/auth/login\">\r\n              <div style=\"cursor: pointer\" class=\"login-text\">\r\n                <p>Log In</p>\r\n              </div>\r\n            </a>\r\n          </div>\r\n          <div>\r\n            <a style=\"text-decoration: none\" href=\"/auth/register\">\r\n              <div style=\"cursor: pointer\" class=\"register-text\">\r\n                <p>Register</p>\r\n              </div></a\r\n            >\r\n          </div>\r\n        </div>\r\n        <ng-template #elseBlock>\r\n          <div>\r\n            <a style=\"text-decoration: none\" href=\"/profile\">\r\n              <div style=\"cursor: pointer\" class=\"login-text\">\r\n                <p>{{ dato }}</p>\r\n              </div>\r\n            </a>\r\n          </div>\r\n          <div>\r\n            <a style=\"text-decoration: none\">\r\n              <div\r\n                style=\"cursor: pointer\"\r\n                class=\"register-text\"\r\n                (click)=\"logout()\"\r\n              >\r\n                <p>Logout</p>\r\n              </div></a\r\n            >\r\n          </div>\r\n        </ng-template>\r\n      </div>\r\n    </div>\r\n    <div (click)=\"openCart()\" style=\"cursor: pointer\" class=\"shopping-cart\">\r\n      <a style=\"text-decoration: none\">\r\n        <div class=\"cart-container\">\r\n          <span class=\"cart-logo\"></span>\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cart\">\r\n  <div class=\"flex\">\r\n    <div>\r\n      <div class=\"row\">\r\n        <div class=\"col-4\">\r\n          <mat-icon style=\"font-size: 70px; color: black\"\r\n            >add_shopping_cart</mat-icon\r\n          >\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <h6>Tu carrito de compras</h6>\r\n        </div>\r\n      </div>\r\n      <span *ngIf=\"valid\">\r\n        <div class=\"row mt-4 mb-4\">\r\n          <div class=\"col-4\">\r\n            <mat-icon style=\"font-size: 70px; color: black\"\r\n              >remove_shopping_cart</mat-icon\r\n            >\r\n          </div>\r\n          <div class=\"col-8\">\r\n            <h6>Tu carrito está vacío</h6>\r\n            <h6>Sigue comprando!</h6>\r\n          </div>\r\n        </div>\r\n      </span>\r\n    </div>\r\n    <div class=\"mt-1 mb-1\">\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row\">\r\n        <div class=\"col-6\">Subtotal</div>\r\n        <div class=\"col-6 right\">S/0.00</div>\r\n      </div>\r\n\r\n      <div class=\"row mb-1\">\r\n        <div class=\"col-6\">Envio</div>\r\n        <div class=\"col-6 right\">---</div>\r\n      </div>\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row justify-content-center mt-3\">\r\n        <button class=\"custom-button\" mat-button [disabled]=\"valid\">\r\n          <div class=\"custom-font\">COMPRAR</div>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cart\">\r\n  <div class=\"flex\">\r\n    <div>\r\n      <div class=\"row\">\r\n        <div class=\"col-4\">\r\n          <mat-icon style=\"font-size: 70px; color: black\"\r\n            >add_shopping_cart</mat-icon\r\n          >\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <h6>Tu carrito de compras</h6>\r\n        </div>\r\n      </div>\r\n      <span *ngIf=\"valid; else elseBlock\">\r\n        <div class=\"row mt-4 mb-4\">\r\n          <div class=\"col-4\">\r\n            <mat-icon style=\"font-size: 70px; color: black\"\r\n              >remove_shopping_cart</mat-icon\r\n            >\r\n          </div>\r\n          <div class=\"col-8\">\r\n            <h6>Tu carrito está vacío</h6>\r\n            <h6>Sigue comprando!</h6>\r\n          </div>\r\n        </div>\r\n      </span>\r\n      <ng-template #elseBlock>\r\n        <div *ngFor=\"let item of CartUser\">\r\n          <div class=\"row bg-white m-1 mt-2 mb-2\" style=\"border-radius: 15px\">\r\n            <div class=\"col-5 mt-2\">\r\n              <div *ngIf=\"isLoading\">\r\n                <img style=\"height: 70px; width: 70px\" [src]=\"loader\" />\r\n              </div>\r\n              <img\r\n                style=\"height: 70px; width: 70px\"\r\n                src=\"{{ item.urlimage }}\"\r\n                [ngStyle]=\"{\r\n                  visibility: isLoading ? 'hidden' : ''\r\n                }\"\r\n                (load)=\"hideLoader()\"\r\n                (error)=\"hideLoader()\"\r\n              />\r\n            </div>\r\n            <div class=\"col-7 mt-2\">\r\n              <div\r\n                class=\"row float-right\"\r\n                style=\"color: #ed691e; font-size: 1px; cursor: pointer\"\r\n                (click)=\"removeItemCartUser(item.idProductCatalog)\"\r\n              >\r\n                <mat-icon>close</mat-icon>\r\n              </div>\r\n              <div\r\n                (click)=\"goToProduct(item.idProductCatalog)\"\r\n                class=\"row\"\r\n                style=\"color: black; font-size: 12px; cursor: pointer\"\r\n              >\r\n                <p>{{ item.productModel }}</p>\r\n              </div>\r\n              <div class=\"row\" style=\"color: black; font-size: 10px\">\r\n                Precio:\r\n              </div>\r\n              <div class=\"row\" style=\"color: red; font-weight: 400\">\r\n                <div class=\"col-6\">S/.{{ item.unitprice }}</div>\r\n                <div class=\"col-2\" style=\"color: black; font-weight: 400\">\r\n                  x{{ item.amount }}\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </ng-template>\r\n    </div>\r\n    <div class=\"mt-1 mb-1\">\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row\">\r\n        <div class=\"col-6\">Subtotal</div>\r\n        <div class=\"col-6 right\">S/{{ Subtotal }}</div>\r\n      </div>\r\n\r\n      <div class=\"row mb-1\">\r\n        <div class=\"col-6\">Envio</div>\r\n        <div class=\"col-6 right\">---</div>\r\n      </div>\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row justify-content-center mt-3\">\r\n        <button\r\n          class=\"custom-button\"\r\n          style=\"cursor: pointer\"\r\n          mat-button\r\n          disabled=\"valid\"\r\n        >\r\n          <div (click)=\"goToPurchase()\" class=\"custom-font\">COMPRAR</div>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -479,14 +479,14 @@ const routes = [
         children: [
             {
                 path: "",
-                loadChildren: () => __webpack_require__.e(/*! import() | modules-home-home-module */ "modules-home-home-module").then(__webpack_require__.bind(null, /*! @modules/home/home.module */ "./src/app/modules/home/home.module.ts")).then((m) => m.HomeModule),
+                loadChildren: () => Promise.all(/*! import() | modules-home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("modules-home-home-module")]).then(__webpack_require__.bind(null, /*! @modules/home/home.module */ "./src/app/modules/home/home.module.ts")).then((m) => m.HomeModule),
             },
         ],
     },
     {
         path: "profile",
         component: _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"],
-        loadChildren: () => __webpack_require__.e(/*! import() | modules-profile-profile-module */ "modules-profile-profile-module").then(__webpack_require__.bind(null, /*! ./modules/profile/profile.module */ "./src/app/modules/profile/profile.module.ts")).then((m) => m.ProfileModule),
+        loadChildren: () => Promise.all(/*! import() | modules-profile-profile-module */[__webpack_require__.e("common"), __webpack_require__.e("modules-profile-profile-module")]).then(__webpack_require__.bind(null, /*! ./modules/profile/profile.module */ "./src/app/modules/profile/profile.module.ts")).then((m) => m.ProfileModule),
     },
     {
         path: "auth",
@@ -705,6 +705,7 @@ __webpack_require__.r(__webpack_exports__);
 let SharedService = class SharedService {
     constructor() {
         this.searchSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"](); // a new subject of type String, replace it with your data type
+        this.searchProductCart = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
     }
 };
 SharedService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -724,7 +725,7 @@ SharedService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".bg-dashboard {\r\n  background: url('admin_bg.jpg') no-repeat center center;\r\n  /* Set rules to fill background */\r\n  min-height: 100%;\r\n  min-width: 100%;\r\n  background-size:cover;\r\n  /* Set up proportionate scaling */\r\n  width: 100%;\r\n  height: auto;\r\n\r\n  /* Set up positioning */\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2FkbWluLWxheW91dC9hZG1pbi1sYXlvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVEQUF1RTtFQUN2RSxpQ0FBaUM7RUFDakMsZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixxQkFBcUI7RUFDckIsaUNBQWlDO0VBQ2pDLFdBQVc7RUFDWCxZQUFZOztFQUVaLHVCQUF1QjtFQUN2QixlQUFlO0VBQ2YsTUFBTTtFQUNOLE9BQU87QUFDVCIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9hZG1pbi1sYXlvdXQvYWRtaW4tbGF5b3V0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmctZGFzaGJvYXJkIHtcclxuICBiYWNrZ3JvdW5kOiB1cmwoLi8uLi8uLi8uLi9hc3NldHMvYWRtaW5fYmcuanBnKSBuby1yZXBlYXQgY2VudGVyIGNlbnRlcjtcclxuICAvKiBTZXQgcnVsZXMgdG8gZmlsbCBiYWNrZ3JvdW5kICovXHJcbiAgbWluLWhlaWdodDogMTAwJTtcclxuICBtaW4td2lkdGg6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1zaXplOmNvdmVyO1xyXG4gIC8qIFNldCB1cCBwcm9wb3J0aW9uYXRlIHNjYWxpbmcgKi9cclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IGF1dG87XHJcblxyXG4gIC8qIFNldCB1cCBwb3NpdGlvbmluZyAqL1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB0b3A6IDA7XHJcbiAgbGVmdDogMDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".bg-dashboard {\r\n  background: url('admin_bg.jpg') no-repeat center center;\r\n  /* Set rules to fill background */\r\n  min-height: 100%;\r\n  min-width: 100%;\r\n  background-size:cover;\r\n  /* Set up proportionate scaling */\r\n  width: 100%;\r\n  height: auto;\r\n\r\n  /* Set up positioning */\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2FkbWluLWxheW91dC9hZG1pbi1sYXlvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVEQUF1RTtFQUN2RSxpQ0FBaUM7RUFDakMsZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixxQkFBcUI7RUFDckIsaUNBQWlDO0VBQ2pDLFdBQVc7RUFDWCxZQUFZOztFQUVaLHVCQUF1QjtFQUN2QixlQUFlO0VBQ2YsTUFBTTtFQUNOLE9BQU87QUFDVCIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9hZG1pbi1sYXlvdXQvYWRtaW4tbGF5b3V0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmctZGFzaGJvYXJkIHtcclxuICBiYWNrZ3JvdW5kOiB1cmwoLi8uLi8uLi8uLi9hc3NldHMvYWRtaW5fYmcuanBnKSBuby1yZXBlYXQgY2VudGVyIGNlbnRlcjtcclxuICAvKiBTZXQgcnVsZXMgdG8gZmlsbCBiYWNrZ3JvdW5kICovXHJcbiAgbWluLWhlaWdodDogMTAwJTtcclxuICBtaW4td2lkdGg6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1zaXplOmNvdmVyO1xyXG4gIC8qIFNldCB1cCBwcm9wb3J0aW9uYXRlIHNjYWxpbmcgKi9cclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IGF1dG87XHJcblxyXG4gIC8qIFNldCB1cCBwb3NpdGlvbmluZyAqL1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB0b3A6IDA7XHJcbiAgbGVmdDogMDtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -812,7 +813,7 @@ AuthlayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".main {\r\n  margin-top: -16px;\r\n}\r\n.mat-app-background {\r\n  height: 100%;\r\n}\r\n.mat-app-footer {\r\n  background-color: #4f4e4e;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2NvbnRlbnRsYXlvdXQvY29udGVudGxheW91dC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxZQUFZO0FBQ2Q7QUFDQTtFQUNFLHlCQUF5QjtBQUMzQiIsImZpbGUiOiJzcmMvYXBwL2xheW91dC9jb250ZW50bGF5b3V0L2NvbnRlbnRsYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluIHtcclxuICBtYXJnaW4tdG9wOiAtMTZweDtcclxufVxyXG4ubWF0LWFwcC1iYWNrZ3JvdW5kIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuLm1hdC1hcHAtZm9vdGVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNGY0ZTRlO1xyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".main {\r\n  margin-top: -16px;\r\n}\r\n.mat-app-background {\r\n  height: 100%;\r\n}\r\n.mat-app-footer {\r\n  background-color: #313030;\r\n  bottom: 0;\r\n  width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2NvbnRlbnRsYXlvdXQvY29udGVudGxheW91dC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxZQUFZO0FBQ2Q7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QixTQUFTO0VBQ1QsV0FBVztBQUNiIiwiZmlsZSI6InNyYy9hcHAvbGF5b3V0L2NvbnRlbnRsYXlvdXQvY29udGVudGxheW91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW4ge1xyXG4gIG1hcmdpbi10b3A6IC0xNnB4O1xyXG59XHJcbi5tYXQtYXBwLWJhY2tncm91bmQge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG4ubWF0LWFwcC1mb290ZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMzMTMwMzA7XHJcbiAgYm90dG9tOiAwO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -1098,7 +1099,7 @@ let HeaderComponent = class HeaderComponent {
                 height: "100%",
                 width: "300px",
                 hasBackdrop: true,
-                panelClass: ["animate__animated", "animate__bounceInRight"],
+                panelClass: ["animate__bounceOutRight"],
             });
         }
         else {
@@ -1264,14 +1265,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartComponent", function() { return CartComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
+
+
 
 
 let CartComponent = class CartComponent {
-    constructor() { }
+    constructor(router, sharedService) {
+        this.router = router;
+        this.sharedService = sharedService;
+        //IMG LOADER
+        this.loader = './../../../../../assets/loader.gif';
+        this.height = 200;
+        this.width = 200;
+        this.CartUser = [{ "idProductCatalog": "SGA31B128", "productBrand": "Samsung", "productModel": "Galaxy A31 Black 128", "unitprice": 1000.0, "urlimage": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/02/04113410/Samsung-Galaxy-A31-731.jpg", "amount": 1 }, { "idProductCatalog": "SGA31A128", "productBrand": "Samsung", "productModel": "Galaxy A51 AZUL 128", "unitprice": 1200.0, "urlimage": "https://images.samsung.com/is/image/samsung/pe-galaxy-a51-a515-sm-a515fzblpeo-back-202096929?$720_576_PNG$", "amount": 1 }, { "idProductCatalog": "SGS21U5G", "productBrand": "Samsung", "productModel": "Galaxy S21 Ultra 5G", "unitprice": 3000.0, "urlimage": "https://falabella.scene7.com/is/image/FalabellaPE/17892255_1?wid=800&hei=800&qlt=70", "amount": 1 }];
+        this.isLoading = true;
+    }
     ngOnInit() {
-        this.valid = true;
+        this.getCartUser();
+        if (this.CartUser.length > 0) {
+            this.valid = false;
+        }
+        else {
+            this.valid = true;
+        }
+        this.Subtotal = this.getSubTotal(this.CartUser);
+        console.log(this.Subtotal);
+    }
+    //IMG LOADER
+    hideLoader() {
+        this.isLoading = false;
+    }
+    //
+    getCartUser() { }
+    removeItemCartUser(idProductCatalog) {
+        this.CartUser.forEach(element => {
+            this.CartUser = this.CartUser.filter((element) => element.idProductCatalog !== idProductCatalog);
+        });
+        this.Subtotal = this.getSubTotal(this.CartUser);
+    }
+    getSubTotal(cart) {
+        let subtotal = 0;
+        cart.forEach(element => {
+            let amount = parseFloat(element.amount);
+            let unitprice = parseFloat(element.unitprice);
+            subtotal += (amount * unitprice);
+        });
+        return subtotal;
+    }
+    goToPurchase() {
+        this.router.navigateByUrl("profile/purchase");
+    }
+    goToProduct(idProductCatalog) {
+        this.sharedService.searchProductCart.next(idProductCatalog);
+        this.router.navigateByUrl(`product/${idProductCatalog}`);
     }
 };
+CartComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], CartComponent.prototype, "loader", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], CartComponent.prototype, "height", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], CartComponent.prototype, "width", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], CartComponent.prototype, "image", void 0);
 CartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-cart',
