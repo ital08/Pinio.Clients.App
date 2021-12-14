@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
+  iproducto: boolean = true;
+  iorden: boolean = false;
+  ilote: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+  ingresarProducto(){
+    this.iproducto = true;
+    this.iorden = false;
+    this.ilote = false;
+  }
+  ingresarOrden(){
+    this.iproducto = false;
+    this.iorden = true;
+    this.ilote = false;
+  }
+  ingresarLote(){
+    this.iproducto = false;
+    this.iorden = false;
+    this.ilote = true;
   }
 
 }

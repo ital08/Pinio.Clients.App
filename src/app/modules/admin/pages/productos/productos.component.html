@@ -1,14 +1,14 @@
 <div class="">
-    <div class="card d-flex align-items-center" style="width: 18rem; float: left;">
-        <div class="card-body">
+    <div class="card opciones d-flex align-items-center " style="width: 18rem; float: left;">
+        <div class="card-body opciones">
           <h5 class="card-title">Productos</h5>
           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <button type="button" class="btn btn-light">Agregar producto</button>
-          <button type="button" class="btn btn-light">Agregar lote</button>
-          <button type="button" class="btn btn-light">Agregar orden</button>
+          <button type="button" class="btn btn-light" (click)= 'ingresarProducto()'>Agregar producto</button>
+          <button type="button" class="btn btn-light" (click)= 'ingresarLote()'>Agregar lote</button>
+          <button type="button" class="btn btn-light" (click)='ingresarOrden()'>Agregar orden</button>
         </div>
       </div>
-      <div *ngIf="false" class="card agregar" style="width: 18rem; float: right; ">
+      <div *ngIf="iproducto" class="card agregar" style="width: 18rem; float: right; ">
         <div class="card-body">
             <form>
                 <div class="form-group" style="float: left;">
@@ -49,8 +49,11 @@
                 </div>
               </form>
         </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" >Registrar Producto</button>
+        </div>
       </div>
-      <div *ngIf="false" class="card agregar" style="width: 18rem; float: right; ">
+      <div *ngIf="iorden" class="card agregar" style="width: 18rem; float: right; ">
         <div class="card-body">
             <form>
                 <div class="form-group" style="float: left;">
@@ -80,8 +83,12 @@
                 </div>
               </form>
         </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" >Registrar Orden</button>
+        </div>
       </div>
-      <div *ngIf="true" class="card agregar" style="width: 18rem; float: right; ">
+
+      <div *ngIf="ilote" class="card agregar" style="width: 18rem; float: right; ">
         <div class="card-body">
             <form>
                 <div class="form-group" >
@@ -97,6 +104,9 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ID">
                 </div>
               </form>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" >Registrar Lote</button>
         </div>
       </div>
 </div>

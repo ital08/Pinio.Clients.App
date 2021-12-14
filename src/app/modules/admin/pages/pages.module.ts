@@ -8,11 +8,12 @@ import { MenuComponent } from './menu/menu.component';
 import { ProductosComponent } from './productos/productos.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { RegistrarEmpleadosComponent } from './registrar-empleados/registrar-empleados.component';
 
 
 
 @NgModule({
-  declarations: [ DashboardAdminComponent, MenuComponent, ProductosComponent, EmpleadosComponent, UsuariosComponent],
+  declarations: [ DashboardAdminComponent, MenuComponent, ProductosComponent, EmpleadosComponent, UsuariosComponent, RegistrarEmpleadosComponent],
   imports: [
     CommonModule,
     SharedModule,

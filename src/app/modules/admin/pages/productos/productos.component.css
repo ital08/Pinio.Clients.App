@@ -7,7 +7,7 @@
     margin-top: 5%;
     float: left;
     width: 25rem;
-    height: 260px;
+    height: 280px;
     border: 0px;
 }
 .card.agregar{
@@ -15,10 +15,33 @@
     margin-right: 5%;
     margin-bottom: 5%;
     width: 50%!important;
-    height: 480px;
+    height: 600px;
     float: right;
-    background-color: gray!important;
+}
+.card-body{
+    background-color: gray;
 }
 .form-group{
     width: 45%;
+}
+.boton{
+    background-color: transparent;
+    
+}
+.card.opciones{
+    background-color: transparent!important;
+}
+.card-body.opciones{
+    background-color: transparent!important;
+}
+.card-footer{
+    padding: 1px;
+    align-items:flex-end;
+    height: 20%;
+}
+.btn-primary{
+    float: right;
+    margin-top: 5%;
+    width: 30%;
+    height: 40%;
 }
