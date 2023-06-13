@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\n  <div>\n    <div class=\"container-router\">\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\r\n  <div>\r\n    <div class=\"container-router\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cart\">\r\n  <div class=\"flex\">\r\n    <div>\r\n      <div class=\"row\">\r\n        <div class=\"col-4\">\r\n          <mat-icon style=\"font-size: 70px; color: black\"\r\n            >add_shopping_cart</mat-icon\r\n          >\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <h6>Tu carrito de compras</h6>\r\n        </div>\r\n      </div>\r\n      <span *ngIf=\"valid; else elseBlock\">\r\n        <div class=\"row mt-4 mb-4\">\r\n          <div class=\"col-4\">\r\n            <mat-icon style=\"font-size: 70px; color: black\"\r\n              >remove_shopping_cart</mat-icon\r\n            >\r\n          </div>\r\n          <div class=\"col-8\">\r\n            <h6>Tu carrito está vacío</h6>\r\n            <h6>Sigue comprando!</h6>\r\n          </div>\r\n        </div>\r\n      </span>\r\n      <ng-template #elseBlock>\r\n        <div *ngFor=\"let item of CartUser\">\r\n          <div class=\"row bg-white m-1 mt-2 mb-2\" style=\"border-radius: 15px\">\r\n            <div class=\"col-5 mt-2\">\r\n              <div *ngIf=\"isLoading\">\r\n                <img style=\"height: 70px; width: 70px\" [src]=\"loader\" />\r\n              </div>\r\n              <img\r\n                style=\"height: 70px; width: 70px\"\r\n                src=\"{{ item.urlimage }}\"\r\n                [ngStyle]=\"{\r\n                  visibility: isLoading ? 'hidden' : ''\r\n                }\"\r\n                (load)=\"hideLoader()\"\r\n                (error)=\"hideLoader()\"\r\n              />\r\n            </div>\r\n            <div class=\"col-7 mt-2\">\r\n              <div\r\n                class=\"row float-right\"\r\n                style=\"color: #ed691e; font-size: 1px; cursor: pointer\"\r\n                (click)=\"removeItemCartUser(item.idProductCatalog)\"\r\n              >\r\n                <mat-icon>close</mat-icon>\r\n              </div>\r\n              <div\r\n                (click)=\"goToProduct(item.idProductCatalog)\"\r\n                class=\"row\"\r\n                style=\"color: black; font-size: 12px; cursor: pointer\"\r\n              >\r\n                <p>{{ item.productModel }}</p>\r\n              </div>\r\n              <div class=\"row\" style=\"color: black; font-size: 10px\">\r\n                Precio:\r\n              </div>\r\n              <div class=\"row\" style=\"color: red; font-weight: 400\">\r\n                <div class=\"col-6\">S/.{{ item.unitprice }}</div>\r\n                <div class=\"col-2\" style=\"color: black; font-weight: 400\">\r\n                  x{{ item.amount }}\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </ng-template>\r\n    </div>\r\n    <div class=\"mt-1 mb-1\">\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row\">\r\n        <div class=\"col-6\">Subtotal</div>\r\n        <div class=\"col-6 right\">S/{{ Subtotal }}</div>\r\n      </div>\r\n\r\n      <div class=\"row mb-1\">\r\n        <div class=\"col-6\">Envio</div>\r\n        <div class=\"col-6 right\">---</div>\r\n      </div>\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row justify-content-center mt-3\">\r\n        <button\r\n          class=\"custom-button\"\r\n          style=\"cursor: pointer\"\r\n          mat-button\r\n          disabled=\"valid\"\r\n        >\r\n          <div (click)=\"goToPurchase()\" class=\"custom-font\">COMPRAR</div>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"cart\">\r\n  <div class=\"flex\">\r\n    <div>\r\n      <div class=\"row\">\r\n        <div class=\"col-4\">\r\n          <mat-icon style=\"font-size: 70px; color: black\"\r\n            >add_shopping_cart</mat-icon\r\n          >\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <h6>Tu carrito de compras</h6>\r\n        </div>\r\n      </div>\r\n      <span *ngIf=\"valid; else elseBlock\">\r\n        <div class=\"row mt-4 mb-4\">\r\n          <div class=\"col-4\">\r\n            <mat-icon style=\"font-size: 70px; color: black\"\r\n              >remove_shopping_cart</mat-icon\r\n            >\r\n          </div>\r\n          <div class=\"col-8\">\r\n            <h6>Tu carrito está vacío</h6>\r\n            <h6>Sigue comprando!</h6>\r\n          </div>\r\n        </div>\r\n      </span>\r\n      <ng-template #elseBlock>\r\n        <div *ngFor=\"let item of CartUser\">\r\n          <div class=\"row bg-white m-1 mt-2 mb-2\" style=\"border-radius: 15px\">\r\n            <div class=\"col-5 mt-2\">\r\n              <div *ngIf=\"isLoading\">\r\n                <img style=\"height: 70px; width: 70px\" [src]=\"loader\" />\r\n              </div>\r\n              <img\r\n                style=\"height: 70px; width: 70px\"\r\n                src=\"{{ item.urlimage }}\"\r\n                [ngStyle]=\"{\r\n                  visibility: isLoading ? 'hidden' : ''\r\n                }\"\r\n                (load)=\"hideLoader()\"\r\n                (error)=\"hideLoader()\"\r\n              />\r\n            </div>\r\n            <div class=\"col-7 mt-2\">\r\n              <div\r\n                class=\"row float-right bg-white rounded\"\r\n                style=\"color: #ed691e; font-size: 1px; cursor: pointer\"\r\n                (click)=\"removeItemCartUser(item.id)\"\r\n              >\r\n                <mat-icon>close</mat-icon>\r\n              </div>\r\n              <br />\r\n              <div\r\n                (click)=\"goToProduct(item.id)\"\r\n                class=\"row\"\r\n                style=\"color: black; font-size: 12px; cursor: pointer\"\r\n              >\r\n                <p>{{ item.productModel }}</p>\r\n              </div>\r\n              <div class=\"row\" style=\"color: black; font-size: 10px\">\r\n                Precio:\r\n              </div>\r\n              <div class=\"row\" style=\"color: red; font-weight: 400\">\r\n                <div class=\"col-6\">S/.{{ item.unitprice }}</div>\r\n                <div class=\"col-2\" style=\"color: black; font-weight: 400\">\r\n                  x{{ item.amount }}\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </ng-template>\r\n    </div>\r\n    <div class=\"mt-1 mb-1\">\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row\">\r\n        <div class=\"col-6\">Subtotal</div>\r\n        <div class=\"col-6 right\">S/{{ Subtotal }}</div>\r\n      </div>\r\n\r\n      <div class=\"row mb-1\">\r\n        <div class=\"col-6\">Envio</div>\r\n        <div class=\"col-6 right\">---</div>\r\n      </div>\r\n      <mat-divider></mat-divider>\r\n      <div class=\"row justify-content-center mt-3\">\r\n        <button\r\n          class=\"custom-button\"\r\n          style=\"cursor: pointer\"\r\n          mat-button\r\n          disabled=\"valid\"\r\n        >\r\n          <div (click)=\"goToPurchase()\" class=\"custom-font\">COMPRAR</div>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -479,14 +479,14 @@ const routes = [
         children: [
             {
                 path: "",
-                loadChildren: () => Promise.all(/*! import() | modules-home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("modules-home-home-module")]).then(__webpack_require__.bind(null, /*! @modules/home/home.module */ "./src/app/modules/home/home.module.ts")).then((m) => m.HomeModule),
+                loadChildren: () => __webpack_require__.e(/*! import() | modules-home-home-module */ "modules-home-home-module").then(__webpack_require__.bind(null, /*! @modules/home/home.module */ "./src/app/modules/home/home.module.ts")).then((m) => m.HomeModule),
             },
         ],
     },
     {
         path: "profile",
         component: _layout_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"],
-        loadChildren: () => Promise.all(/*! import() | modules-profile-profile-module */[__webpack_require__.e("common"), __webpack_require__.e("modules-profile-profile-module")]).then(__webpack_require__.bind(null, /*! ./modules/profile/profile.module */ "./src/app/modules/profile/profile.module.ts")).then((m) => m.ProfileModule),
+        loadChildren: () => __webpack_require__.e(/*! import() | modules-profile-profile-module */ "modules-profile-profile-module").then(__webpack_require__.bind(null, /*! ./modules/profile/profile.module */ "./src/app/modules/profile/profile.module.ts")).then((m) => m.ProfileModule),
     },
     {
         path: "auth",
@@ -681,6 +681,312 @@ CoreModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         ]
     })
 ], CoreModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/data/services/products.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/data/services/products.service.ts ***!
+  \***************************************************/
+/*! exports provided: ProductService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _env__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @env */ "./src/environments/environment.ts");
+/* harmony import */ var _shared_service_http_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shared/service/http.service */ "./src/app/shared/service/http.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+
+
+let ProductService = class ProductService {
+    constructor(httpService, http) {
+        this.httpService = httpService;
+        this.http = http;
+        this.elementsData = [
+            {
+                id: 1,
+                idProductCatalog: "118143964",
+                productBrand: "Intel",
+                productModel: "Procesador Intel Core i9-12900KS 2.50 / 5.50GHz 30MB Intel Smart Caché",
+                description: "Procesador Intel Core i9-12900KS 2.50 / 5.50GHz 30MB Intel Smart Caché, LGA1700, 10nm",
+                unitprice: 19.99,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_118143963_1990370_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 2,
+                idProductCatalog: "118152947",
+                productBrand: "118152947",
+                productModel: "Monitor Samsung S34J550WQL 34.1 UltraWide 2K 3440x1440, FreeSync.",
+                description: "Multitareas fácil, crea un gran espacio de trabajo para ver todos sus documentos en una pantalla ultra grande de 34 pulgadas, la resolución ideal de WQHD 21: 9 te sumerge en el vibrante mundo del entretenimiento con una calidad de imagen más nítida en cada detalle.",
+                unitprice: 1299,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_118152946_1995606_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 3,
+                idProductCatalog: "115982528",
+                productBrand: "APPLE",
+                productModel: "Apple Iphone 13 128GB Verde",
+                description: "El iPhone 13 es un móvil que se siente premium nada más cogerlo. Si de algo sabe Apple es de construir móviles, y se nota. Es agradable al tacto y, a pesar de tener una pantalla relativamente grande 6.1, se siente compacto y equilibrado. Es un iPhone bastante ligero y no es pesado usarlo con una sola mano. En cuanto a conexiones y puertos, sin sorpresas. El lateral derecho queda reservado para el botón de inicio, el izquierdo aloja los botones de volumen, la pestaña para el modo vibración y la bandeja de la SIM y el marco inferior guarda el puerto Lightning (perfectamente centrado) y los altavoces. El otro altavoz, para el estéreo, está en el notch. En resumidas cuentas, es un móvil muy bien construido, compacto y perfectamente terminado. Esto, todo sea dicho, es algo exigible si tenemos en cuenta su precio. Llevando una pantalla de 6,1 pulgadas, panel Super Retina XDR OLED con resolución FullHD+. Seguimos con el rendimiento, un apartado que nos ha dejado con un sabor de boca exquisito. Apple sabe lo que se hace cuando habla de procesadores y el Apple A15 Bionic es, sencillamente, espectacular. Se trata de un procesador de cinco nanómetros que, ojo, no es exactamente el mismo que el de los Pro: en los iPhone 13 la GPU tiene cuatro núcleos mientras que en los iPhone 13 Pro tiene cinco. El procesador está acompañado por 4 GB de memoria RAM, la misma que los iPhone 12, y en esta ocasión, por fin, partimos los 128 GB de almacenamiento interno. Y llegamos así al apartado de la cámara Cámara principal: 12 megapíxeles con apertura f/1.6, 26 milímetros, píxeles de 1,7 micras, dual pixel PDAF y estabilización por desplazamiento.Cámara gran angular: 12 megapíxeles con apertura f/2.4, el iPhone 13 es capaz de grabar en Dolby Vision, cuenta con el modo Deep Fusion (que seguimos sin saber cuándo se activa y cuándo no) y con modo noche.",
+                unitprice: 3359,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115982527_1328032_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 4,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_120248925_2614548_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 5,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4069374_01?wid=180",
+            },
+            {
+                id: 6,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4069374_01?wid=180",
+            },
+            {
+                id: 7,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115468164_1127619_1?wid=180",
+            },
+            {
+                id: 8,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://s7d2.scene7.com/is/image/TottusPE/42673737_1?wid=180",
+            },
+            {
+                id: 9,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4057201_01?wid=180",
+            },
+            {
+                id: 10,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4095634_00?wid=180",
+            },
+            {
+                id: 11,
+                idProductCatalog: "118143964",
+                productBrand: "Intel",
+                productModel: "Procesador Intel Core i9-12900KS 2.50 / 5.50GHz 30MB Intel Smart Caché",
+                description: "Procesador Intel Core i9-12900KS 2.50 / 5.50GHz 30MB Intel Smart Caché, LGA1700, 10nm",
+                unitprice: 19.99,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_118143963_1990370_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 12,
+                idProductCatalog: "118152947",
+                productBrand: "118152947",
+                productModel: "Monitor Samsung S34J550WQL 34.1 UltraWide 2K 3440x1440, FreeSync.",
+                description: "Multitareas fácil, crea un gran espacio de trabajo para ver todos sus documentos en una pantalla ultra grande de 34 pulgadas, la resolución ideal de WQHD 21: 9 te sumerge en el vibrante mundo del entretenimiento con una calidad de imagen más nítida en cada detalle.",
+                unitprice: 1299,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_118152946_1995606_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 13,
+                idProductCatalog: "115982528",
+                productBrand: "APPLE",
+                productModel: "Apple Iphone 13 128GB Verde",
+                description: "El iPhone 13 es un móvil que se siente premium nada más cogerlo. Si de algo sabe Apple es de construir móviles, y se nota. Es agradable al tacto y, a pesar de tener una pantalla relativamente grande 6.1, se siente compacto y equilibrado. Es un iPhone bastante ligero y no es pesado usarlo con una sola mano. En cuanto a conexiones y puertos, sin sorpresas. El lateral derecho queda reservado para el botón de inicio, el izquierdo aloja los botones de volumen, la pestaña para el modo vibración y la bandeja de la SIM y el marco inferior guarda el puerto Lightning (perfectamente centrado) y los altavoces. El otro altavoz, para el estéreo, está en el notch. En resumidas cuentas, es un móvil muy bien construido, compacto y perfectamente terminado. Esto, todo sea dicho, es algo exigible si tenemos en cuenta su precio. Llevando una pantalla de 6,1 pulgadas, panel Super Retina XDR OLED con resolución FullHD+. Seguimos con el rendimiento, un apartado que nos ha dejado con un sabor de boca exquisito. Apple sabe lo que se hace cuando habla de procesadores y el Apple A15 Bionic es, sencillamente, espectacular. Se trata de un procesador de cinco nanómetros que, ojo, no es exactamente el mismo que el de los Pro: en los iPhone 13 la GPU tiene cuatro núcleos mientras que en los iPhone 13 Pro tiene cinco. El procesador está acompañado por 4 GB de memoria RAM, la misma que los iPhone 12, y en esta ocasión, por fin, partimos los 128 GB de almacenamiento interno. Y llegamos así al apartado de la cámara Cámara principal: 12 megapíxeles con apertura f/1.6, 26 milímetros, píxeles de 1,7 micras, dual pixel PDAF y estabilización por desplazamiento.Cámara gran angular: 12 megapíxeles con apertura f/2.4, el iPhone 13 es capaz de grabar en Dolby Vision, cuenta con el modo Deep Fusion (que seguimos sin saber cuándo se activa y cuándo no) y con modo noche.",
+                unitprice: 3359,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115982527_1328032_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 14,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_120248925_2614548_1?wid=1500&hei=1500&qlt=70",
+            },
+            {
+                id: 15,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4069374_01?wid=180",
+            },
+            {
+                id: 16,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4069374_01?wid=180",
+            },
+            {
+                id: 17,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115468164_1127619_1?wid=180",
+            },
+            {
+                id: 18,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://s7d2.scene7.com/is/image/TottusPE/42673737_1?wid=180",
+            },
+            {
+                id: 19,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4057201_01?wid=180",
+            },
+            {
+                id: 110,
+                idProductCatalog: "120248926",
+                productBrand: "APPLE",
+                productModel: "iPhone 12 Mini 64GB 4GB Blanco - REACONDICIONADO",
+                description: "Al ser un articulo reacondicionado, éste podría presentar algunos signos de desgaste, como raspaduras, rasguños, abolladuras, y/o calcomanías. Sin embargo, la condición estética no afecta el rendimiento que si es totalmente bueno, listo para nuevos usuarios.",
+                unitprice: 1922,
+                urlimage: "https://sodimac.scene7.com/is/image/SodimacPeru/4095634_00?wid=180",
+            },
+        ];
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                "Content-Type": "application/json;charset=utf-8",
+            }),
+        };
+        this.APIENDPOINT = _env__WEBPACK_IMPORTED_MODULE_3__["environment"].urlApiService;
+        this.cartKey = "cart";
+    }
+    // tslint:disable-next-line:typedef
+    errorHandl(error) {
+        let errorMessage = "";
+        if (error.error instanceof ErrorEvent) {
+            errorMessage = error.error.message;
+        }
+        else {
+            errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+        }
+        console.log(errorMessage);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["throwError"])(errorMessage);
+    }
+    guardarProductoEnCarrito(producto) {
+        // Obtener el carrito actual del localStorage
+        const cart = this.getCartFromLocalStorage();
+        // Agregar el producto al carrito
+        cart.push(producto);
+        // Guardar el carrito actualizado en el localStorage
+        this.saveCartToLocalStorage(cart);
+    }
+    listarProductosEnCarrito() {
+        // Obtener el carrito actual del localStorage
+        const cart = this.getCartFromLocalStorage();
+        // Devolver los productos del carrito
+        return cart;
+    }
+    eliminarProductoDelCarrito(id) {
+        // Obtener el carrito actual del localStorage
+        const cart = this.getCartFromLocalStorage();
+        // Encontrar el índice del producto en el carrito
+        const index = cart.findIndex((producto) => producto.id === id);
+        // Si se encontró el producto, eliminarlo del carrito
+        if (index !== -1) {
+            cart.splice(index, 1);
+        }
+        // Guardar el carrito actualizado en el localStorage
+        this.saveCartToLocalStorage(cart);
+    }
+    getCartFromLocalStorage() {
+        // Obtener el carrito actual del localStorage o inicializar uno vacío si no existe
+        const cartJSON = localStorage.getItem(this.cartKey);
+        return cartJSON ? JSON.parse(cartJSON) : [];
+    }
+    saveCartToLocalStorage(cart) {
+        // Guardar el carrito en el localStorage como JSON
+        const cartJSON = JSON.stringify(cart);
+        localStorage.setItem(this.cartKey, cartJSON);
+    }
+    getProductCatalog(pageSize, pageIndex) {
+        const startIndex = pageSize * pageIndex;
+        const endIndex = startIndex + pageSize;
+        const pagedItems = this.elementsData.slice(startIndex, endIndex);
+        const totalItems = this.elementsData.length;
+        console.log(pageSize, pageIndex);
+        return {
+            data: pagedItems,
+            total: totalItems,
+        };
+    }
+    getProduct(id) {
+        console.log(id);
+        const product = this.elementsData.find((val) => val.id == id);
+        console.log(product);
+        return product;
+    }
+    getProductCatalog1(productId, brand, model, price) {
+        return this.httpService.get(`${this.APIENDPOINT}/products/productcatalog?idProductCatalog=${productId}&productBrand=${brand}&productModel=${model}&unitprice=${price}&urlimage=string`);
+    }
+    getProductCatalog2(productId, brand, model, price) {
+        return this.http
+            .get(`${this.APIENDPOINT}/products/productcatalog?idProductCatalog=${productId}&productBrand=${brand}&productModel=${model}&unitprice=${price}&urlimage=string`, this.httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["retry"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["catchError"])(this.errorHandl));
+    }
+};
+ProductService.ctorParameters = () => [
+    { type: _shared_service_http_service__WEBPACK_IMPORTED_MODULE_4__["HttpService"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
+        providedIn: "root",
+    })
+], ProductService);
 
 
 
@@ -1040,10 +1346,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @modules/home/modals/cart/cart.component */ "./src/app/modules/home/modals/cart/cart.component.ts");
-/* harmony import */ var _modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @modules/home/modals/no-cart/no-cart.component */ "./src/app/modules/home/modals/no-cart/no-cart.component.ts");
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
-/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
-
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
+/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
 
 
 
@@ -1082,48 +1386,22 @@ let HeaderComponent = class HeaderComponent {
         this.router.navigateByUrl("");
     }
     openCart() {
-        if (localStorage.getItem("clientname") != null) {
-            // const initialState = {
-            //   title: "Inicio de Sesión",
-            //   message: "Las credenciales ingresadas son incorrectas/inválidas",
-            //   acceptButton: {
-            //     text: "Reintentar"
-            //   },
-            //   cancelButton: {
-            //     text: "Seguir navegando"
-            //   }
-            // };
-            // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
-            this.dialogRef = this.dialog.open(_modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_4__["CartComponent"], {
-                position: { right: "0", top: "0" },
-                height: "100%",
-                width: "300px",
-                hasBackdrop: true,
-                panelClass: ["animate__bounceOutRight"],
-            });
-        }
-        else {
-            const initialState = {
-                title: "Ups ! Parece que no has iniciado sesion aun :(",
-                message: "Accede para ingresar a tu carrito de compras",
-                acceptButton: {
-                    text: "Iniciar Sesión"
-                },
-                cancelButton: {
-                    text: "Seguir navegando"
-                }
-            };
-            this.bsModalRef = this.modalService.show(_modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_5__["NoCartComponent"], { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState });
-        }
+        this.dialogRef = this.dialog.open(_modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_4__["CartComponent"], {
+            position: { right: "0", top: "0" },
+            height: "100%",
+            width: "300px",
+            hasBackdrop: true,
+            panelClass: ["animate__bounceOutRight"],
+        });
     }
     goToItem(name) {
         this.router.navigateByUrl("/", { state: name });
     }
 };
 HeaderComponent.ctorParameters = () => [
-    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_7__["SharedService"] },
+    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_6__["SharedService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"] },
+    { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__["BsModalService"] },
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }
 ];
 HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1266,21 +1544,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
+/* harmony import */ var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/data/services/products.service */ "./src/app/data/services/products.service.ts");
+/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
+
 
 
 
 
 let CartComponent = class CartComponent {
-    constructor(router, sharedService) {
+    constructor(router, sharedService, productService) {
         this.router = router;
         this.sharedService = sharedService;
+        this.productService = productService;
         //IMG LOADER
-        this.loader = './../../../../../assets/loader.gif';
+        this.loader = "./../../../../../assets/loader.gif";
         this.height = 200;
         this.width = 200;
-        this.CartUser = [{ "idProductCatalog": "SGA31B128", "productBrand": "Samsung", "productModel": "Galaxy A31 Black 128", "unitprice": 1000.0, "urlimage": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/02/04113410/Samsung-Galaxy-A31-731.jpg", "amount": 1 }, { "idProductCatalog": "SGA31A128", "productBrand": "Samsung", "productModel": "Galaxy A51 AZUL 128", "unitprice": 1200.0, "urlimage": "https://images.samsung.com/is/image/samsung/pe-galaxy-a51-a515-sm-a515fzblpeo-back-202096929?$720_576_PNG$", "amount": 1 }, { "idProductCatalog": "SGS21U5G", "productBrand": "Samsung", "productModel": "Galaxy S21 Ultra 5G", "unitprice": 3000.0, "urlimage": "https://falabella.scene7.com/is/image/FalabellaPE/17892255_1?wid=800&hei=800&qlt=70", "amount": 1 }];
+        this.CartUser = [];
         this.isLoading = true;
+        this.getCartUser();
     }
     ngOnInit() {
         this.getCartUser();
@@ -1290,7 +1572,6 @@ let CartComponent = class CartComponent {
         else {
             this.valid = true;
         }
-        this.Subtotal = this.getSubTotal(this.CartUser);
         console.log(this.Subtotal);
     }
     //IMG LOADER
@@ -1298,33 +1579,34 @@ let CartComponent = class CartComponent {
         this.isLoading = false;
     }
     //
-    getCartUser() { }
-    removeItemCartUser(idProductCatalog) {
-        this.CartUser.forEach(element => {
-            this.CartUser = this.CartUser.filter((element) => element.idProductCatalog !== idProductCatalog);
-        });
-        this.Subtotal = this.getSubTotal(this.CartUser);
+    getCartUser() {
+        this.CartUser = this.productService.getCartFromLocalStorage();
+        this.getSubTotal();
+        this.isLoading = false;
     }
-    getSubTotal(cart) {
+    removeItemCartUser(id) {
+        this.productService.eliminarProductoDelCarrito(id);
+        this.getCartUser();
+    }
+    getSubTotal() {
         let subtotal = 0;
-        cart.forEach(element => {
-            let amount = parseFloat(element.amount);
+        this.CartUser.forEach((element) => {
             let unitprice = parseFloat(element.unitprice);
-            subtotal += (amount * unitprice);
+            subtotal += unitprice;
         });
-        return subtotal;
+        this.Subtotal = subtotal;
     }
     goToPurchase() {
         this.router.navigateByUrl("profile/purchase");
     }
-    goToProduct(idProductCatalog) {
-        this.sharedService.searchProductCart.next(idProductCatalog);
-        this.router.navigateByUrl(`product/${idProductCatalog}`);
+    goToProduct(id) {
+        this.router.navigateByUrl(`product/${id}`);
     }
 };
 CartComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"] }
+    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"] },
+    { type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -1340,7 +1622,7 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 ], CartComponent.prototype, "image", void 0);
 CartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-cart',
+        selector: "app-cart",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./cart.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/home/modals/cart/cart.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./cart.component.css */ "./src/app/modules/home/modals/cart/cart.component.css")).default]
     })
@@ -1831,7 +2113,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\SI505V\Pinio.Clients.App\Pinio.Clients.App\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\italo\Documents\GITHUB\Pinio.Clients.App\src\main.ts */"./src/main.ts");
 
 
 /***/ })

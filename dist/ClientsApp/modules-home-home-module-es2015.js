@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"loading\">\r\n  <div class=\"container justify-content-center\" style=\"padding: 10%\">\r\n    <div class=\"row justify-content-center\">\r\n      <div class=\"justify-content-center\">\r\n        <mat-progress-spinner\r\n          class=\"justify-content-center\"\r\n          color=\"primary\"\r\n          mode=\"indeterminate\"\r\n        >\r\n        </mat-progress-spinner>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"bg-white\">\r\n  <div class=\"mt-3 bg-white\">\r\n    <div *ngFor=\"let item of productCatalogList\">\r\n      <div>\r\n        <div class=\"products-router-container\">\r\n          <a\r\n            style=\"text-decoration: none; color: #ed691e\"\r\n            href=\"/category/{{ item.idProductCatalog }}\"\r\n            >Categoria</a\r\n          >\r\n          <span class=\"material-icons\"> arrow_forward_ios </span>\r\n          <a style=\"text-decoration: none; color: #ed691e\" href=\"\">{{\r\n            item.productBrand\r\n          }}</a>\r\n          <span class=\"material-icons\"> arrow_forward_ios </span>\r\n          <a\r\n            style=\"text-decoration: none; color: #ed691e\"\r\n            href=\"/product/{{ item.idProductCatalog }}\"\r\n            >{{ item.productModel }}</a\r\n          >\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div style=\"background-color: #ed691e; height: 1vh\"></div>\r\n  <div *ngFor=\"let item of productCatalogList\">\r\n    <div class=\"container\">\r\n      <div class=\"row mt-3 mb-3\">\r\n        <div class=\"col-md-6\">\r\n          <div *ngIf=\"isLoading\" class=\"img-fluid\">\r\n            <img [src]=\"loader\" class=\"img-fluid\" />\r\n          </div>\r\n          <img\r\n            class=\"img-fluid\"\r\n            src=\"{{ item.urlimage }}\"\r\n            [ngStyle]=\"{\r\n              visibility: isLoading ? 'hidden' : ''\r\n            }\"\r\n            (load)=\"hideLoader()\"\r\n            (error)=\"hideLoader()\"\r\n          />\r\n        </div>\r\n        <div class=\"col-md-6 my-auto justify-content-center\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n              <h3>{{ item.productModel }}</h3>\r\n            </div>\r\n          </div>\r\n          <mat-divider></mat-divider>\r\n          <div class=\"row\">\r\n            <div class=\"col-4\">Stock:</div>\r\n            <div class=\"col-5\">20+ Unidades</div>\r\n          </div>\r\n          <mat-divider></mat-divider>\r\n          <div class=\"row\">\r\n            <div class=\"col-4\">Marca:</div>\r\n            <div class=\"col-5\">{{ item.productBrand }}</div>\r\n          </div>\r\n          <mat-divider></mat-divider>\r\n          <div class=\"row\">\r\n            <div class=\"col-4\">Modelo:</div>\r\n            <div class=\"col-5\">{{ item.idProductCatalog }}</div>\r\n          </div>\r\n          <mat-divider></mat-divider>\r\n          <div class=\"row\">\r\n            <div class=\"col-4\">Description:</div>\r\n            <div class=\"col-8 justify-content-center\">\r\n              Samsung Torres de Sonido ofrece una variedad de divertidos modos\r\n              de luces, incluido el modo Fiesta, Ambiente, Danza, Trueno y\r\n              Estrella. Además, gracias a la aplicación, podrás ajustar los\r\n              efectos fácilmente desde tu dispositivo móvil. Configura el efecto\r\n              de luces para que combine con el ritmo y… ¡que comience la fiesta!\r\n              Haz que comience la fiesta con una aplicación ideal para que te\r\n              conviertas en DJ. Esta aplicación facilita el control de varios\r\n              efectos de luces y sonido e incluso la configuración del\r\n              ecualizador, directamente desde el dispositivo móvil. ¡Que\r\n              comience la fiesta!\r\n            </div>\r\n          </div>\r\n          <mat-divider></mat-divider>\r\n          <div class=\"row\">\r\n            <div class=\"col-3\">Precio</div>\r\n            <div class=\"col-5\">\r\n              <h4 style=\"color: red\">S/.{{ item.unitprice }}</h4>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-12\">\r\n              <button\r\n                class=\"float-center\"\r\n                style=\"color: white\"\r\n                mat-raised-button\r\n                color=\"primary\"\r\n                disable=\"true\"\r\n                (click)=\"openCart()\"\r\n              >\r\n                Añadir al carrito\r\n                <mat-icon style=\"color: white\">add_shopping_cart</mat-icon>\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <div *ngIf=\"loading\">\r\n  <div class=\"container justify-content-center\" style=\"padding: 10%\">\r\n    <div class=\"row justify-content-center\">\r\n      <div class=\"justify-content-center\">\r\n        <mat-progress-spinner\r\n          class=\"justify-content-center\"\r\n          color=\"primary\"\r\n          mode=\"indeterminate\"\r\n        >\r\n        </mat-progress-spinner>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div> -->\r\n<div class=\"bg-white\">\r\n  <div class=\"mt-3 bg-white\">\r\n    <div>\r\n      <div class=\"products-router-container\">\r\n        <a\r\n          style=\"text-decoration: none; color: #ed691e\"\r\n          href=\"/category/{{ defaultProduct?.idProductCatalog }}\"\r\n          >Categoria</a\r\n        >\r\n        <span class=\"material-icons\"> arrow_forward_ios </span>\r\n        <a style=\"text-decoration: none; color: #ed691e\" href=\"\">{{\r\n          defaultProduct?.productBrand\r\n        }}</a>\r\n        <span class=\"material-icons\"> arrow_forward_ios </span>\r\n        <a\r\n          style=\"text-decoration: none; color: #ed691e\"\r\n          href=\"/product/{{ defaultProduct?.idProductCatalog }}\"\r\n          >{{ defaultProduct?.productModel }}</a\r\n        >\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div style=\"background-color: #ed691e; height: 1vh\"></div>\r\n  <div class=\"container\">\r\n    <div class=\"row mt-3 mb-3\">\r\n      <div class=\"col-md-6\">\r\n        <div *ngIf=\"isLoading\" class=\"img-fluid\">\r\n          <img [src]=\"loader\" class=\"img-fluid\" />\r\n        </div>\r\n        <img\r\n          class=\"img-fluid\"\r\n          [src]=\"defaultProduct?.urlimage\"\r\n          [ngStyle]=\"{\r\n            visibility: isLoading ? 'hidden' : ''\r\n          }\"\r\n          (load)=\"hideLoader()\"\r\n          (error)=\"hideLoader()\"\r\n        />\r\n      </div>\r\n      <div class=\"col-md-6 my-auto justify-content-center\">\r\n        <div class=\"row\">\r\n          <div class=\"col-md-12\">\r\n            <h3>{{ defaultProduct?.productModel }}</h3>\r\n          </div>\r\n        </div>\r\n        <mat-divider></mat-divider>\r\n        <div class=\"row\">\r\n          <div class=\"col-4\">Stock:</div>\r\n          <div class=\"col-5\">20+ Unidades</div>\r\n        </div>\r\n        <mat-divider></mat-divider>\r\n        <div class=\"row\">\r\n          <div class=\"col-4\">Marca:</div>\r\n          <div class=\"col-5\">{{ defaultProduct?.productBrand }}</div>\r\n        </div>\r\n        <mat-divider></mat-divider>\r\n        <div class=\"row\">\r\n          <div class=\"col-4\">Modelo:</div>\r\n          <div class=\"col-5\">{{ defaultProduct?.idProductCatalog }}</div>\r\n        </div>\r\n        <mat-divider></mat-divider>\r\n        <div class=\"row\">\r\n          <div class=\"col-4\">Descripción:</div>\r\n          <div class=\"col-8 justify-content-center\">\r\n            {{ defaultProduct?.description }}\r\n          </div>\r\n        </div>\r\n        <mat-divider></mat-divider>\r\n        <div class=\"row\">\r\n          <div class=\"col-3\">Precio</div>\r\n          <div class=\"col-5\">\r\n            <h4 style=\"color: red\">S/.{{ defaultProduct?.unitprice }}</h4>\r\n          </div>\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"col-md-12\">\r\n            <button\r\n              class=\"float-center\"\r\n              style=\"color: white\"\r\n              mat-raised-button\r\n              color=\"primary\"\r\n              disable=\"true\"\r\n              (click)=\"addToCart()\"\r\n            >\r\n              Añadir al carrito\r\n              <mat-icon style=\"color: white\">add_shopping_cart</mat-icon>\r\n            </button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div style=\"background-color: #d3d3d3\">\r\n  <nav\r\n    style=\"padding-top: 20px\"\r\n    class=\"navbar navbar-expand-lg navbar-light bg-light\"\r\n  >\r\n    <button\r\n      class=\"navbar-toggler\"\r\n      type=\"button\"\r\n      data-toggle=\"collapse\"\r\n      data-target=\"#navbarNavDropdown\"\r\n      aria-controls=\"navbarNavDropdown\"\r\n      aria-expanded=\"false\"\r\n      aria-label=\"Toggle navigation\"\r\n    >\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            MARCA\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section\">\r\n              <div *ngFor=\"let item of Brands; let i = index\">\r\n                <mat-checkbox\r\n                  [checked]=\"selected === i\"\r\n                  (change)=\"selected = i\"\r\n                  >{{ item.BrandName }}</mat-checkbox\r\n                >\r\n              </div>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            PRECIO\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section1\">\r\n              <div>\r\n                <mat-form-field\r\n                  class=\"w-100\"\r\n                  appearance=\"fill\"\r\n                  color=\"primary\"\r\n                  floatLabel=\"always\"\r\n                >\r\n                  <mat-label>Desde</mat-label>\r\n                  <input matInput type=\"number\" [(ngModel)]=\"minValue\" />\r\n                  <span matPrefix>S/.&nbsp;</span>\r\n                </mat-form-field>\r\n              </div>\r\n              <div>\r\n                <mat-form-field\r\n                  class=\"w-100\"\r\n                  appearance=\"fill\"\r\n                  floatLabel=\"always\"\r\n                >\r\n                  <mat-label>Hasta</mat-label>\r\n                  <input matInput type=\"number\" [(ngModel)]=\"maxValue\" />\r\n                  <span matPrefix>S/.&nbsp;</span>\r\n                </mat-form-field>\r\n              </div>\r\n              <ngx-slider\r\n                [(value)]=\"minValue\"\r\n                [(highValue)]=\"maxValue\"\r\n                [options]=\"options\"\r\n              ></ngx-slider>\r\n              <div class=\"float-right\" (click)=\"restablecer()\">Restablecer</div>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <!-- <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ENVIO\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Check me!</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li> -->\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ORDENAR POR\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section w-auto\">\r\n              <div\r\n                style=\"width: 200px\"\r\n                *ngFor=\"let item of OrderBy; let i = index\"\r\n              >\r\n                <mat-checkbox\r\n                  [checked]=\"selected === i\"\r\n                  (change)=\"selected = i\"\r\n                  >{{ item.OptionOrderName }}</mat-checkbox\r\n                >\r\n              </div>\r\n            </section>\r\n          </div>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <!--  -->\r\n</div>\r\n<!-- productos -->\r\n\r\n<div *ngIf=\"loading; else elseBlock\">\r\n  <div class=\"container justify-content-center\" style=\"padding: 10%\">\r\n    <div class=\"row justify-content-center\">\r\n      <div class=\"justify-content-center\">\r\n        <mat-progress-spinner\r\n          class=\"justify-content-center\"\r\n          color=\"primary\"\r\n          mode=\"indeterminate\"\r\n        >\r\n        </mat-progress-spinner>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #elseBlock>\r\n  <div class=\"container\">\r\n    <div class=\"row justify-content-center mt-2 mb-2\">\r\n      <div *ngFor=\"let item of products\">\r\n        <div class=\"col-3 mt-1 mb-1 justify-content-center\">\r\n          <mat-card style=\"width: 240px\">\r\n            <mat-card-title align=\"center\" style=\"font-size: small\">\r\n              {{ item.productModel }}\r\n            </mat-card-title>\r\n            <mat-card-subtitle align=\"center\" color=\"primary\">\r\n              S/.{{ item.unitprice }}\r\n            </mat-card-subtitle>\r\n            <mat-card-content align=\"center\">\r\n              <div *ngIf=\"isLoading\">\r\n                <img mat-card-lg-image [src]=\"loader\" />\r\n              </div>\r\n              <img\r\n                src=\"{{ item.urlimage }}\"\r\n                mat-card-lg-image\r\n                [ngStyle]=\"{\r\n                  visibility: isLoading ? 'hidden' : ''\r\n                }\"\r\n                (load)=\"hideLoader()\"\r\n                (error)=\"hideLoader()\"\r\n              />\r\n            </mat-card-content>\r\n            <mat-card-actions align=\"center\">\r\n              <button\r\n                (click)=\"gotoproduct(item.idProductCatalog)\"\r\n                class=\"col-8 m-1\"\r\n                mat-stroked-button\r\n                color=\"accent\"\r\n              >\r\n                Detalles\r\n                <mat-icon>dehaze</mat-icon>\r\n              </button>\r\n              <button\r\n                (click)=\"openCart()\"\r\n                class=\"col-8 m-1\"\r\n                mat-flat-button\r\n                style=\"color: white\"\r\n                color=\"accent\"\r\n              >\r\n                Comprar\r\n                <mat-icon>add_shopping_cart</mat-icon>\r\n              </button>\r\n            </mat-card-actions>\r\n          </mat-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ng-template>\r\n<div *ngIf=\"NoItemMessage\">\r\n  <div class=\"container justify-content-center mt-5\">\r\n    <div class=\"row justify-content-center m-5\">\r\n      <div style=\"min-height: 440px\" class=\"justify-content-center m-1\">\r\n        No se han encontrado resultados que coincidan con tu criterio de\r\n        búsqueda.\r\n        <mat-icon>new_releases</mat-icon>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<!-- fin productos -->\r\n<!-- paginator -->\r\n\r\n<mat-paginator\r\n  [length]=\"length\"\r\n  [pageSize]=\"pageSize\"\r\n  [pageSizeOptions]=\"pageSizeOptions\"\r\n  (page)=\"pageEvent = $event\"\r\n  aria-label=\"Select page\"\r\n>\r\n</mat-paginator>\r\n<!-- fin paginator -->\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div style=\"background-color: #d3d3d3\">\r\n  <nav\r\n    style=\"padding-top: 20px\"\r\n    class=\"navbar navbar-expand-lg navbar-light bg-light\"\r\n  >\r\n    <button\r\n      class=\"navbar-toggler\"\r\n      type=\"button\"\r\n      data-toggle=\"collapse\"\r\n      data-target=\"#navbarNavDropdown\"\r\n      aria-controls=\"navbarNavDropdown\"\r\n      aria-expanded=\"false\"\r\n      aria-label=\"Toggle navigation\"\r\n    >\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            MARCA\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section\">\r\n              <div *ngFor=\"let item of Brands; let i = index\">\r\n                <mat-checkbox\r\n                  [checked]=\"selected === i\"\r\n                  (change)=\"selected = i\"\r\n                  >{{ item.BrandName }}</mat-checkbox\r\n                >\r\n              </div>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            PRECIO\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section1\">\r\n              <div>\r\n                <mat-form-field\r\n                  class=\"w-100\"\r\n                  appearance=\"fill\"\r\n                  color=\"primary\"\r\n                  floatLabel=\"always\"\r\n                >\r\n                  <mat-label>Desde</mat-label>\r\n                  <input matInput type=\"number\" [(ngModel)]=\"minValue\" />\r\n                  <span matPrefix>S/.&nbsp;</span>\r\n                </mat-form-field>\r\n              </div>\r\n              <div>\r\n                <mat-form-field\r\n                  class=\"w-100\"\r\n                  appearance=\"fill\"\r\n                  floatLabel=\"always\"\r\n                >\r\n                  <mat-label>Hasta</mat-label>\r\n                  <input matInput type=\"number\" [(ngModel)]=\"maxValue\" />\r\n                  <span matPrefix>S/.&nbsp;</span>\r\n                </mat-form-field>\r\n              </div>\r\n              <ngx-slider\r\n                [(value)]=\"minValue\"\r\n                [(highValue)]=\"maxValue\"\r\n                [options]=\"options\"\r\n              ></ngx-slider>\r\n              <div class=\"float-right\" (click)=\"restablecer()\">Restablecer</div>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ENVIO\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section\">\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Gratis</mat-checkbox>\r\n              </li>\r\n              <li>\r\n                <mat-checkbox class=\"example-margin\">Terrestre</mat-checkbox>\r\n              </li>\r\n            </section>\r\n          </div>\r\n        </li>\r\n        <li class=\"nav-item dropdown\">\r\n          <a\r\n            class=\"nav-link dropdown-toggle\"\r\n            href=\"#\"\r\n            id=\"navbarDropdownMenuLink\"\r\n            data-toggle=\"dropdown\"\r\n            aria-haspopup=\"true\"\r\n            aria-expanded=\"false\"\r\n          >\r\n            ORDENAR POR\r\n          </a>\r\n          <div\r\n            class=\"bg-filters dropdown-menu\"\r\n            aria-labelledby=\"navbarDropdownMenuLink\"\r\n          >\r\n            <section class=\"example-section w-auto\">\r\n              <div\r\n                style=\"width: 200px\"\r\n                *ngFor=\"let item of OrderBy; let i = index\"\r\n              >\r\n                <mat-checkbox\r\n                  [checked]=\"selected === i\"\r\n                  (change)=\"selected = i\"\r\n                  >{{ item.OptionOrderName }}</mat-checkbox\r\n                >\r\n              </div>\r\n            </section>\r\n          </div>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <!--  -->\r\n</div>\r\n<!-- productos -->\r\n\r\n<div *ngIf=\"loading; else elseBlock\">\r\n  <div class=\"container justify-content-center\" style=\"padding: 10%\">\r\n    <div class=\"row justify-content-center\">\r\n      <div class=\"justify-content-center\">\r\n        <mat-progress-spinner\r\n          class=\"justify-content-center\"\r\n          color=\"primary\"\r\n          mode=\"indeterminate\"\r\n        >\r\n        </mat-progress-spinner>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #elseBlock>\r\n  <div class=\"container\">\r\n    <div class=\"row justify-content-center mt-2 mb-2\">\r\n      <div *ngFor=\"let item of products\">\r\n        <div class=\"col-3 mt-1 mb-1 justify-content-center\">\r\n          <mat-card style=\"width: 240px\">\r\n            <mat-card-title align=\"center\" style=\"font-size: small\">\r\n              {{ item.productModel }}\r\n            </mat-card-title>\r\n            <mat-card-subtitle align=\"center\" color=\"primary\">\r\n              S/.{{ item.unitprice }}\r\n            </mat-card-subtitle>\r\n            <mat-card-content align=\"center\">\r\n              <div *ngIf=\"isLoading\">\r\n                <img mat-card-lg-image [src]=\"loader\" />\r\n              </div>\r\n              <img\r\n                src=\"{{ item.urlimage }}\"\r\n                mat-card-lg-image\r\n                [ngStyle]=\"{\r\n                  visibility: isLoading ? 'hidden' : ''\r\n                }\"\r\n                (load)=\"hideLoader()\"\r\n                (error)=\"hideLoader()\"\r\n              />\r\n            </mat-card-content>\r\n            <mat-card-actions align=\"center\">\r\n              <button\r\n                (click)=\"gotoproduct(item.id)\"\r\n                class=\"col-8 m-1\"\r\n                mat-stroked-button\r\n                color=\"accent\"\r\n              >\r\n                Detalles\r\n                <mat-icon>dehaze</mat-icon>\r\n              </button>\r\n              <button\r\n                (click)=\"openCart(item)\"\r\n                class=\"col-8 m-1\"\r\n                mat-flat-button\r\n                style=\"color: white\"\r\n                color=\"accent\"\r\n              >\r\n                Agregar\r\n                <mat-icon>add_shopping_cart</mat-icon>\r\n              </button>\r\n            </mat-card-actions>\r\n          </mat-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ng-template>\r\n<div *ngIf=\"NoItemMessage\">\r\n  <div class=\"container justify-content-center mt-5\">\r\n    <div class=\"row justify-content-center m-5\">\r\n      <div style=\"min-height: 440px\" class=\"justify-content-center m-1\">\r\n        No se han encontrado resultados que coincidan con tu criterio de\r\n        búsqueda.\r\n        <mat-icon>new_releases</mat-icon>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<!-- fin productos -->\r\n<!-- paginator -->\r\n\r\n<mat-paginator\r\n  #paginator\r\n  [length]=\"length\"\r\n  [pageSize]=\"pageSize\"\r\n  [pageSizeOptions]=\"pageSizeOptions\"\r\n  (page)=\"getListProducts($event)\"\r\n  aria-label=\"Select page\"\r\n>\r\n</mat-paginator>\r\n<!-- fin paginator -->\r\n");
 
 /***/ }),
 
@@ -207,11 +207,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @modules/home/modals/cart/cart.component */ "./src/app/modules/home/modals/cart/cart.component.ts");
-/* harmony import */ var _modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @modules/home/modals/no-cart/no-cart.component */ "./src/app/modules/home/modals/no-cart/no-cart.component.ts");
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
-/* harmony import */ var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/data/services/products.service */ "./src/app/data/services/products.service.ts");
-/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
-
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
+/* harmony import */ var src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/data/services/products.service */ "./src/app/data/services/products.service.ts");
+/* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
 
 
 
@@ -222,15 +220,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ProductsComponent = class ProductsComponent {
-    //
-    constructor(productService, formBuilder, routeSub, sharedService, modalService, dialog) {
+    constructor(productService, formBuilder, activatedRoute, router, sharedService, modalService, dialog) {
         this.productService = productService;
         this.formBuilder = formBuilder;
-        this.routeSub = routeSub;
+        this.activatedRoute = activatedRoute;
+        this.router = router;
         this.sharedService = sharedService;
         this.modalService = modalService;
         this.dialog = dialog;
-        this.loader = './../../../../../assets/loader.gif';
+        this.loader = "./../../../../../assets/loader.gif";
         this.height = 200;
         this.width = 200;
         this.loading = true;
@@ -247,31 +245,18 @@ let ProductsComponent = class ProductsComponent {
         this.productCatalogList = [];
         this.idp = history.state.id;
         this.products = [];
-        this.isLoading = true;
-    }
-    ngOnInit() {
-        this.createFilterForm();
-        if (this.idp == undefined) {
-            console.log("sacando del url");
-            console.log(this.idp);
-            this.routeSub.params.subscribe((params) => {
-                this.idp = params["id"];
-                this.firstFilterForm.value.idproductcatalog = this.idp;
-            });
-        }
-        else {
-            this.firstFilterForm.value.idproductcatalog = this.idp;
-            console.log("recibido de la anterior");
-            console.log(this.idp);
-        }
-        this.getListProducts();
-        this.subscription = this.sharedService.searchProductCart.subscribe((mySearch) => {
-            if (mySearch != undefined) {
-                this.firstFilterForm.value.idproductcatalog = mySearch;
-                this.getListProducts();
+        this.activatedRoute.params.subscribe((params) => {
+            if (params["id"]) {
+                this.id = params["id"];
+                this.getProducts();
+            }
+            else {
+                this.router.navigate([""]);
             }
         });
+        this.isLoading = true;
     }
+    ngOnInit() { }
     hideLoader() {
         this.isLoading = false;
     }
@@ -287,68 +272,31 @@ let ProductsComponent = class ProductsComponent {
     /**
      * Get Products
      */
-    getListProducts() {
-        let firstFilter = this.firstFilterForm.value;
-        this.productService
-            .getProductCatalog1(firstFilter.idproductcatalog, firstFilter.productbrand, firstFilter.productmodel, firstFilter.unitprice)
-            .subscribe((response) => {
-            let body = response.body;
-            let status = response.status;
-            this.loading = false;
-            switch (status) {
-                case 200:
-                    this.productCatalogList = body.listProductCatalog;
-                    break;
-                default:
-                    break;
-            }
-        }, (error) => {
-            this.loading = true;
-            console.log("Error al traer los productos");
-        });
+    getProducts() {
+        const product = this.productService.getProduct(this.id);
+        console.log(product);
+        this.defaultProduct = product;
+        this.loading = false;
+        this.isLoading = false;
     }
-    openCart() {
-        if (localStorage.getItem("clientname") != null) {
-            // const initialState = {
-            //   title: "Inicio de Sesión",
-            //   message: "Las credenciales ingresadas son incorrectas/inválidas",
-            //   acceptButton: {
-            //     text: "Reintentar"
-            //   },
-            //   cancelButton: {
-            //     text: "Seguir navegando"
-            //   }
-            // };
-            // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
-            this.dialogRef = this.dialog.open(_modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_5__["CartComponent"], {
-                position: { right: "0", top: "0" },
-                height: "100%",
-                width: "300px",
-                hasBackdrop: true,
-                panelClass: ["animate__bounceOutRight"],
-            });
-        }
-        else {
-            const initialState = {
-                title: "Ups ! Parece que no has iniciado sesion aun :(",
-                message: "Accede para ingresar a tu carrito de compras",
-                acceptButton: {
-                    text: "Iniciar Sesión"
-                },
-                cancelButton: {
-                    text: "Seguir navegando"
-                }
-            };
-            this.bsModalRef = this.modalService.show(_modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_6__["NoCartComponent"], { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState });
-        }
+    addToCart() {
+        this.productService.guardarProductoEnCarrito(this.defaultProduct);
+        this.dialogRef = this.dialog.open(_modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_5__["CartComponent"], {
+            position: { right: "0", top: "0" },
+            height: "100%",
+            width: "300px",
+            hasBackdrop: true,
+            panelClass: ["animate__bounceOutRight"],
+        });
     }
 };
 ProductsComponent.ctorParameters = () => [
-    { type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_8__["ProductService"] },
+    { type: src_app_data_services_products_service__WEBPACK_IMPORTED_MODULE_7__["ProductService"] },
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_9__["SharedService"] },
-    { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__["BsModalService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_8__["SharedService"] },
+    { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"] },
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -407,8 +355,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_data_services_search_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/data/services/search.service */ "./src/app/data/services/search.service.ts");
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm2015/ngx-bootstrap-modal.js");
 /* harmony import */ var _modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @modules/home/modals/cart/cart.component */ "./src/app/modules/home/modals/cart/cart.component.ts");
-/* harmony import */ var _modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @modules/home/modals/no-cart/no-cart.component */ "./src/app/modules/home/modals/no-cart/no-cart.component.ts");
-
 
 
 
@@ -428,7 +374,7 @@ let StartComponent = class StartComponent {
         this.dialog = dialog;
         //
         //IMG LOADER
-        this.loader = './../../../../../assets/loader.gif';
+        this.loader = "./../../../../../assets/loader.gif";
         this.height = 200;
         this.width = 200;
         this.minValue = 0;
@@ -437,16 +383,16 @@ let StartComponent = class StartComponent {
             floor: 0,
             ceil: 10000,
             translate: (value) => {
-                return 'S/.' + value;
+                return "S/." + value;
             },
             getPointerColor: (value) => {
-                return 'white';
+                return "white";
             },
             getSelectionBarColor: (value) => {
-                return 'white';
+                return "white";
             },
             getTickColor: (value) => {
-                return '#ed691e';
+                return "#ed691e";
             },
         };
         this.loading = true;
@@ -462,36 +408,42 @@ let StartComponent = class StartComponent {
         this.sortColumn = "name";
         this.sortType = "asc";
         this.productCatalogList = [];
-        this.labelPosition = 'after';
+        this.labelPosition = "after";
         this.Brands = [
             {
-                "id": 1,
-                "BrandName": "Samsung"
-            }, {
-                "id": 2,
-                "BrandName": "Huawei"
-            }, {
-                "id": 3,
-                "BrandName": "Apple"
-            }, {
-                "id": 4,
-                "BrandName": "Motorola"
-            }, {
-                "id": 5,
-                "BrandName": "Xiaomi"
+                id: 1,
+                BrandName: "Samsung",
+            },
+            {
+                id: 2,
+                BrandName: "Huawei",
+            },
+            {
+                id: 3,
+                BrandName: "Apple",
+            },
+            {
+                id: 4,
+                BrandName: "Motorola",
+            },
+            {
+                id: 5,
+                BrandName: "Xiaomi",
             },
         ];
         this.OrderBy = [
             {
-                "id": 1,
-                "OptionOrderName": "Nombre"
-            }, {
-                "id": 2,
-                "OptionOrderName": "Mayor a Menor Precio"
-            }, {
-                "id": 3,
-                "OptionOrderName": "Menor a Mayor Precio"
-            }
+                id: 1,
+                OptionOrderName: "Nombre",
+            },
+            {
+                id: 2,
+                OptionOrderName: "Mayor a Menor Precio",
+            },
+            {
+                id: 3,
+                OptionOrderName: "Menor a Mayor Precio",
+            },
         ];
         //search
         this.nameSearch = history.state.nameSearch;
@@ -504,7 +456,7 @@ let StartComponent = class StartComponent {
     ngOnInit() {
         this.generateSlide();
         this.createFilterForm();
-        this.getListProducts();
+        this.getListProducts({ pageSize: 10, pageIndex: 0 });
         this.subscription = this.sharedService.searchSubject.subscribe((mySearch) => {
             if (mySearch != undefined) {
                 this.primaryFilterSearch(mySearch);
@@ -516,7 +468,7 @@ let StartComponent = class StartComponent {
         this.createFilterForm();
         this.firstFilterForm.controls.productmodel.setValue(name);
         this.loading = true;
-        this.getListProducts();
+        // this.getListProducts();
     }
     restablecer() {
         this.minValue = 0;
@@ -524,7 +476,7 @@ let StartComponent = class StartComponent {
     }
     generateSlide() {
         this.sliderForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            sliderControl: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]([this.floor, this.ceil])
+            sliderControl: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]([this.floor, this.ceil]),
         });
     }
     createFilterForm() {
@@ -539,31 +491,23 @@ let StartComponent = class StartComponent {
     /**
      * Get Products
      */
-    getListProducts() {
-        let firstFilter = this.firstFilterForm.value;
-        this.productService
-            .getProductCatalog1(firstFilter.idproductcatalog, firstFilter.productbrand, firstFilter.productmodel, firstFilter.unitprice)
-            .subscribe((response) => {
-            let body = response.body;
-            let status = response.status;
-            this.loading = false;
-            switch (status) {
-                case 200:
-                    this.products = body.listProductCatalog;
-                    if (this.products.length > 0) {
-                        this.NoItemMessage = false;
-                    }
-                    else {
-                        this.NoItemMessage = true;
-                    }
-                    break;
-                default:
-                    break;
+    getListProducts(event) {
+        this.loading = true;
+        this.products = [];
+        const timer = setInterval(() => {
+            const items = this.productService.getProductCatalog(event.pageSize ? event.pageSize : 10, event.pageIndex);
+            let data = items.data;
+            this.products = data;
+            this.length = items.total;
+            if (this.products.length > 0) {
+                this.NoItemMessage = false;
             }
-        }, (error) => {
-            this.loading = true;
-            console.log("Error al traer los productos");
-        });
+            else {
+                this.NoItemMessage = true;
+            }
+            this.loading = false;
+            clearInterval(timer);
+        }, 1000);
     }
     /**Precio**/
     formatLabel(value) {
@@ -580,44 +524,18 @@ let StartComponent = class StartComponent {
         }
     }
     /**fin pagination */
-    gotoproduct(product) {
-        let link = "product/" + product;
-        this.router.navigateByUrl(link, { state: product });
+    gotoproduct(id) {
+        this.router.navigate([`product/${id}`]);
     }
-    openCart() {
-        if (localStorage.getItem("clientname") != null) {
-            // const initialState = {
-            //   title: "Inicio de Sesión",
-            //   message: "Las credenciales ingresadas son incorrectas/inválidas",
-            //   acceptButton: {
-            //     text: "Reintentar"
-            //   },
-            //   cancelButton: {
-            //     text: "Seguir navegando"
-            //   }
-            // };
-            // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
-            this.dialogRef = this.dialog.open(_modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_8__["CartComponent"], {
-                position: { right: "0", top: "0" },
-                height: "100%",
-                width: "300px",
-                hasBackdrop: true,
-                panelClass: ["animate__bounceOutRight"],
-            });
-        }
-        else {
-            const initialState = {
-                title: "Ups ! Parece que no has iniciado sesion aun :(",
-                message: "Accede para ingresar a tu carrito de compras",
-                acceptButton: {
-                    text: "Iniciar Sesión"
-                },
-                cancelButton: {
-                    text: "Seguir navegando"
-                }
-            };
-            this.bsModalRef = this.modalService.show(_modules_home_modals_no_cart_no_cart_component__WEBPACK_IMPORTED_MODULE_9__["NoCartComponent"], { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState });
-        }
+    openCart(item) {
+        this.productService.guardarProductoEnCarrito(item);
+        this.dialogRef = this.dialog.open(_modules_home_modals_cart_cart_component__WEBPACK_IMPORTED_MODULE_8__["CartComponent"], {
+            position: { right: "0", top: "0" },
+            height: "100%",
+            width: "300px",
+            hasBackdrop: true,
+            panelClass: ["animate__bounceOutRight"],
+        });
     }
 };
 StartComponent.ctorParameters = () => [
@@ -628,6 +546,9 @@ StartComponent.ctorParameters = () => [
     { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__["BsModalService"] },
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
+], StartComponent.prototype, "paginator", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteTrigger"], {
         read: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatAutocompleteTrigger"],

@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botones\">\r\n    <div class=\"row align-self-center\">\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">\r\n                <div><mat-icon>storage</mat-icon></div>\r\n                <div>Productos</div>\r\n            </button>\r\n        </div>\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">\r\n                <div><mat-icon>person</mat-icon></div>\r\n                <div>Gestión de Personal</div>\r\n            </button>\r\n        </div>\r\n        <div class=\"w-100\"></div>\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block \">\r\n                <div><mat-icon>person_outline</mat-icon></div>\r\n                <div>Gestión de Usuarios</div>\r\n            </button>\r\n        </div>\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">\r\n                <div><mat-icon> local_shipping</mat-icon></div>\r\n                <div>Gestión de Envíos</div>\r\n            </button>\r\n        </div>\r\n    </div>\r\n</div>  \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botones\">\r\n    <div class=\"row align-self-center\">\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)= 'paginaProductos()' >  \r\n                <div><mat-icon>storage</mat-icon></div>\r\n                <div>Productos</div>\r\n            </button>\r\n        </div>\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)= 'paginaPersonal()'>\r\n                <div><mat-icon>person</mat-icon></div>\r\n                <div>Gestión de Personal</div>\r\n            </button>\r\n        </div>\r\n        <div class=\"w-100\"></div>\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block \" (click)= 'paginaUsuarios()'>\r\n                <div><mat-icon>person_outline</mat-icon></div>\r\n                <div>Gestión de Usuarios</div>\r\n            </button>\r\n        </div>\r\n        <div class=\"col\">\r\n            <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">\r\n                <div><mat-icon> local_shipping</mat-icon></div>\r\n                <div>Gestión de Envíos</div>\r\n            </button>\r\n        </div>\r\n    </div>\r\n</div>  \r\n");
 
 /***/ }),
 
@@ -48,7 +48,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"\">\r\n    <div class=\"card d-flex align-items-center\" style=\"width: 18rem; float: left;\">\r\n        <div class=\"card-body\">\r\n          <h5 class=\"card-title\">Productos</h5>\r\n          <h6 class=\"card-subtitle mb-2 text-muted\">Card subtitle</h6>\r\n          <button type=\"button\" class=\"btn btn-light\">Agregar producto</button>\r\n          <button type=\"button\" class=\"btn btn-light\">Agregar lote</button>\r\n          <button type=\"button\" class=\"btn btn-light\">Agregar orden</button>\r\n        </div>\r\n      </div>\r\n      <div *ngIf=\"false\" class=\"card agregar\" style=\"width: 18rem; float: right; \">\r\n        <div class=\"card-body\">\r\n            <form>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                  <label for=\"exampleFormControlInput1\">ID PRODUCTO</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Nombre Comercial</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Nombre Comercial\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">ID Subcategoria</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID Subcategoria\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlTextarea1\">Descripcion</label>\r\n                    <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>\r\n                  </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Marca</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Marca\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Provedor</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Provedor\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Precio Unitario</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Precio Unitario\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Unidades por lote</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Unidades por lote\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Costo de Envio</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Costo de Envio\">\r\n                </div>\r\n              </form>\r\n        </div>\r\n      </div>\r\n      <div *ngIf=\"false\" class=\"card agregar\" style=\"width: 18rem; float: right; \">\r\n        <div class=\"card-body\">\r\n            <form>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                  <label for=\"exampleFormControlInput1\">ID PRODUCTO ORDENADO</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Cantidad de Lotes</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Nombre Comercial\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Empresa</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Nombre\" style=\"margin-bottom: 2px;\">\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"RUC\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Empleado</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Producto catalogo</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label for=\"exampleFormControlInput1\">Monto</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Monto\">\r\n                </div>\r\n              </form>\r\n        </div>\r\n      </div>\r\n      <div *ngIf=\"true\" class=\"card agregar\" style=\"width: 18rem; float: right; \">\r\n        <div class=\"card-body\">\r\n            <form>\r\n                <div class=\"form-group\" >\r\n                  <label for=\"exampleFormControlInput1\">ID PRODUCTO ORDENADO</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label for=\"exampleFormControlInput1\">Cantidad de Productos por Lotes</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"#\">\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label for=\"exampleFormControlInput1\">ID de Inventario</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n              </form>\r\n        </div>\r\n      </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"\">\r\n    <div class=\"card opciones d-flex align-items-center \" style=\"width: 18rem; float: left;\">\r\n        <div class=\"card-body opciones\">\r\n          <h5 class=\"card-title\">Productos</h5>\r\n          <h6 class=\"card-subtitle mb-2 text-muted\">Card subtitle</h6>\r\n          <button type=\"button\" class=\"btn btn-light\" (click)= 'ingresarProducto()'>Agregar producto</button>\r\n          <button type=\"button\" class=\"btn btn-light\" (click)= 'ingresarLote()'>Agregar lote</button>\r\n          <button type=\"button\" class=\"btn btn-light\" (click)='ingresarOrden()'>Agregar orden</button>\r\n        </div>\r\n      </div>\r\n      <div *ngIf=\"iproducto\" class=\"card agregar\" style=\"width: 18rem; float: right; \">\r\n        <div class=\"card-body\">\r\n            <form>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                  <label for=\"exampleFormControlInput1\">ID PRODUCTO</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Nombre Comercial</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Nombre Comercial\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">ID Subcategoria</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID Subcategoria\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlTextarea1\">Descripcion</label>\r\n                    <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>\r\n                  </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Marca</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Marca\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Provedor</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Provedor\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Precio Unitario</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Precio Unitario\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Unidades por lote</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Unidades por lote\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Costo de Envio</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Costo de Envio\">\r\n                </div>\r\n              </form>\r\n        </div>\r\n        <div class=\"card-footer\">\r\n          <button type=\"button\" class=\"btn btn-primary\" >Registrar Producto</button>\r\n        </div>\r\n      </div>\r\n      <div *ngIf=\"iorden\" class=\"card agregar\" style=\"width: 18rem; float: right; \">\r\n        <div class=\"card-body\">\r\n            <form>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                  <label for=\"exampleFormControlInput1\">ID PRODUCTO ORDENADO</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Cantidad de Lotes</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Nombre Comercial\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: left;\">\r\n                    <label for=\"exampleFormControlInput1\">Empresa</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Nombre\" style=\"margin-bottom: 2px;\">\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"RUC\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Empleado</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" style=\"float: right;\">\r\n                    <label for=\"exampleFormControlInput1\">Producto catalogo</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label for=\"exampleFormControlInput1\">Monto</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"Monto\">\r\n                </div>\r\n              </form>\r\n        </div>\r\n        <div class=\"card-footer\">\r\n          <button type=\"button\" class=\"btn btn-primary\" >Registrar Orden</button>\r\n        </div>\r\n      </div>\r\n\r\n      <div *ngIf=\"ilote\" class=\"card agregar\" style=\"width: 18rem; float: right; \">\r\n        <div class=\"card-body\">\r\n            <form>\r\n                <div class=\"form-group\" >\r\n                  <label for=\"exampleFormControlInput1\">ID PRODUCTO ORDENADO</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label for=\"exampleFormControlInput1\">Cantidad de Productos por Lotes</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"#\">\r\n                </div>\r\n                <div class=\"form-group\" >\r\n                    <label for=\"exampleFormControlInput1\">ID de Inventario</label>\r\n                    <input type=\"text\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"ID\">\r\n                </div>\r\n              </form>\r\n        </div>\r\n        <div class=\"card-footer\">\r\n          <button type=\"button\" class=\"btn btn-primary\" >Registrar Lote</button>\r\n        </div>\r\n      </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.html":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.html ***!
+  \**********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>registrar-empleados works!</p>\r\n");
 
 /***/ }),
 
@@ -178,13 +191,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuComponent", function() { return MenuComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 let MenuComponent = class MenuComponent {
-    constructor() { }
+    constructor(router) {
+        this.router = router;
+    }
     ngOnInit() {
     }
+    paginaProductos() {
+        this.router.navigateByUrl("/admin/Productos");
+    }
+    paginaPersonal() {
+        this.router.navigateByUrl("/admin/Empleados");
+    }
+    paginaUsuarios() {
+        this.router.navigateByUrl("/admin/Usuarios");
+    }
 };
+MenuComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
 MenuComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-menu',
@@ -281,6 +310,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _productos_productos_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./productos/productos.component */ "./src/app/modules/admin/pages/productos/productos.component.ts");
 /* harmony import */ var _empleados_empleados_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./empleados/empleados.component */ "./src/app/modules/admin/pages/empleados/empleados.component.ts");
 /* harmony import */ var _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./usuarios/usuarios.component */ "./src/app/modules/admin/pages/usuarios/usuarios.component.ts");
+/* harmony import */ var _registrar_empleados_registrar_empleados_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./registrar-empleados/registrar-empleados.component */ "./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.ts");
+
 
 
 
@@ -296,7 +327,7 @@ let PagesModule = class PagesModule {
 };
 PagesModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_5__["DashboardAdminComponent"], _menu_menu_component__WEBPACK_IMPORTED_MODULE_7__["MenuComponent"], _productos_productos_component__WEBPACK_IMPORTED_MODULE_8__["ProductosComponent"], _empleados_empleados_component__WEBPACK_IMPORTED_MODULE_9__["EmpleadosComponent"], _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_10__["UsuariosComponent"]],
+        declarations: [_dashboard_admin_dashboard_admin_component__WEBPACK_IMPORTED_MODULE_5__["DashboardAdminComponent"], _menu_menu_component__WEBPACK_IMPORTED_MODULE_7__["MenuComponent"], _productos_productos_component__WEBPACK_IMPORTED_MODULE_8__["ProductosComponent"], _empleados_empleados_component__WEBPACK_IMPORTED_MODULE_9__["EmpleadosComponent"], _usuarios_usuarios_component__WEBPACK_IMPORTED_MODULE_10__["UsuariosComponent"], _registrar_empleados_registrar_empleados_component__WEBPACK_IMPORTED_MODULE_11__["RegistrarEmpleadosComponent"]],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
@@ -319,7 +350,7 @@ PagesModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".btn-light{\r\n    width: 130%;\r\n    margin: 10%;\r\n}\r\n.card{\r\n    background-color: transparent;\r\n    margin-top: 5%;\r\n    float: left;\r\n    width: 25rem;\r\n    height: 260px;\r\n    border: 0px;\r\n}\r\n.card.agregar{\r\n    margin-top: 1%;\r\n    margin-right: 5%;\r\n    margin-bottom: 5%;\r\n    width: 50%!important;\r\n    height: 480px;\r\n    float: right;\r\n    background-color: gray!important;\r\n}\r\n.form-group{\r\n    width: 45%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9hZG1pbi9wYWdlcy9wcm9kdWN0b3MvcHJvZHVjdG9zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsV0FBVztBQUNmO0FBQ0E7SUFDSSw2QkFBNkI7SUFDN0IsY0FBYztJQUNkLFdBQVc7SUFDWCxZQUFZO0lBQ1osYUFBYTtJQUNiLFdBQVc7QUFDZjtBQUNBO0lBQ0ksY0FBYztJQUNkLGdCQUFnQjtJQUNoQixpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLGFBQWE7SUFDYixZQUFZO0lBQ1osZ0NBQWdDO0FBQ3BDO0FBQ0E7SUFDSSxVQUFVO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2FkbWluL3BhZ2VzL3Byb2R1Y3Rvcy9wcm9kdWN0b3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idG4tbGlnaHR7XHJcbiAgICB3aWR0aDogMTMwJTtcclxuICAgIG1hcmdpbjogMTAlO1xyXG59XHJcbi5jYXJke1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBtYXJnaW4tdG9wOiA1JTtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgd2lkdGg6IDI1cmVtO1xyXG4gICAgaGVpZ2h0OiAyNjBweDtcclxuICAgIGJvcmRlcjogMHB4O1xyXG59XHJcbi5jYXJkLmFncmVnYXJ7XHJcbiAgICBtYXJnaW4tdG9wOiAxJTtcclxuICAgIG1hcmdpbi1yaWdodDogNSU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcclxuICAgIHdpZHRoOiA1MCUhaW1wb3J0YW50O1xyXG4gICAgaGVpZ2h0OiA0ODBweDtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGdyYXkhaW1wb3J0YW50O1xyXG59XHJcbi5mb3JtLWdyb3Vwe1xyXG4gICAgd2lkdGg6IDQ1JTtcclxufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".btn-light{\r\n    width: 130%;\r\n    margin: 10%;\r\n}\r\n.card{\r\n    background-color: transparent;\r\n    margin-top: 5%;\r\n    float: left;\r\n    width: 25rem;\r\n    height: 280px;\r\n    border: 0px;\r\n}\r\n.card.agregar{\r\n    margin-top: 1%;\r\n    margin-right: 5%;\r\n    margin-bottom: 5%;\r\n    width: 50%!important;\r\n    height: 600px;\r\n    float: right;\r\n}\r\n.card-body{\r\n    background-color: gray;\r\n}\r\n.form-group{\r\n    width: 45%;\r\n}\r\n.boton{\r\n    background-color: transparent;\r\n    \r\n}\r\n.card.opciones{\r\n    background-color: transparent!important;\r\n}\r\n.card-body.opciones{\r\n    background-color: transparent!important;\r\n}\r\n.card-footer{\r\n    padding: 1px;\r\n    align-items:flex-end;\r\n    height: 20%;\r\n}\r\n.btn-primary{\r\n    float: right;\r\n    margin-top: 5%;\r\n    width: 30%;\r\n    height: 40%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9hZG1pbi9wYWdlcy9wcm9kdWN0b3MvcHJvZHVjdG9zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsV0FBVztBQUNmO0FBQ0E7SUFDSSw2QkFBNkI7SUFDN0IsY0FBYztJQUNkLFdBQVc7SUFDWCxZQUFZO0lBQ1osYUFBYTtJQUNiLFdBQVc7QUFDZjtBQUNBO0lBQ0ksY0FBYztJQUNkLGdCQUFnQjtJQUNoQixpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLGFBQWE7SUFDYixZQUFZO0FBQ2hCO0FBQ0E7SUFDSSxzQkFBc0I7QUFDMUI7QUFDQTtJQUNJLFVBQVU7QUFDZDtBQUNBO0lBQ0ksNkJBQTZCOztBQUVqQztBQUNBO0lBQ0ksdUNBQXVDO0FBQzNDO0FBQ0E7SUFDSSx1Q0FBdUM7QUFDM0M7QUFDQTtJQUNJLFlBQVk7SUFDWixvQkFBb0I7SUFDcEIsV0FBVztBQUNmO0FBQ0E7SUFDSSxZQUFZO0lBQ1osY0FBYztJQUNkLFVBQVU7SUFDVixXQUFXO0FBQ2YiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2FkbWluL3BhZ2VzL3Byb2R1Y3Rvcy9wcm9kdWN0b3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idG4tbGlnaHR7XHJcbiAgICB3aWR0aDogMTMwJTtcclxuICAgIG1hcmdpbjogMTAlO1xyXG59XHJcbi5jYXJke1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBtYXJnaW4tdG9wOiA1JTtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgd2lkdGg6IDI1cmVtO1xyXG4gICAgaGVpZ2h0OiAyODBweDtcclxuICAgIGJvcmRlcjogMHB4O1xyXG59XHJcbi5jYXJkLmFncmVnYXJ7XHJcbiAgICBtYXJnaW4tdG9wOiAxJTtcclxuICAgIG1hcmdpbi1yaWdodDogNSU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcclxuICAgIHdpZHRoOiA1MCUhaW1wb3J0YW50O1xyXG4gICAgaGVpZ2h0OiA2MDBweDtcclxuICAgIGZsb2F0OiByaWdodDtcclxufVxyXG4uY2FyZC1ib2R5e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JheTtcclxufVxyXG4uZm9ybS1ncm91cHtcclxuICAgIHdpZHRoOiA0NSU7XHJcbn1cclxuLmJvdG9ue1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBcclxufVxyXG4uY2FyZC5vcGNpb25lc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50IWltcG9ydGFudDtcclxufVxyXG4uY2FyZC1ib2R5Lm9wY2lvbmVze1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQhaW1wb3J0YW50O1xyXG59XHJcbi5jYXJkLWZvb3RlcntcclxuICAgIHBhZGRpbmc6IDFweDtcclxuICAgIGFsaWduLWl0ZW1zOmZsZXgtZW5kO1xyXG4gICAgaGVpZ2h0OiAyMCU7XHJcbn1cclxuLmJ0bi1wcmltYXJ5e1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgbWFyZ2luLXRvcDogNSU7XHJcbiAgICB3aWR0aDogMzAlO1xyXG4gICAgaGVpZ2h0OiA0MCU7XHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -338,8 +369,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ProductosComponent = class ProductosComponent {
-    constructor() { }
+    constructor() {
+        this.iproducto = true;
+        this.iorden = false;
+        this.ilote = false;
+    }
     ngOnInit() {
+    }
+    ingresarProducto() {
+        this.iproducto = true;
+        this.iorden = false;
+        this.ilote = false;
+    }
+    ingresarOrden() {
+        this.iproducto = false;
+        this.iorden = true;
+        this.ilote = false;
+    }
+    ingresarLote() {
+        this.iproducto = false;
+        this.iorden = false;
+        this.ilote = true;
     }
 };
 ProductosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -349,6 +399,50 @@ ProductosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./productos.component.css */ "./src/app/modules/admin/pages/productos/productos.component.css")).default]
     })
 ], ProductosComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.css":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.css ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4vcGFnZXMvcmVnaXN0cmFyLWVtcGxlYWRvcy9yZWdpc3RyYXItZW1wbGVhZG9zLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.ts":
+/*!******************************************************************************************!*\
+  !*** ./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.ts ***!
+  \******************************************************************************************/
+/*! exports provided: RegistrarEmpleadosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistrarEmpleadosComponent", function() { return RegistrarEmpleadosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let RegistrarEmpleadosComponent = class RegistrarEmpleadosComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+RegistrarEmpleadosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-registrar-empleados',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./registrar-empleados.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./registrar-empleados.component.css */ "./src/app/modules/admin/pages/registrar-empleados/registrar-empleados.component.css")).default]
+    })
+], RegistrarEmpleadosComponent);
 
 
 
