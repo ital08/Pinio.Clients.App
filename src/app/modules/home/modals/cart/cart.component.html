@@ -43,14 +43,15 @@
             </div>
             <div class="col-7 mt-2">
               <div
-                class="row float-right"
+                class="row float-right bg-white rounded"
                 style="color: #ed691e; font-size: 1px; cursor: pointer"
-                (click)="removeItemCartUser(item.idProductCatalog)"
+                (click)="removeItemCartUser(item.id)"
               >
                 <mat-icon>close</mat-icon>
               </div>
+              <br />
               <div
-                (click)="goToProduct(item.idProductCatalog)"
+                (click)="goToProduct(item.id)"
                 class="row"
                 style="color: black; font-size: 12px; cursor: pointer"
               >

@@ -1,7 +1,24 @@
 import { Route } from "@angular/compiler/src/core";
-import { Component, Input, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { MatAutocompleteTrigger, MatDialog, MatDialogRef, PageEvent } from "@angular/material";
+import {
+  Component,
+  Input,
+  OnInit,
+  ViewChild,
+  ViewEncapsulation,
+} from "@angular/core";
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+} from "@angular/forms";
+import {
+  MatAutocompleteTrigger,
+  MatDialog,
+  MatDialogRef,
+  MatPaginator,
+  PageEvent,
+} from "@angular/material";
 import { Options } from "@angular-slider/ngx-slider";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { BootstrapModalModule } from "ngx-bootstrap-modal";
@@ -20,6 +37,8 @@ import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component"
   encapsulation: ViewEncapsulation.None,
 })
 export class StartComponent implements OnInit {
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   @ViewChild(MatAutocompleteTrigger, {
     read: MatAutocompleteTrigger,
     static: false,
@@ -29,7 +48,7 @@ export class StartComponent implements OnInit {
   dialogRef: MatDialogRef<any>;
   //
   //IMG LOADER
-  @Input() loader: string = './../../../../../assets/loader.gif';
+  @Input() loader: string = "./../../../../../assets/loader.gif";
   @Input() height: number = 200;
   @Input() width: number = 200;
   @Input() image: string;
@@ -46,16 +65,16 @@ export class StartComponent implements OnInit {
     ceil: 10000,
 
     translate: (value: number): string => {
-      return 'S/.' + value;
+      return "S/." + value;
     },
     getPointerColor: (value: number): string => {
-      return 'white';
+      return "white";
     },
     getSelectionBarColor: (value: number): string => {
-      return 'white';
+      return "white";
     },
     getTickColor: (value: number): string => {
-      return '#ed691e';
+      return "#ed691e";
     },
   };
   //
@@ -77,40 +96,46 @@ export class StartComponent implements OnInit {
   productCatalogList = [];
   category: string;
   firstFilterForm: FormGroup;
-  labelPosition: 'before' | 'after' = 'after';
+  labelPosition: "before" | "after" = "after";
   Brands = [
     {
-      "id": 1,
-      "BrandName": "Samsung"
-    }, {
-      "id": 2,
-      "BrandName": "Huawei"
-    }, {
-      "id": 3,
-      "BrandName": "Apple"
-    }, {
-      "id": 4,
-      "BrandName": "Motorola"
-    }, {
-      "id": 5,
-      "BrandName": "Xiaomi"
+      id: 1,
+      BrandName: "Samsung",
+    },
+    {
+      id: 2,
+      BrandName: "Huawei",
+    },
+    {
+      id: 3,
+      BrandName: "Apple",
+    },
+    {
+      id: 4,
+      BrandName: "Motorola",
+    },
+    {
+      id: 5,
+      BrandName: "Xiaomi",
     },
   ];
   OrderBy = [
     {
-      "id": 1,
-      "OptionOrderName": "Nombre"
-    }, {
-      "id": 2,
-      "OptionOrderName": "Mayor a Menor Precio"
-    }, {
-      "id": 3,
-      "OptionOrderName": "Menor a Mayor Precio"
-    }
+      id: 1,
+      OptionOrderName: "Nombre",
+    },
+    {
+      id: 2,
+      OptionOrderName: "Mayor a Menor Precio",
+    },
+    {
+      id: 3,
+      OptionOrderName: "Menor a Mayor Precio",
+    },
   ];
   //search
   nameSearch: string = history.state.nameSearch;
-  subscription: Subscription
+  subscription: Subscription;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -119,26 +144,30 @@ export class StartComponent implements OnInit {
     private sharedService: SharedService,
     private modalService: BsModalService,
     private dialog: MatDialog
-  ) { this.isLoading = true; }
+  ) {
+    this.isLoading = true;
+  }
   hideLoader() {
     this.isLoading = false;
   }
   ngOnInit() {
     this.generateSlide();
     this.createFilterForm();
-    this.getListProducts();
-    this.subscription = this.sharedService.searchSubject.subscribe((mySearch: String) => {
-      if (mySearch != undefined) {
-        this.primaryFilterSearch(mySearch);
+    this.getListProducts({ pageSize: 10, pageIndex: 0 });
+    this.subscription = this.sharedService.searchSubject.subscribe(
+      (mySearch: String) => {
+        if (mySearch != undefined) {
+          this.primaryFilterSearch(mySearch);
+        }
       }
-    });
+    );
   }
   primaryFilterSearch(name: any) {
     this.products = new Array();
     this.createFilterForm();
     this.firstFilterForm.controls.productmodel.setValue(name);
     this.loading = true;
-    this.getListProducts();
+    // this.getListProducts();
   }
   restablecer() {
     this.minValue = 0;
@@ -146,7 +175,7 @@ export class StartComponent implements OnInit {
   }
   generateSlide() {
     this.sliderForm = new FormGroup({
-      sliderControl: new FormControl([this.floor, this.ceil])
+      sliderControl: new FormControl([this.floor, this.ceil]),
     });
   }
   products = [];
@@ -160,43 +189,31 @@ export class StartComponent implements OnInit {
       unitprice: 0,
     });
   }
+
   /**
    * Get Products
    */
-  getListProducts() {
-    let firstFilter = this.firstFilterForm.value;
-    this.productService
-      .getProductCatalog1(
-        firstFilter.idproductcatalog,
-        firstFilter.productbrand,
-        firstFilter.productmodel,
-        firstFilter.unitprice
-      )
-      .subscribe(
-        (response: any) => {
-          let body = response.body;
-          let status = response.status;
-          this.loading = false;
-          switch (status) {
-            case 200:
-              this.products = body.listProductCatalog;
-              if (this.products.length > 0) {
-                this.NoItemMessage = false;
-              }
-              else {
-                this.NoItemMessage = true;
-              }
-              break;
-            default:
-              break;
-          }
-        },
-        (error) => {
-          this.loading = true;
-          console.log("Error al traer los productos");
-        }
+  getListProducts(event: any) {
+    this.loading = true;
+    this.products = [];
+    const timer = setInterval(() => {
+      const items = this.productService.getProductCatalog(
+        event.pageSize ? event.pageSize : 10,
+        event.pageIndex
       );
+      let data = items.data;
+      this.products = data;
+      this.length = items.total;
+      if (this.products.length > 0) {
+        this.NoItemMessage = false;
+      } else {
+        this.NoItemMessage = true;
+      }
+      this.loading = false;
+      clearInterval(timer);
+    }, 1000);
   }
+
   /**Precio**/
   formatLabel(value: number) {
     if (value >= 1000) {
@@ -219,46 +236,18 @@ export class StartComponent implements OnInit {
     }
   }
   /**fin pagination */
-  gotoproduct(product) {
-    let link = "product/" + product;
-    this.router.navigateByUrl(link, { state: product });
+  gotoproduct(id) {
+    this.router.navigate([`product/${id}`]);
   }
-  openCart() {
-    if (localStorage.getItem("clientname") != null) {
 
-      // const initialState = {
-      //   title: "Inicio de Sesión",
-      //   message: "Las credenciales ingresadas son incorrectas/inválidas",
-      //   acceptButton: {
-      //     text: "Reintentar"
-      //   },
-      //   cancelButton: {
-      //     text: "Seguir navegando"
-      //   }
-      // };
-      // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
-      this.dialogRef = this.dialog.open(CartComponent, {
-        position: { right: "0", top: "0" },
-        height: "100%",
-        width: "300px",
-        hasBackdrop: true,
-        panelClass: ["animate__bounceOutRight"],
-
-      })
-    }
-    else {
-      const initialState = {
-        title: "Ups ! Parece que no has iniciado sesion aun :(",
-        message: "Accede para ingresar a tu carrito de compras",
-        acceptButton: {
-          text: "Iniciar Sesión"
-        },
-        cancelButton: {
-          text: "Seguir navegando"
-        }
-      };
-      this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState })
-
-    }
+  openCart(item) {
+    this.productService.guardarProductoEnCarrito(item);
+    this.dialogRef = this.dialog.open(CartComponent, {
+      position: { right: "0", top: "0" },
+      height: "100%",
+      width: "300px",
+      hasBackdrop: true,
+      panelClass: ["animate__bounceOutRight"],
+    });
   }
 }

@@ -1,4 +1,4 @@
-<div *ngIf="loading">
+<!-- <div *ngIf="loading">
   <div class="container justify-content-center" style="padding: 10%">
     <div class="row justify-content-center">
       <div class="justify-content-center">
@@ -11,107 +11,94 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="bg-white">
   <div class="mt-3 bg-white">
-    <div *ngFor="let item of productCatalogList">
-      <div>
-        <div class="products-router-container">
-          <a
-            style="text-decoration: none; color: #ed691e"
-            href="/category/{{ item.idProductCatalog }}"
-            >Categoria</a
-          >
-          <span class="material-icons"> arrow_forward_ios </span>
-          <a style="text-decoration: none; color: #ed691e" href="">{{
-            item.productBrand
-          }}</a>
-          <span class="material-icons"> arrow_forward_ios </span>
-          <a
-            style="text-decoration: none; color: #ed691e"
-            href="/product/{{ item.idProductCatalog }}"
-            >{{ item.productModel }}</a
-          >
-        </div>
+    <div>
+      <div class="products-router-container">
+        <a
+          style="text-decoration: none; color: #ed691e"
+          href="/category/{{ defaultProduct?.idProductCatalog }}"
+          >Categoria</a
+        >
+        <span class="material-icons"> arrow_forward_ios </span>
+        <a style="text-decoration: none; color: #ed691e" href="">{{
+          defaultProduct?.productBrand
+        }}</a>
+        <span class="material-icons"> arrow_forward_ios </span>
+        <a
+          style="text-decoration: none; color: #ed691e"
+          href="/product/{{ defaultProduct?.idProductCatalog }}"
+          >{{ defaultProduct?.productModel }}</a
+        >
       </div>
     </div>
   </div>
   <div style="background-color: #ed691e; height: 1vh"></div>
-  <div *ngFor="let item of productCatalogList">
-    <div class="container">
-      <div class="row mt-3 mb-3">
-        <div class="col-md-6">
-          <div *ngIf="isLoading" class="img-fluid">
-            <img [src]="loader" class="img-fluid" />
-          </div>
-          <img
-            class="img-fluid"
-            src="{{ item.urlimage }}"
-            [ngStyle]="{
-              visibility: isLoading ? 'hidden' : ''
-            }"
-            (load)="hideLoader()"
-            (error)="hideLoader()"
-          />
+  <div class="container">
+    <div class="row mt-3 mb-3">
+      <div class="col-md-6">
+        <div *ngIf="isLoading" class="img-fluid">
+          <img [src]="loader" class="img-fluid" />
         </div>
-        <div class="col-md-6 my-auto justify-content-center">
-          <div class="row">
-            <div class="col-md-12">
-              <h3>{{ item.productModel }}</h3>
-            </div>
+        <img
+          class="img-fluid"
+          [src]="defaultProduct?.urlimage"
+          [ngStyle]="{
+            visibility: isLoading ? 'hidden' : ''
+          }"
+          (load)="hideLoader()"
+          (error)="hideLoader()"
+        />
+      </div>
+      <div class="col-md-6 my-auto justify-content-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>{{ defaultProduct?.productModel }}</h3>
           </div>
-          <mat-divider></mat-divider>
-          <div class="row">
-            <div class="col-4">Stock:</div>
-            <div class="col-5">20+ Unidades</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="row">
+          <div class="col-4">Stock:</div>
+          <div class="col-5">20+ Unidades</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="row">
+          <div class="col-4">Marca:</div>
+          <div class="col-5">{{ defaultProduct?.productBrand }}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="row">
+          <div class="col-4">Modelo:</div>
+          <div class="col-5">{{ defaultProduct?.idProductCatalog }}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="row">
+          <div class="col-4">Descripción:</div>
+          <div class="col-8 justify-content-center">
+            {{ defaultProduct?.description }}
           </div>
-          <mat-divider></mat-divider>
-          <div class="row">
-            <div class="col-4">Marca:</div>
-            <div class="col-5">{{ item.productBrand }}</div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="row">
+          <div class="col-3">Precio</div>
+          <div class="col-5">
+            <h4 style="color: red">S/.{{ defaultProduct?.unitprice }}</h4>
           </div>
-          <mat-divider></mat-divider>
-          <div class="row">
-            <div class="col-4">Modelo:</div>
-            <div class="col-5">{{ item.idProductCatalog }}</div>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="row">
-            <div class="col-4">Description:</div>
-            <div class="col-8 justify-content-center">
-              Samsung Torres de Sonido ofrece una variedad de divertidos modos
-              de luces, incluido el modo Fiesta, Ambiente, Danza, Trueno y
-              Estrella. Además, gracias a la aplicación, podrás ajustar los
-              efectos fácilmente desde tu dispositivo móvil. Configura el efecto
-              de luces para que combine con el ritmo y… ¡que comience la fiesta!
-              Haz que comience la fiesta con una aplicación ideal para que te
-              conviertas en DJ. Esta aplicación facilita el control de varios
-              efectos de luces y sonido e incluso la configuración del
-              ecualizador, directamente desde el dispositivo móvil. ¡Que
-              comience la fiesta!
-            </div>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="row">
-            <div class="col-3">Precio</div>
-            <div class="col-5">
-              <h4 style="color: red">S/.{{ item.unitprice }}</h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <button
-                class="float-center"
-                style="color: white"
-                mat-raised-button
-                color="primary"
-                disable="true"
-                (click)="openCart()"
-              >
-                Añadir al carrito
-                <mat-icon style="color: white">add_shopping_cart</mat-icon>
-              </button>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button
+              class="float-center"
+              style="color: white"
+              mat-raised-button
+              color="primary"
+              disable="true"
+              (click)="addToCart()"
+            >
+              Añadir al carrito
+              <mat-icon style="color: white">add_shopping_cart</mat-icon>
+            </button>
           </div>
         </div>
       </div>

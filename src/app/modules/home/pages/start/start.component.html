@@ -90,7 +90,7 @@
             </section>
           </div>
         </li>
-        <!-- <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -107,14 +107,14 @@
           >
             <section class="example-section">
               <li>
-                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+                <mat-checkbox class="example-margin">Gratis</mat-checkbox>
               </li>
               <li>
-                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+                <mat-checkbox class="example-margin">Terrestre</mat-checkbox>
               </li>
             </section>
           </div>
-        </li> -->
+        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -193,7 +193,7 @@
             </mat-card-content>
             <mat-card-actions align="center">
               <button
-                (click)="gotoproduct(item.idProductCatalog)"
+                (click)="gotoproduct(item.id)"
                 class="col-8 m-1"
                 mat-stroked-button
                 color="accent"
@@ -202,13 +202,13 @@
                 <mat-icon>dehaze</mat-icon>
               </button>
               <button
-                (click)="openCart()"
+                (click)="openCart(item)"
                 class="col-8 m-1"
                 mat-flat-button
                 style="color: white"
                 color="accent"
               >
-                Comprar
+                Agregar
                 <mat-icon>add_shopping_cart</mat-icon>
               </button>
             </mat-card-actions>
@@ -233,10 +233,11 @@
 <!-- paginator -->
 
 <mat-paginator
+  #paginator
   [length]="length"
   [pageSize]="pageSize"
   [pageSizeOptions]="pageSizeOptions"
-  (page)="pageEvent = $event"
+  (page)="getListProducts($event)"
   aria-label="Select page"
 >
 </mat-paginator>

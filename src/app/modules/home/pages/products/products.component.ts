@@ -1,7 +1,17 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { MatAutocompleteTrigger, MatDialog, MatDialogRef } from "@angular/material";
-import { ActivatedRoute, Route, Router, RouterLinkActive } from "@angular/router";
+import {
+  MatAutocompleteTrigger,
+  MatDialog,
+  MatDialogRef,
+} from "@angular/material";
+import {
+  ActivatedRoute,
+  Params,
+  Route,
+  Router,
+  RouterLinkActive,
+} from "@angular/router";
 import { CartComponent } from "@modules/home/modals/cart/cart.component";
 import { NoCartComponent } from "@modules/home/modals/no-cart/no-cart.component";
 import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
@@ -15,7 +25,7 @@ import { SharedService } from "src/app/data/services/search.service";
   styleUrls: ["./products.component.css"],
 })
 export class ProductsComponent implements OnInit {
-  @Input() loader: string = './../../../../../assets/loader.gif';
+  @Input() loader: string = "./../../../../../assets/loader.gif";
   @Input() height: number = 200;
   @Input() width: number = 200;
   @Input() image: string;
@@ -41,41 +51,32 @@ export class ProductsComponent implements OnInit {
   idp: string = history.state.id;
   subscription: Subscription;
   //carrito modal
+  defaultProduct: any;
   bsModalRef: BsModalRef;
   dialogRef: MatDialogRef<any>;
   //
-  constructor(private productService: ProductService,
+  id: number;
+  constructor(
+    private productService: ProductService,
     private formBuilder: FormBuilder,
-    private routeSub: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
     private sharedService: SharedService,
     private modalService: BsModalService,
     private dialog: MatDialog
-  ) { this.isLoading = true; }
-
-  ngOnInit() {
-    this.createFilterForm();
-    if (this.idp == undefined) {
-      console.log("sacando del url");
-      console.log(this.idp)
-      this.routeSub.params.subscribe((params) => {
-        this.idp = params["id"];
-        this.firstFilterForm.value.idproductcatalog = this.idp;
-
-      });
-    }
-    else {
-      this.firstFilterForm.value.idproductcatalog = this.idp;
-      console.log("recibido de la anterior");
-      console.log(this.idp)
-    }
-    this.getListProducts();
-    this.subscription = this.sharedService.searchProductCart.subscribe((mySearch: String) => {
-      if (mySearch != undefined) {
-        this.firstFilterForm.value.idproductcatalog = mySearch;
-        this.getListProducts();
+  ) {
+    this.activatedRoute.params.subscribe((params: any) => {
+      if (params["id"]) {
+        this.id = params["id"];
+        this.getProducts();
+      } else {
+        this.router.navigate([""]);
       }
     });
+    this.isLoading = true;
   }
+
+  ngOnInit() {}
   hideLoader() {
     this.isLoading = false;
   }
@@ -93,70 +94,22 @@ export class ProductsComponent implements OnInit {
   /**
    * Get Products
    */
-  getListProducts() {
-    let firstFilter = this.firstFilterForm.value;
-    this.productService
-      .getProductCatalog1(
-        firstFilter.idproductcatalog,
-        firstFilter.productbrand,
-        firstFilter.productmodel,
-        firstFilter.unitprice
-      )
-      .subscribe(
-        (response: any) => {
-          let body = response.body;
-          let status = response.status;
-          this.loading = false;
-          switch (status) {
-            case 200:
-              this.productCatalogList = body.listProductCatalog;
-              break;
-            default:
-              break;
-          }
-        },
-        (error) => {
-          this.loading = true;
-          console.log("Error al traer los productos");
-        }
-      );
+  getProducts() {
+    const product = this.productService.getProduct(this.id);
+    console.log(product);
+    this.defaultProduct = product;
+    this.loading = false;
+    this.isLoading = false;
   }
-  openCart() {
-    if (localStorage.getItem("clientname") != null) {
 
-      // const initialState = {
-      //   title: "Inicio de Sesión",
-      //   message: "Las credenciales ingresadas son incorrectas/inválidas",
-      //   acceptButton: {
-      //     text: "Reintentar"
-      //   },
-      //   cancelButton: {
-      //     text: "Seguir navegando"
-      //   }
-      // };
-      // this.bsModalRef = this.modalService.show(CartComponent, { class: 'modal right fade', backdrop: 'static', keyboard: false, initialState })
-      this.dialogRef = this.dialog.open(CartComponent, {
-        position: { right: "0", top: "0" },
-        height: "100%",
-        width: "300px",
-        hasBackdrop: true,
-        panelClass: ["animate__bounceOutRight"],
-
-      })
-    }
-    else {
-      const initialState = {
-        title: "Ups ! Parece que no has iniciado sesion aun :(",
-        message: "Accede para ingresar a tu carrito de compras",
-        acceptButton: {
-          text: "Iniciar Sesión"
-        },
-        cancelButton: {
-          text: "Seguir navegando"
-        }
-      };
-      this.bsModalRef = this.modalService.show(NoCartComponent, { class: 'modal-dialog-centered', ignoreBackdropClick: false, keyboard: false, initialState })
-
-    }
+  addToCart() {
+    this.productService.guardarProductoEnCarrito(this.defaultProduct);
+    this.dialogRef = this.dialog.open(CartComponent, {
+      position: { right: "0", top: "0" },
+      height: "100%",
+      width: "300px",
+      hasBackdrop: true,
+      panelClass: ["animate__bounceOutRight"],
+    });
   }
 }
